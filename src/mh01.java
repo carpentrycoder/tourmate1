@@ -238,7 +238,7 @@ public class mh01 extends JFrame implements ActionListener {
             new rentalrtn();
         } else if (e.getSource()==hotl) {
             setVisible(true);
-            new rtnHOTELS ();
+
         }
     }
     public static void main(String[] args) {

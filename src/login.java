@@ -12,6 +12,7 @@ JTextField tfusername, tfpass;
 Font fontTxt = new Font("Open Sauce",Font.PLAIN,15);
    login()
    {
+
        setSize(900,400);
        setLocationRelativeTo(null);
        setTitle("Login");
@@ -149,7 +150,7 @@ Font fontTxt = new Font("Open Sauce",Font.PLAIN,15);
               if(rs.next())
               {
                   setVisible(false);
-                new loading();
+                  new loading();
               }
               else
               {
@@ -163,7 +164,6 @@ Font fontTxt = new Font("Open Sauce",Font.PLAIN,15);
         }
 
     }
-
 
     public static void main(String[] args) {
         new login();

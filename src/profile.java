@@ -6,10 +6,11 @@ import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 
-
-public class profile extends JFrame implements ActionListener {
+public class profile extends JFrame implements ActionListener
+{
    JButton b1,b2,b3;
     String Sname, Saadhar, SphoneNo, Saddress, Sbldgrp, Sgender, Sdob;
     int x = 80;
@@ -317,13 +318,14 @@ public class profile extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Some error occured :(");
             }
 
-        } else if (k.getSource()==b3) {
+        } else if (k.getSource()==b3)
+        {
             try {
                 int option = JOptionPane.showConfirmDialog(null, "Do you want to delete your profile?", "Delete", JOptionPane.YES_NO_OPTION);
 
                 if (option == JOptionPane.YES_OPTION) {
-                    String nameString = "";
-                    String passString = "";
+                    String nameString = "user.txt";
+                    String passString = "pass.txt";
 
                     try (BufferedReader reader1 = new BufferedReader(new FileReader("user.txt"));
                          BufferedReader reader2 = new BufferedReader(new FileReader("pass.txt"))) {
@@ -334,36 +336,44 @@ public class profile extends JFrame implements ActionListener {
                         if (nameString != null) {
                             System.out.println("Stored string: " + nameString);
                             System.out.println("Stored string: " + passString);
+
+                            try {
+                                // Check if the record exists before attempting deletion
+                                String checkQuery = "SELECT * FROM account WHERE Username = '" + nameString + "' AND Password = '" + passString + "'";
+                                conn checkConn = new conn();
+                                ResultSet resultSet = checkConn.s.executeQuery(checkQuery);
+                                if (resultSet.next()) {
+                                    // The record exists, proceed with deletion
+                                    String deleteQuery = "DELETE FROM account WHERE Username = '" + nameString + "' AND Password = '" + passString + "'";
+                                    conn deleteConn = new conn();
+                                    int rowsAffected = deleteConn.s.executeUpdate(deleteQuery);
+
+                                    if (rowsAffected > 0) {
+                                        JOptionPane.showMessageDialog(null, "Profile deleted successfully!");
+                                    } else {
+                                        JOptionPane.showMessageDialog(null, "Deletion failed. Please try again.");
+                                    }
+                                } else {
+                                    // The record does not exist
+                                    JOptionPane.showMessageDialog(null, "No matching profile found. Deletion failed.");
+                                }
+                            } catch (Exception e) {
+                                JOptionPane.showMessageDialog(null, "Error occurred: " + e.getMessage());
+                                e.printStackTrace();
+                            }
+
                         } else {
                             System.out.println("No string stored yet.");
                         }
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-
-                    String query = "DELETE FROM account WHERE Username = '" + nameString + "' AND Password = '" + passString + "'";
-                    conn c = new conn();
-
-                    try {
-                        int rowsAffected = c.s.executeUpdate(query);
-
-                        if (rowsAffected > 0) {
-                            JOptionPane.showMessageDialog(null,"Profile deleted successfully!");
-                        } else {
-                            JOptionPane.showMessageDialog(null, "No matching profile found. Deletion failed.");
-                        }
-                    } catch (Exception e) {
-                        JOptionPane.showMessageDialog(null, "Error occurred: " + e.getMessage());
-                        e.printStackTrace();
-                    }
-
-
-                    // The rest of your code goes here for handling the query result
                 }
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Error occurred: " + e.getMessage());
                 e.printStackTrace();
             }
+
         }
         }
 

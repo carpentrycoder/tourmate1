@@ -198,7 +198,6 @@ public class dash extends JFrame implements ActionListener {
     w4.setBounds(220, 410, 675,256);
     add(w4);
 
-
     JPanel k = new JPanel(); // clock
     k.setBounds(215, 70, 260, 123);
     k.setBackground(new Color(0xFF5C2DB0, true));

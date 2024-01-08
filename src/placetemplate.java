@@ -8,17 +8,20 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 public class placetemplate extends JFrame implements ActionListener {
-    JButton back,map,wt,itr, trip,pckgbutn,rent,hotl;
-    JPanel contentPanel;
+    static JButton back,map,wt,itr, trip,pckgbutn,rent,hotl;
+    static JPanel contentPanel;
+    static JScrollPane scrollPane;
+
     placetemplate()
     {
+
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
         setTitle("Ratnagiri");
         setLayout(null);
 //        getContentPane().setBackground(new Color(71, 72, 86, 255));
 
-        JScrollPane scrollPane = new JScrollPane();
+        scrollPane = new JScrollPane();
         scrollPane.setBounds(0, 0, 1366, 768); // Set the bounds to cover the whole frame
         getContentPane().add(scrollPane); // Add the scroll pane to the frame
 
@@ -35,7 +38,8 @@ public class placetemplate extends JFrame implements ActionListener {
         k1.setBounds(0, 0, 1600, 57);
         contentPanel.add(k1);
 
-        JLabel h = new JLabel("Ratnagiri");
+        String a = "Ratnagiri";
+        JLabel h = new JLabel(a);
         h.setBounds(25, 70, 200, 45);
         h.setFont(new Font("Poppins", Font.BOLD,40));
         h.setForeground(new Color(0xF9F8FC));
@@ -47,7 +51,8 @@ public class placetemplate extends JFrame implements ActionListener {
         n.setForeground(new Color(0xF9F8FC));
         contentPanel.add(n);
 
-        ImageIcon backb = new ImageIcon("\\tourmate1\\src\\DButns\\Back.png");
+        String backbstr = "\\tourmate1\\src\\DButns\\Back.png";
+        ImageIcon backb = new ImageIcon(backbstr);
         back = new JButton(backb); // back
         back.setBackground(new Color(0x474856));
         back.setLayout(null);
@@ -56,49 +61,56 @@ public class placetemplate extends JFrame implements ActionListener {
         back.addActionListener(this);
         contentPanel.add(back);
 
-        ImageIcon a1 = new ImageIcon(ClassLoader.getSystemResource("Dash_Icons/rtn.png"));
+        String a1str = "Dash_Icons/rtn.png";
+        ImageIcon a1 = new ImageIcon(ClassLoader.getSystemResource(a1str));
         Image a2 = a1.getImage().getScaledInstance(614, 355, Image.SCALE_DEFAULT);
         ImageIcon a3 = new ImageIcon(a2);
         JLabel a4 = new JLabel(a3);
         a4.setBounds(28, 150, 614, 355);
         contentPanel.add(a4);
 
-        ImageIcon h1 = new ImageIcon(ClassLoader.getSystemResource("icons/thiba.png"));
+        String h1str = "icons/thiba.png";
+        ImageIcon h1 = new ImageIcon(ClassLoader.getSystemResource(h1str));
         Image h2 = h1.getImage().getScaledInstance(477, 318, Image.SCALE_DEFAULT);
         ImageIcon h3 = new ImageIcon(h2);
         JLabel h4 = new JLabel(h3);
         h4.setBounds(778, 528, 487, 318);
         contentPanel.add(h4);
 
-        ImageIcon z1 = new ImageIcon(ClassLoader.getSystemResource("icons/info.png"));
+        String z1str = "icons/info.png";
+        ImageIcon z1 = new ImageIcon(ClassLoader.getSystemResource(z1str));
         Image z2 = z1.getImage().getScaledInstance(400, 452, Image.SCALE_DEFAULT);
         ImageIcon z3 = new ImageIcon(z2);
         JLabel z4 = new JLabel(z3);
         z4.setBounds(356,525, 400,452);
         contentPanel.add(z4);
 
-        ImageIcon v1 = new ImageIcon(ClassLoader.getSystemResource("icons/famous.png"));
+        String v1str = "icons/famous.png";
+        ImageIcon v1 = new ImageIcon(ClassLoader.getSystemResource(v1str));
         Image v2 = v1.getImage().getScaledInstance(326, 309, Image.SCALE_DEFAULT);
         ImageIcon v3 = new ImageIcon(v2);
         JLabel v4 = new JLabel(v3);
         v4.setBounds(18,665, 326,309);
         contentPanel.add(v4);
 
-        ImageIcon j1 = new ImageIcon(ClassLoader.getSystemResource("icons/paplate.png"));
+        String j1str = "icons/paplate.png";
+        ImageIcon j1 = new ImageIcon(ClassLoader.getSystemResource(j1str));
         Image j2 = j1.getImage().getScaledInstance(284, 333, Image.SCALE_DEFAULT);
         ImageIcon j3 = new ImageIcon(j2);
         JLabel j4 = new JLabel(j3);
         j4.setBounds(18,990, 284,333);
         contentPanel.add(j4);
 
-        ImageIcon s1 = new ImageIcon(ClassLoader.getSystemResource("icons/client reviwes.png"));
+        String s1Str = "icons/client reviwes.png";
+        ImageIcon s1 = new ImageIcon(ClassLoader.getSystemResource(s1Str));
         Image s2 = s1.getImage().getScaledInstance(489, 553, Image.SCALE_DEFAULT);
         ImageIcon s3 = new ImageIcon(s2);
         JLabel s4 = new JLabel(s3);
         s4.setBounds(778, 868, 489,553);
         contentPanel.add(s4);
 
-        ImageIcon g1 = new ImageIcon(ClassLoader.getSystemResource("icons/client 1.png"));
+        String g1str = "icons/client 1.png";
+        ImageIcon g1 = new ImageIcon(ClassLoader.getSystemResource(g1str));
         Image g2 = g1.getImage().getScaledInstance(431, 132, Image.SCALE_DEFAULT);
         ImageIcon g3 = new ImageIcon(g2);
         JLabel g4 = new JLabel(g3);
@@ -237,8 +249,7 @@ public class placetemplate extends JFrame implements ActionListener {
             setVisible(true);
             new rentalrtn();
         } else if (e.getSource()==hotl) {
-           setVisible(true);
-           new rtnHOTELS ();
+            new Hotel();
         }
     }
     public static void main(String[] args) {

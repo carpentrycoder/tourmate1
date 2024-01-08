@@ -3,6 +3,10 @@ import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -212,49 +216,57 @@ public class trip extends JFrame implements ActionListener
                 int endDay = scanner.nextInt();
                 int endMonth = scanner.nextInt();
                 int endYear = scanner.nextInt();
+                LocalDate currentDate = LocalDate.now();
+
+                // Extract day, month, and year
+                int curday = currentDate.getDayOfMonth();
+                int curmonth = currentDate.getMonthValue();
+                int curyear = currentDate.getYear();
 
                 if ((startYear == 2024) && (endYear == 2024))
                 {
                     if (startYear < endYear || (startYear == endYear && startMonth < endMonth) || (startYear == endYear && startMonth == endMonth && startDay <= endDay)) {
-                        Date startDate = new Date(startYear - 1900, startMonth - 1, startDay);
-                        Date endDate = new Date(endYear - 1900, endMonth - 1, endDay);
+                            Date startDate = new Date(startYear - 1900, startMonth - 1, startDay);
+                            Date endDate = new Date(endYear - 1900, endMonth - 1, endDay);
 
-                        long difference = endDate.getTime() - startDate.getTime();
-                        days = (int) (difference / (24 * 60 * 60 * 1000));
-                        JOptionPane.showMessageDialog(getContentPane(), "Number of days : " + days, "Result", JOptionPane.INFORMATION_MESSAGE);
-                        setVisible(false);
+                            long difference = endDate.getTime() - startDate.getTime();
+                            days = (int) (difference / (24 * 60 * 60 * 1000));
+                            JOptionPane.showMessageDialog(getContentPane(), "Number of days : " + days, "Result", JOptionPane.INFORMATION_MESSAGE);
+                            setVisible(false);
 
-                        // Call the appropriate itinerary method based on the selected city
-                        if (citystr != null) {
-                            switch (citystr) {
-                                case "Ratnagiri":
-                                    ratnagiri(startDateStr, endDateStr);
-                                    break;
-                                case "Mumbai":
-                                    mumbai(startDateStr, endDateStr);
-                                    break;
-                                case "Pune":
-                                    pune(startDateStr, endDateStr);
-                                    break;
-                                case "Sambhajinager":
-                                    sambhajinager(startDateStr, endDateStr);
-                                    break;
-                                case "Nashik":
-                                    nashik(startDateStr, endDateStr);
-                                    break;
-                                default:
-                                    // Handle unexpected city
-                                    break;
+                            // Call the appropriate itinerary method based on the selected city
+                            if (citystr != null) {
+                                switch (citystr) {
+                                    case "Ratnagiri":
+                                        ratnagiri(startDateStr, endDateStr);
+                                        break;
+                                    case "Mumbai":
+                                        mumbai(startDateStr, endDateStr);
+                                        break;
+                                    case "Pune":
+                                        pune(startDateStr, endDateStr);
+                                        break;
+                                    case "Sambhajinager":
+                                        sambhajinager(startDateStr, endDateStr);
+                                        break;
+                                    case "Nashik":
+                                        nashik(startDateStr, endDateStr);
+                                        break;
+                                    default:
+                                        // Handle unexpected city
+                                        break;
+                                }
+                            } else {
+                                JOptionPane.showMessageDialog(getContentPane(), "City isn't Selected !!!! ");
+                                new trip();
                             }
-                        } else
-                        {
-                            JOptionPane.showMessageDialog(getContentPane(), "City isn't Selected !!!! ");
-                            new trip();
+                        } else {
+                            JOptionPane.showMessageDialog(getContentPane(), "Dates are Invalid");
                         }
-                    } else {
-                        JOptionPane.showMessageDialog(getContentPane(), "Dates are Invalid");
+
                     }
-                } else {
+                else
+                {
                     if (endYear >= 2024 || startYear >= 2024) {
                         JOptionPane.showMessageDialog(getContentPane(), "Sir you can't travel for Year \uD83D\uDC68\u200D✈\uFE0F", "Invalid Date", JOptionPane.INFORMATION_MESSAGE);
                     } else if (endYear <= 2024 || startYear >= 2024) {
@@ -268,10 +280,16 @@ public class trip extends JFrame implements ActionListener
         } else if (e.getSource() == invite) {
             openInviteFrame();
         } // Check if b1 (places) button is clicked
+
         if (e.getSource() == b1) {
             // Handle action for places button (e.g., show a dialog to add a new place)
             if (citystr == rtnstr) {
-                JOptionPane.showMessageDialog(ratnagiriFrame, "Button b1 (Places) clicked!");
+                try {
+                    URI uri = new URI("file:///E:/tourmate(webview)/index.html");
+                    Desktop.getDesktop().browse(uri);
+                } catch (URISyntaxException | IOException j) {
+                    throw new RuntimeException(j);
+                }
             } else if (citystr == smbjstr ) {
                 JOptionPane.showMessageDialog(SambhajinagerFrame, "Button b1 (Places) clicked!");
             } else if (citystr == mumstr) {
@@ -285,7 +303,7 @@ public class trip extends JFrame implements ActionListener
         // Check if b2 (hotels) button is clicked
         else if (e.getSource() == b2) {
             if (citystr == rtnstr) {
-                JOptionPane.showMessageDialog(ratnagiriFrame, "Button b2 (Places) clicked!");
+                new Hotel();
             } else if (citystr == smbjstr ) {
                 JOptionPane.showMessageDialog(SambhajinagerFrame, "Button b2 (Places) clicked!");
             } else if (citystr == mumstr) {
@@ -332,9 +350,9 @@ public class trip extends JFrame implements ActionListener
 
                 // Ensure a day is available
                 if (day >= 0 && day < days) {
-                    if (customlabel[day].getComponentCount() > 0) {
+                    if (customlabel[day].getComponentCount() > 0)
+                    {
                         itineraryFrame = new JFrame();
-
                         if (citystr == rtnstr)
                         {
                             itineraryFrame = ratnagiriFrame;
@@ -380,7 +398,7 @@ public class trip extends JFrame implements ActionListener
 
     }
 
-    private void ratnagiri(String startDateStr, String endDateStr)
+    public void ratnagiri(String startDateStr, String endDateStr)
     {
         ratnagiriFrame = new JFrame();
         ratnagiriFrame.setTitle("Itinerary");
@@ -416,18 +434,21 @@ public class trip extends JFrame implements ActionListener
         b1 = new JButton(place1);
         b1.setBounds(130,250,354,187);
         b1.setBorder(BorderFactory.createEmptyBorder());
+        b1.addActionListener(this);
         label.add(b1);
 
         place2 = new ImageIcon("\\tourmate1\\src\\DButns\\IB2.png");
         b2 = new JButton(place2);
         b2.setBounds(130 + 354 + 71, 250, 354, 187);
         b2.setBorder(BorderFactory.createEmptyBorder());
+        b2.addActionListener(this);
         label.add(b2);
 
         place3 = new ImageIcon("\\tourmate1\\src\\DButns\\IB3.png");
         b3 = new JButton(place3);
         b3.setBounds(130 + (354 + 71) * 2, 250, 354, 187);
         b3.setBorder(BorderFactory.createEmptyBorder());
+        b3.addActionListener(this);
         label.add(b3);
 
         ImageIcon a1 = new ImageIcon(ClassLoader.getSystemResource("DButns/JPanal.png"));
@@ -468,7 +489,6 @@ public class trip extends JFrame implements ActionListener
         scrollPane1.setViewportView(subplaces);
 
         //displaying using for loop places icons
-
         customButtons = new JButton[12];
         for (i = 1; i <= 12; i++) {
             String imagePath = "\\tourmate1\\src\\Subplaces\\w" + i + ".png";
@@ -486,7 +506,7 @@ public class trip extends JFrame implements ActionListener
             buttonIcon = new ImageIcon(buttonImage);
 
             button1 = new JButton(buttonIcon);
-            button1.setBounds(489, 9, 34, 34);
+            button1.setBounds(489, 9, 40, 34);
             button1.setBackground(new Color(0x235568));
             button1.setBorder(BorderFactory.createEmptyBorder());
 
@@ -616,12 +636,14 @@ public class trip extends JFrame implements ActionListener
         b1 = new JButton(place1);
         b1.setBounds(130,250,354,187);
         b1.setBorder(BorderFactory.createEmptyBorder());
+        b1.addActionListener(this);
         label.add(b1);
 
         place2 = new ImageIcon("\\tourmate1\\src\\DButns\\IB2.png");
         b2 = new JButton(place2);
         b2.setBounds(130 + 354 + 71, 250, 354, 187);
         b2.setBorder(BorderFactory.createEmptyBorder());
+        b2.addActionListener(this);
         label.add(b2);
 
 // Third button with a space of 71
@@ -629,6 +651,7 @@ public class trip extends JFrame implements ActionListener
         b3 = new JButton(place3);
         b3.setBounds(130 + (354 + 71) * 2, 250, 354, 187);
         b3.setBorder(BorderFactory.createEmptyBorder());
+        b3.addActionListener(this);
         label.add(b3);
 
         ImageIcon a1 = new ImageIcon(ClassLoader.getSystemResource("DButns/JPanal.png"));
