@@ -136,12 +136,6 @@ public class Hotel extends JFrame implements ActionListener
         rtnhotels.setLayout(null);
         rtnhotels.setVisible(true);
 
-//        if ("ratagirihotels".equals(rtnhotels.getTitle())) {
-//            JOptionPane.showMessageDialog(null, "The title is ratagirihotels!");
-//        } else {
-//            JOptionPane.showMessageDialog(null, "The title is not ratagirihotels.");
-//        }
-
     }
 
     @Override
@@ -201,15 +195,7 @@ public class Hotel extends JFrame implements ActionListener
             }
         }
 
-        //       try {
-//            URI uri = new URI("");
-//            Desktop.getDesktop().browse(uri);
-//        } catch (URISyntaxException | IOException j) {
-//            throw new RuntimeException(j);
-//        }
-//
-
-        //array buttons
+ //array buttons
         JButton clickedButton = (JButton) e.getSource();
         // You can now perform actions based on the clicked button
         if (clickedButton.getText().equals("Button 1")) {
@@ -355,8 +341,6 @@ public class Hotel extends JFrame implements ActionListener
         }
 
     }
-
-
     public static void main(String[] args) {
         new Hotel();
     }
