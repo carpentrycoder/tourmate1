@@ -1,6 +1,8 @@
 # Tourmate Travel Planning Application
 
 The "Tourmate" travel planning application is a comprehensive and user-centric desktop-based solution designed to enhance the travel planning experience. With a seamless and intuitive interface, it offers dedicated sections for every aspect of travel, ensuring a hassle-free journey.
+
+## DASHBOARD 
 ![Tourmate App](src/icons/dashboard.png)
 ## Key Features
 
