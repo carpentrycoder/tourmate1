@@ -8,21 +8,20 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
-
-public class Hotel extends JFrame implements ActionListener
-{
+public class Hotel extends JFrame implements ActionListener {
     JPanel contentPanel;
-    JTextField checkin,checkout;
-    JButton back,done;
+    JTextField checkin, checkout;
+    JButton back, done;
     JButton[] buttons;
     JFrame rtnhotels;
+    String strday,endday;
+
     Hotel() {
         rtnhotels();
     }
-    private void rtnhotels()
-    {
+
+    private void rtnhotels() {
         rtnhotels = new JFrame();
         rtnhotels.setTitle("ratagirihotels");
         rtnhotels.setExtendedState(MAXIMIZED_BOTH);
@@ -41,13 +40,13 @@ public class Hotel extends JFrame implements ActionListener
         scrollPane.setViewportView(contentPanel);
 
         checkin = new JTextField();
-        checkin.setBounds(220,310,390,80);
+        checkin.setBounds(220, 310, 390, 80);
         checkin.setBorder(BorderFactory.createLineBorder(new Color(0xF1EBD0)));
         checkin.setForeground(Color.BLACK);
-        checkin.setFont(new Font("Helvetica",Font.BOLD,31));
+        checkin.setFont(new Font("Helvetica", Font.BOLD, 31));
         checkin.setBackground(new Color(0xF1EBD0));
         checkin.setHorizontalAlignment(JTextField.CENTER);
-        String strday = checkin.getText();
+        strday = checkin.getText();
         contentPanel.add(checkin);
 
         checkout = new JTextField();
@@ -57,14 +56,14 @@ public class Hotel extends JFrame implements ActionListener
         checkout.setFont(new Font("Helvetica", Font.BOLD, 31));
         checkout.setBackground(new Color(0xF1EBD0));
         checkout.setHorizontalAlignment(JTextField.CENTER);
-        String endday = checkout.getText();
+        endday = checkout.getText();
         contentPanel.add(checkout);
 
         ImageIcon ok = new ImageIcon("\\tourmate1\\src\\DButns\\done_80.png");
         done = new JButton(ok);
         done.setLayout(null);
         done.setBorder(BorderFactory.createEmptyBorder());
-        done.setBounds(640,400,80,80);
+        done.setBounds(640, 400, 80, 80);
         done.setBackground(new Color(0x3000000, true));
         done.addActionListener(this);
         contentPanel.add(done);
@@ -89,7 +88,7 @@ public class Hotel extends JFrame implements ActionListener
         int xSecondRow = xFirstRow + buttonWidth + 480; // Adjust this spacing as needed
 
         for (int i = 0; i < 10; i++) {
-            buttons[i] = new JButton("Button " + (i + 1),icon);
+            buttons[i] = new JButton("Button " + (i + 1), icon);
             buttons[i].setBounds(xFirstRow, yCoordinates[i], buttonWidth, buttonHeight);
             buttons[i].addActionListener(this);
             buttons[i].setBorder(BorderFactory.createEmptyBorder());
@@ -97,7 +96,7 @@ public class Hotel extends JFrame implements ActionListener
             contentPanel.add(buttons[i]);
         }
         for (int i = 10; i < buttons.length; i++) {
-            buttons[i] = new JButton("Button " + (i + 1),icon);
+            buttons[i] = new JButton("Button " + (i + 1), icon);
             buttons[i].setBounds(xSecondRow, yCoordinates[i - 10], buttonWidth, buttonHeight);
             buttons[i].addActionListener(this);
             buttons[i].setBorder(BorderFactory.createEmptyBorder());
@@ -137,23 +136,27 @@ public class Hotel extends JFrame implements ActionListener
         rtnhotels.setLayout(null);
         rtnhotels.setVisible(true);
 
+//        if ("ratagirihotels".equals(rtnhotels.getTitle())) {
+//            JOptionPane.showMessageDialog(null, "The title is ratagirihotels!");
+//        } else {
+//            JOptionPane.showMessageDialog(null, "The title is not ratagirihotels.");
+//        }
+
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == back)
-        {
+        if (e.getSource() == back) {
             JOptionPane.showMessageDialog(null, "BUTTON IS CLICKED !!");
             rtnhotels.setVisible(false);
-        }
-        else if (e.getSource()==done)
+        } else if (e.getSource() == done)
         {
             LocalDate currentDate = LocalDate.now();
             int day1 = currentDate.getDayOfMonth();
             int month1 = currentDate.getMonthValue();
             int year1 = currentDate.getYear();
 
-//            Get the text from the checkin and checkout fields
+//          Get the text from the checkin and checkout fields
             String strCheckin = checkin.getText();
             String[] arr_in = strCheckin.split("-");
             int d_in = Integer.parseInt(arr_in[0]);
@@ -161,8 +164,8 @@ public class Hotel extends JFrame implements ActionListener
             int y_in = Integer.parseInt(arr_in[2]);
 
             String strCheckout = checkout.getText();
-            String[] arr_out =strCheckout.split("-");
-            int d_out= Integer.parseInt(arr_out[0]);
+            String[] arr_out = strCheckout.split("-");
+            int d_out = Integer.parseInt(arr_out[0]);
             int m_out = Integer.parseInt(arr_out[1]);
             int y_out = Integer.parseInt(arr_out[2]);
 
@@ -179,24 +182,29 @@ public class Hotel extends JFrame implements ActionListener
             int checkoutYear = checkoutDate.getYear();
 
             // Use the extracted values as needed
-            System.out.println("Checkin Date: " + checkinDay + "-" + checkinMonth + "-" + checkinYear);
-            System.out.println("Checkout Date: " +checkoutDate);
+            System.out.println("check in date :"+strCheckin);
+            System.out.println("check out date :"+strCheckout);
 
-            if (d_in > day1 && m_in >= month1 && y_in >= year1 && d_out > day1 && m_out >= month1 && y_out >=year1 )
-            {
-                JOptionPane.showMessageDialog(null,"Dates are valid  \uD83D\uDCC5 ");
-
-
-            }
-            else
-            {
+            if ((isValidDate(d_in, m_in, y_in) && isValidDate(d_out, m_out, y_out))
+                    && ((y_in > year1) || (y_in == year1 && m_in > month1) || (y_in == year1 && m_in == month1 && d_in >= day1))
+                    && ((y_out > year1) || (y_out == year1 && m_out > month1) || (y_out == year1 && m_out == month1 && d_out >= day1))) {
+                JOptionPane.showMessageDialog(null, "Dates are valid  \uD83D\uDCC5");
+            } else {
                 JOptionPane.showInternalMessageDialog(null, "Dates are Invalid  \uD83D\uDCC5", "Error", JOptionPane.ERROR_MESSAGE);
                 checkin.setText("");
                 checkout.setText("");
             }
         }
 
- //array buttons
+        //       try {
+//            URI uri = new URI("");
+//            Desktop.getDesktop().browse(uri);
+//        } catch (URISyntaxException | IOException j) {
+//            throw new RuntimeException(j);
+//        }
+//
+
+        //array buttons
         JButton clickedButton = (JButton) e.getSource();
         // You can now perform actions based on the clicked button
         if (clickedButton.getText().equals("Button 1")) {
@@ -227,7 +235,7 @@ public class Hotel extends JFrame implements ActionListener
             } catch (URISyntaxException | IOException j) {
                 throw new RuntimeException(j);
             }
-        }  else if (clickedButton.getText().equals("Button 5")) {
+        } else if (clickedButton.getText().equals("Button 5")) {
             try {
                 URI uri = new URI("https://www.makemytrip.com/hotels/atharva_stay_home-details-ganpatipule.html");
                 Desktop.getDesktop().browse(uri);
@@ -342,6 +350,17 @@ public class Hotel extends JFrame implements ActionListener
         }
 
     }
+
+    public static boolean isValidDate(int day, int month, int year)
+    {
+        // Check if the month is valid (between 1 and 12)
+        if (month < 1 || month > 12) {
+            return false;
+        }
+        return true;
+    }
+
+
     public static void main(String[] args) {
         new Hotel();
     }
