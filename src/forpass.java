@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
-
+// Copyright (c) 2024 Sutar
 public class forpass extends JFrame implements ActionListener {
     TextField tfname,tfmail,tfans,tfsec;
     JButton S,retrive,b;
