@@ -303,7 +303,7 @@ public class trip extends JFrame implements ActionListener
         // Check if b2 (hotels) button is clicked
         else if (e.getSource() == b2) {
             if (citystr == rtnstr) {
-                new Hotel();
+                new Hotel_ratnagiri();
             } else if (citystr == smbjstr ) {
                 JOptionPane.showMessageDialog(SambhajinagerFrame, "Button b2 (Places) clicked!");
             } else if (citystr == mumstr) {

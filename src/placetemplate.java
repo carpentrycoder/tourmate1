@@ -249,7 +249,7 @@ public class placetemplate extends JFrame implements ActionListener {
             setVisible(true);
             new rentalrtn();
         } else if (e.getSource()==hotl) {
-            new Hotel();
+            new Hotel_ratnagiri();
         }
     }
     public static void main(String[] args) {

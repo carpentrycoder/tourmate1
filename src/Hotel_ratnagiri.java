@@ -10,7 +10,7 @@ import java.net.URISyntaxException;
 import java.time.LocalDate;
 
 //<<<<<<< HEAD
- public class Hotel extends JFrame implements ActionListener {
+ public class Hotel_ratnagiri extends JFrame implements ActionListener {
 ///>>>>>>> afb4408bd9170331efa2f2b63100eb49458abe8d
     JPanel contentPanel;
     JTextField checkin, checkout;
@@ -19,7 +19,7 @@ import java.time.LocalDate;
     JFrame rtnhotels;
     String strday,endday;
 
-    Hotel() {
+    Hotel_ratnagiri() {
         rtnhotels();
     }
 
@@ -149,7 +149,7 @@ import java.time.LocalDate;
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == back) {
-           
+
             rtnhotels.setVisible(false);
         } else if (e.getSource() == done)
         {
@@ -364,7 +364,7 @@ import java.time.LocalDate;
 
 
     public static void main(String[] args) {
-        new Hotel();
+        new Hotel_ratnagiri();
     }
 }
 
