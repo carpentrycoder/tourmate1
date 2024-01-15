@@ -61,7 +61,7 @@ import java.time.LocalDate;
         endday = checkout.getText();
         contentPanel.add(checkout);
 
-        ImageIcon ok = new ImageIcon("\\tourmate1\\src\\DButns\\done_80.png");
+        ImageIcon ok = new ImageIcon("\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\done_80.png");
         done = new JButton(ok);
         done.setLayout(null);
         done.setBorder(BorderFactory.createEmptyBorder());
@@ -78,7 +78,7 @@ import java.time.LocalDate;
         // Calculate Y-coordinates based on the provided reference
         int startY = 630; // Adjusted starting Y-coordinate
         int[] yCoordinates = new int[10];
-        String imagePath = "\\tourmate1\\src\\DButns\\deal_button.png";
+        String imagePath = "\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\deal_button.png";
         ImageIcon icon = new ImageIcon(imagePath);
 
         for (int i = 0; i < yCoordinates.length; i++) {
@@ -122,7 +122,7 @@ import java.time.LocalDate;
             }
         });
 
-        ImageIcon backb = new ImageIcon("\\tourmate1\\src\\DButns\\Back.png");
+        ImageIcon backb = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
         back = new JButton(backb); // back
         back.setBackground(new Color(0xC8C8C8));
         back.setLayout(null);
@@ -149,7 +149,7 @@ import java.time.LocalDate;
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == back) {
-            JOptionPane.showMessageDialog(null, "BUTTON IS CLICKED !!");
+           
             rtnhotels.setVisible(false);
         } else if (e.getSource() == done)
         {
