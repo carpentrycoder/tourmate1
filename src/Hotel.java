@@ -8,8 +8,6 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
 
 public class Hotel extends JFrame implements ActionListener
 {
@@ -105,7 +103,7 @@ public class Hotel extends JFrame implements ActionListener
             contentPanel.add(buttons[i]);
         }
 
-        ImageIcon imageIcon = new ImageIcon("\\tourmate1\\src\\icons\\rtnhotels.png");
+        ImageIcon imageIcon = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\rtnhotels.png");
         Image image = imageIcon.getImage().getScaledInstance(1366, 3000, Image.SCALE_DEFAULT);
         imageIcon = new ImageIcon(image);
         JLabel label = new JLabel(imageIcon);
