@@ -19,24 +19,25 @@ public class Hotel extends JFrame {
     public static JScrollPane scrollPane; // Declare scrollPane as a class member variable
     public static String strday, endday;
 
-    public Hotel() {
-        rtnhotels();
-    }
-
     public static void setupScrollPane() {
         scrollPane = new JScrollPane(); // Initialize scrollPane
         scrollPane.setBounds(0, 0, 1366, 766);
         scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         rtnhotels.add(scrollPane);
-        rtnhotels.setBackground(new Color(0x92A7BA));
+
+        // Use getContentPane() to get the contentPane of the frame
+        Container contentPane = rtnhotels.getContentPane();
+
+        // Set background color for the contentPane
+        contentPane.setBackground(new Color(0x592A7BA, true));
+
         setupScrollBar();
 
         contentPanel = new JPanel();
         contentPanel.setLayout(null);
         contentPanel.setPreferredSize(new Dimension(1366, 2790));
-        contentPanel.setBackground(new Color(146, 167, 186, 255));
+        contentPanel.setBackground(new Color(146, 167, 186, 0));
         scrollPane.setViewportView(contentPanel);
-
     }
 
     public static void addImageLabel(JPanel contentPanel, String imagePath) {
@@ -57,49 +58,43 @@ public class Hotel extends JFrame {
         contentPanel.add(textField);
         return textField;
     }
-    public static JFrame rtnhotelframe(){
+    public static JFrame rtnhotelframe() {
         rtnhotels = new JFrame();
         rtnhotels.setTitle("hotels");
         rtnhotels.setExtendedState(MAXIMIZED_BOTH);
         rtnhotels.setSize(1366, 766);
-        setupScrollPane();
         rtnhotels.setUndecorated(true);
         rtnhotels.setLocationRelativeTo(null);
         rtnhotels.setLayout(null);
+        setupScrollPane(); // Call setupScrollPane before adding components
         rtnhotels.setVisible(true);
-        return null;
+        return rtnhotels;
     }
-    public static void rtnhotels() {
-        rtnhotels = new JFrame();
-        rtnhotels.setTitle("hotels");
-        rtnhotels.setExtendedState(MAXIMIZED_BOTH);
-        rtnhotels.setSize(1366, 766);
 
-        //... (Your existing code for setting up JFrame)
+    //    Default set-bounds
+//        checkin = configureTextField(new JTextField());
+//        checkin.setBounds(220, 310, 390, 80);
+//
+//        checkout = configureTextField(new JTextField());
+//        checkout.setBounds(350 + 400, 310, 390, 80);
 
-        setupScrollPane();
-        // ... (Other setup methods)
-        checkin = configureTextField(new JTextField());
-        checkin.setBounds(220, 310, 390, 80);
+       static ActionListener buttonClickListener_back_done = createBackDoneActionListener();
+    public static JButton createAndConfigureDoneButton() {
 
-        checkout = configureTextField(new JTextField());
-        checkout.setBounds(350 + 400, 310, 390, 80);
-
-        ActionListener buttonClickListener_back_done = createBackDoneActionListener();
         ImageIcon ok = new ImageIcon("\\tourmate1\\src\\DButns\\done_80.png");
-        done = new JButton(ok);
+        JButton done = new JButton(ok);
         done.setLayout(null);
         done.setBorder(BorderFactory.createEmptyBorder());
         done.setBounds(640, 400, 80, 80);
         done.setBackground(new Color(0x3000000, true));
         done.addActionListener(buttonClickListener_back_done);
-        contentPanel.add(done);
+        return done;
+    }
 
-        ActionListener buttonClickListener = Hotel.createButtonClickListener(checkin, checkout);
-        createAndAddButtons(buttonClickListener);
+    public static JButton createAndConfigureBackButton() {
 
         ImageIcon backb = new ImageIcon("E:\\tourmate1\\src\\DButns\\Back.png");
-        back = new JButton(backb); // back
+        JButton back = new JButton(backb);
         back.setBackground(new Color(0xC8C8C8));
         back.setLayout(null);
         back.setBorder(BorderFactory.createEmptyBorder());
@@ -107,12 +102,8 @@ public class Hotel extends JFrame {
         back.setFont(new Font("open sauce", Font.BOLD, 20));
         back.setForeground(Color.BLACK);
         back.addActionListener(buttonClickListener_back_done);
-        label.add(back);
-
-        rtnhotels.setUndecorated(true);
-        rtnhotels.setLocationRelativeTo(null);
-        rtnhotels.setLayout(null);
-        rtnhotels.setVisible(true);
+        rtnhotels.add(back);
+        return null;
     }
 
     public static void createAndAddButtons(ActionListener buttonClickListener) {
