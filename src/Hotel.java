@@ -19,7 +19,8 @@ public class Hotel extends JFrame {
     public static JScrollPane scrollPane; // Declare scrollPane as a class member variable
     public static String strday, endday;
 
-    public static void setupScrollPane() {
+    public static void setupScrollPane() 
+    {
         scrollPane = new JScrollPane(); // Initialize scrollPane
         scrollPane.setBounds(0, 0, 1366, 766);
         scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -62,7 +63,7 @@ public class Hotel extends JFrame {
         rtnhotels = new JFrame();
         rtnhotels.setTitle("hotels");
         rtnhotels.setExtendedState(MAXIMIZED_BOTH);
-        rtnhotels.setSize(1366, 766);
+        rtnhotels.setSize(1366, 0);
         rtnhotels.setUndecorated(true);
         rtnhotels.setLocationRelativeTo(null);
         rtnhotels.setLayout(null);
@@ -78,54 +79,70 @@ public class Hotel extends JFrame {
 //        checkout = configureTextField(new JTextField());
 //        checkout.setBounds(350 + 400, 310, 390, 80);
 
-       static ActionListener buttonClickListener_back_done = createBackDoneActionListener();
-    public static JButton createAndConfigureDoneButton() {
+     //  static ActionListener buttonClickListener_back_done = createBackDoneActionListener();
 
+       public static JButton createAndConfigureDoneButton(JTextField checkin, JTextField checkout) {
         ImageIcon ok = new ImageIcon("\\tourmate1\\src\\DButns\\done_80.png");
         JButton done = new JButton(ok);
         done.setLayout(null);
         done.setBorder(BorderFactory.createEmptyBorder());
         done.setBounds(640, 400, 80, 80);
         done.setBackground(new Color(0x3000000, true));
-        done.addActionListener(buttonClickListener_back_done);
+        done.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Assuming validateAndDisplayDates does not need checkin and checkout
+                validateAndDisplayDates(checkin, checkout);
+            }
+        });
         return done;
     }
 
-    public static JButton createAndConfigureBackButton() {
-
-        ImageIcon backb = new ImageIcon("E:\\tourmate1\\src\\DButns\\Back.png");
+    public static JButton createAndConfigureBackButton(JFrame frame) {
+        ImageIcon backb = new ImageIcon("\\tourmate1\\src\\DButns\\Back.png");
         JButton back = new JButton(backb);
-        back.setBackground(new Color(0xC8C8C8));
         back.setLayout(null);
         back.setBorder(BorderFactory.createEmptyBorder());
-        back.setBounds(1240, 2630, 60, 60);
-        back.setFont(new Font("open sauce", Font.BOLD, 20));
-        back.setForeground(Color.BLACK);
-        back.addActionListener(buttonClickListener_back_done);
-        rtnhotels.add(back);
-        return null;
+    
+        // Use the correct alpha channel value for transparency
+        back.setBackground(new Color(0x0C8C8C8, true));
+    
+        back.setBounds(1240, 630, 60, 60);
+        back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+            }
+        });
+        return back;
     }
-
     public static void createAndAddButtons(ActionListener buttonClickListener) {
         int buttonWidth = 166;
         int buttonHeight = 40;
         int verticalSpacing = 170;
+        
+        // The adjustment factor based on the scroll position
+        int scrollAdjustment = scrollPane.getVerticalScrollBar().getValue();
+    
         // Declare an array to store the buttons
         buttons = new JButton[20];
+    
         // Calculate Y-coordinates based on the provided reference
-        int startY = 630; // Adjusted starting Y-coordinate
+        int startY = 630 + scrollAdjustment; // Adjusted starting Y-coordinate
+    
         int[] yCoordinates = new int[10];
         String imagePath = "\\tourmate1\\src\\DButns\\deal_button.png";
         ImageIcon icon = new ImageIcon(imagePath);
-
+    
         for (int i = 0; i < yCoordinates.length; i++) {
             yCoordinates[i] = startY + i * (buttonHeight + verticalSpacing);
         }
+    
         // Calculate X-coordinates for the first row
         int xFirstRow = 490;
         // Calculate X-coordinates for the second row
         int xSecondRow = xFirstRow + buttonWidth + 480; // Adjust this spacing as needed
-
+    
         for (int i = 0; i < 10; i++) {
             buttons[i] = new JButton("Button " + (i + 1), icon);
             buttons[i].setBounds(xFirstRow, yCoordinates[i], buttonWidth, buttonHeight);
@@ -133,7 +150,9 @@ public class Hotel extends JFrame {
             buttons[i].setBorder(BorderFactory.createEmptyBorder());
             buttons[i].setBackground(new Color(0xF9F8FC));
             contentPanel.add(buttons[i]);
+            buttons[i].setVisible(true);
         }
+    
         for (int i = 10; i < buttons.length; i++) {
             buttons[i] = new JButton("Button " + (i + 1), icon);
             buttons[i].setBounds(xSecondRow, yCoordinates[i - 10], buttonWidth, buttonHeight);
@@ -141,6 +160,7 @@ public class Hotel extends JFrame {
             buttons[i].setBorder(BorderFactory.createEmptyBorder());
             buttons[i].setBackground(new Color(0xF9F8FC));
             contentPanel.add(buttons[i]);
+            buttons[i].setVisible(true);
         }
     }
 
@@ -156,19 +176,6 @@ public class Hotel extends JFrame {
         };
     }
 
-    public static ActionListener createBackDoneActionListener() {
-        return new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (e.getSource() == back) {
-                    rtnhotels.setVisible(false);
-                } else if (e.getSource() == done) {
-                    // Assuming validateAndDisplayDates does not need checkin and checkout
-                    validateAndDisplayDates( checkin,checkout);
-                }
-            }
-        };
-    }
     public static void setupScrollBar() {
         JScrollBar verticalScrollBar1 = scrollPane.getVerticalScrollBar();
         verticalScrollBar1.setUI(new BasicScrollBarUI() {
@@ -212,7 +219,8 @@ public class Hotel extends JFrame {
 
     public static void openURLBasedOnButton(String buttonText)
     {
-        switch (buttonText) {
+        switch (buttonText) 
+        {
             case "Button 1":
                 openURIInBrowser("https://www.booking.com/hotel/in/blue-ocean-resort-amp-spa.en-gb.html?aid=7344211&label=metatripad-link-dmetain-hotel-1485713_xqdz-d4784da8944bb36df48b7b02b989b21b_los-07_bw-002_tod-20_dom-in_curr-INR_gst-02_nrm-01_clkid-4040a97c-6a25-4748-9218-f26a1f90713d_aud-0000_mbl-L_pd-_sc-2_defdate-0_spo-1_clksrc-0_mcid-10&sid=b8b1f48e2e72280c2afb21c08005d08b&all_sr_blocks=148571307_376994761_2_2_0;checkin=2024-01-07;checkout=2024-01-11;dest_id=900053379;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=148571307_376994761_2_2_0;hpos=1;matching_block_id=148571307_376994761_2_2_0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=148571307_376994761_2_2_0__3100000;srepoch=1704469015;srpvid=01706dc7454c0161;type=total;ucfs=1&#hotelTmpl");
                 break;
