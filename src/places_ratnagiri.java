@@ -27,7 +27,7 @@ import java.io.IOException;
 
 public class places_ratnagiri extends JFrame implements ActionListener {
     JScrollPane scrollPane;
-    JButton ganpatipule_temple, ganpatipule_beach,Jai_Vinayak_Temple,Ratnadurg_Fort;
+    JButton ganpatipule_temple, ganpatipule_beach,Jai_Vinayak_Temple,Ratnadurg_Fort,Jaigad_Lighthouse,Bhatye_Beach,Aare_ware_Beach,Ganesh_Ghule_Beach,Pawas,Kanakaditya_temple,thirdButton,secondButton;
     JFrame rtn;
 
     public static void main(String[] args) {
@@ -70,22 +70,62 @@ public class places_ratnagiri extends JFrame implements ActionListener {
         ganpatipule_temple = createButton("src/Dash_Icons/Ganpatipule_Temple.png",this);
         ganpatipule_temple.setBounds(x1,y1, 400, 300);
         contentPanel.add(ganpatipule_temple);
-        loadAndSetCustomFont(contentPanel, "E:\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ganpatipule Temple", Font.BOLD, 30, new Color(69, 37, 52), 80, 560, 378,44);
+        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ganpatipule Temple", Font.BOLD, 30, new Color(69, 37, 52), 80, 560, 378,44);
 
         ganpatipule_beach = createButton("src/Dash_Icons/Ganpule_beach.png",this);
         ganpatipule_beach.setBounds(x2,y2, 400, 300);
         contentPanel.add(ganpatipule_beach);
-        loadAndSetCustomFont(contentPanel, "E:\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ganpatipule Beach ", Font.BOLD, 30, new Color(69, 37, 52), 120+378+44, 560, 378,44);
+        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ganpatipule Beach ", Font.BOLD, 30, new Color(69, 37, 52), 120+378+44, 560, 378,44);
 
         Jai_Vinayak_Temple = createButton("src/Dash_Icons/Jai_Vinayak_Temple.png",this);
         Jai_Vinayak_Temple.setBounds(x2 + 400 + 42,y2, 400, 300);
         contentPanel.add(Jai_Vinayak_Temple);
-        loadAndSetCustomFont(contentPanel, "E:\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Jai Vinayak Temple", Font.BOLD, 30, new Color(69, 37, 52), 260+678+44, 560, 378,44);
+        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Jai Vinayak Temple", Font.BOLD, 30, new Color(69, 37, 52), 260+678+44, 560, 378,44);
 
         Ratnadurg_Fort = createButton("src/Dash_Icons/Ratnadurg Fort.png",this);
         Ratnadurg_Fort.setBounds(x1,y1 + 300 + 73, 400, 300);
         contentPanel.add(Ratnadurg_Fort);
-        loadAndSetCustomFont(contentPanel, "E:\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ratnadurg Fort", Font.BOLD, 30, new Color(69, 37, 52), 10, 90+800+44, 378,44);
+        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ratnadurg Fort", Font.BOLD, 30, new Color(69, 37, 52), 120, 90+800+44, 378,44);
+
+        Jaigad_Lighthouse = createButton("src/Dash_Icons/Jaigad_Lighthouse.png",this);
+        Jaigad_Lighthouse.setBounds(x1 + 400 + 42,y1 + 300 + 73, 400, 300);
+        contentPanel.add(Jaigad_Lighthouse);
+        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Jaigad Lighthouse", Font.BOLD, 30, new Color(69, 37, 52), 120+378+44, 90+800+44, 378,44);
+
+        Bhatye_Beach = createButton("src/Dash_Icons/Bhatye_Beach.png",this);
+        Bhatye_Beach.setBounds(x2 + 400 + 42,y1 + 300 + 73, 400, 300);
+        contentPanel.add(Bhatye_Beach);
+        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Bhatye Beach", Font.BOLD, 30, new Color(69, 37, 52), 260+678+80, 90+800+44, 378,44);
+
+        Aare_ware_Beach = createButton("src/Dash_Icons/Aare_ware_Beach.png",this);
+        Aare_ware_Beach.setBounds(x1,y1 + 600 + 150, 400, 300);
+        contentPanel.add(Aare_ware_Beach);
+        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Aare ware Beach", Font.BOLD, 30, new Color(69, 37, 52), 90, 70+1200+44, 378,44);
+
+        Ganesh_Ghule_Beach = createButton("src/Dash_Icons/Ganesh_Ghule_Beach.png",this);
+        Ganesh_Ghule_Beach.setBounds(x1 + 400 + 42,y1 + 600 + 150, 400, 300);
+        contentPanel.add(Ganesh_Ghule_Beach);
+        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ganesh Ghule Beach", Font.BOLD, 30, new Color(69, 37, 52), 120+378+38, 70+1200+44, 378,44);
+
+        Pawas = createButton("src/Dash_Icons/Ganesh_Ghule_Beach.png",this);
+        Pawas.setBounds(x2 + 400 + 42,y1 + 600 + 150, 400, 300);
+        contentPanel.add(Pawas);
+        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Pawas", Font.BOLD, 30, new Color(69, 37, 52), 260+678+120, 70+1200+44, 378,44);
+
+        Kanakaditya_temple = createButton("src/Dash_Icons/Kanakaditya_temple.png",this);
+        Kanakaditya_temple.setBounds(x1,y1 + 900 + 150 +73, 400, 300);
+        contentPanel.add(Kanakaditya_temple);
+        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Kanakaditya Temple", Font.BOLD, 30, new Color(69, 37, 52),80, 70+1600+14, 378,44);
+
+        secondButton = createButton("src/Dash_Icons/Tilak ali_Museum.png", this);
+        secondButton.setBounds(x1 + 400 + 40, y1 + 900 + 150 + 73, 400, 300);
+        contentPanel.add(secondButton);
+        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Tilak Ali Museum", Font.BOLD, 30, new Color(69, 37, 52), 80 + 400 + 60, 70 + 1600 + 14, 378, 44);
+
+        thirdButton = createButton("src/Dash_Icons/Thiba_Palace.png", this);
+        thirdButton.setBounds(x1 + (400 + 40) * 2, y1 + 900 + 150 + 73, 400, 300);
+        contentPanel.add(thirdButton);
+        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Thiba Palace", Font.BOLD, 30, new Color(69, 37, 52), 80 + (400 + 60) * 2, 70 + 1600 + 14, 378, 44);
 
 
         rtn.setUndecorated(true);
@@ -130,8 +170,29 @@ public class places_ratnagiri extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == ganpatipule_temple) {
-            rtn.setVisible(false);
-            System.exit(0);
+            Hotel.openURIInBrowser("https://www.tripadvisor.in/Attraction_Review-g1156427-d3410764-Reviews-Ganpatipule_Temple-Ganpatipule_Ratnagiri_District_Maharashtra.html");
+        } else if (e.getSource() == ganpatipule_beach) {
+            Hotel.openURIInBrowser("");
+        } else if (e.getSource() == Jai_Vinayak_Temple) {
+            Hotel.openURIInBrowser("");
+        } else if (e.getSource() == Ratnadurg_Fort) {
+            Hotel.openURIInBrowser("");
+        } else if (e.getSource() == Jaigad_Lighthouse) {
+            Hotel.openURIInBrowser("");
+        } else if (e.getSource() == Bhatye_Beach) {
+            Hotel.openURIInBrowser("");
+        } else if (e.getSource() == Aare_ware_Beach) {
+            Hotel.openURIInBrowser("");
+        } else if (e.getSource() == Ganesh_Ghule_Beach) {
+            Hotel.openURIInBrowser("");
+        } else if (e.getSource() == Pawas) {
+            Hotel.openURIInBrowser("");
+        } else if (e.getSource() == Kanakaditya_temple) {
+            Hotel.openURIInBrowser("");
+        } else if (e.getSource() == secondButton) {
+            Hotel.openURIInBrowser("");
+        } else if (e.getSource() == thirdButton) {
+            Hotel.openURIInBrowser("");
         }
     }
 }
