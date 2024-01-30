@@ -1,4 +1,3 @@
-// Copyright (c) 2024 Sutar
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
@@ -10,8 +9,8 @@ import java.net.URISyntaxException;
 import java.time.LocalDate;
 
 //<<<<<<< HEAD
- public class Hotel_ratnagiri extends JFrame implements ActionListener {
-///>>>>>>> afb4408bd9170331efa2f2b63100eb49458abe8d
+public class Hotel_ratnagiri extends JFrame implements ActionListener {
+    ///>>>>>>> afb4408bd9170331efa2f2b63100eb49458abe8d
     JPanel contentPanel;
     JTextField checkin, checkout;
     JButton back, done;
@@ -61,7 +60,7 @@ import java.time.LocalDate;
         endday = checkout.getText();
         contentPanel.add(checkout);
 
-        ImageIcon ok = new ImageIcon("\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\done_80.png");
+        ImageIcon ok = new ImageIcon("\\tourmate1\\src\\DButns\\done_80.png");
         done = new JButton(ok);
         done.setLayout(null);
         done.setBorder(BorderFactory.createEmptyBorder());
@@ -78,7 +77,7 @@ import java.time.LocalDate;
         // Calculate Y-coordinates based on the provided reference
         int startY = 630; // Adjusted starting Y-coordinate
         int[] yCoordinates = new int[10];
-        String imagePath = "\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\deal_button.png";
+        String imagePath = "\\tourmate1\\src\\DButns\\deal_button.png";
         ImageIcon icon = new ImageIcon(imagePath);
 
         for (int i = 0; i < yCoordinates.length; i++) {
@@ -106,7 +105,7 @@ import java.time.LocalDate;
             contentPanel.add(buttons[i]);
         }
 
-        ImageIcon imageIcon = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\rtnhotels.png");
+        ImageIcon imageIcon = new ImageIcon("E:\\tourmate1\\src\\icons\\rtnhotels.png");
         Image image = imageIcon.getImage().getScaledInstance(1366, 3000, Image.SCALE_DEFAULT);
         imageIcon = new ImageIcon(image);
         JLabel label = new JLabel(imageIcon);
@@ -122,7 +121,7 @@ import java.time.LocalDate;
             }
         });
 
-        ImageIcon backb = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
+        ImageIcon backb = new ImageIcon("E:\\tourmate1\\src\\DButns\\Back.png");
         back = new JButton(backb); // back
         back.setBackground(new Color(0xC8C8C8));
         back.setLayout(null);
@@ -138,11 +137,6 @@ import java.time.LocalDate;
         rtnhotels.setLayout(null);
         rtnhotels.setVisible(true);
 
-//        if ("ratagirihotels".equals(rtnhotels.getTitle())) {
-//            JOptionPane.showMessageDialog(null, "The title is ratagirihotels!");
-//        } else {
-//            JOptionPane.showMessageDialog(null, "The title is not ratagirihotels.");
-//        }
 
     }
 
@@ -210,33 +204,16 @@ import java.time.LocalDate;
         JButton clickedButton = (JButton) e.getSource();
         // You can now perform actions based on the clicked button
         if (clickedButton.getText().equals("Button 1")) {
-            try {
-                URI uri = new URI("https://www.booking.com/hotel/in/blue-ocean-resort-amp-spa.en-gb.html?aid=7344211&label=metatripad-link-dmetain-hotel-1485713_xqdz-d4784da8944bb36df48b7b02b989b21b_los-07_bw-002_tod-20_dom-in_curr-INR_gst-02_nrm-01_clkid-4040a97c-6a25-4748-9218-f26a1f90713d_aud-0000_mbl-L_pd-_sc-2_defdate-0_spo-1_clksrc-0_mcid-10&sid=b8b1f48e2e72280c2afb21c08005d08b&all_sr_blocks=148571307_376994761_2_2_0;checkin=2024-01-07;checkout=2024-01-11;dest_id=900053379;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=148571307_376994761_2_2_0;hpos=1;matching_block_id=148571307_376994761_2_2_0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=148571307_376994761_2_2_0__3100000;srepoch=1704469015;srpvid=01706dc7454c0161;type=total;ucfs=1&#hotelTmpl");
-                Desktop.getDesktop().browse(uri);
-            } catch (URISyntaxException | IOException j) {
-                throw new RuntimeException(j);
-            }
+            openURIInBrowser("https://www.booking.com/hotel/in/blue-ocean-resort-amp-spa.en-gb.html?aid=7344211&label=metatripad-link-dmetain-hotel-1485713_xqdz-d4784da8944bb36df48b7b02b989b21b_los-07_bw-002_tod-20_dom-in_curr-INR_gst-02_nrm-01_clkid-4040a97c-6a25-4748-9218-f26a1f90713d_aud-0000_mbl-L_pd-_sc-2_defdate-0_spo-1_clksrc-0_mcid-10&sid=b8b1f48e2e72280c2afb21c08005d08b&all_sr_blocks=148571307_376994761_2_2_0;checkin=2024-01-07;checkout=2024-01-11;dest_id=900053379;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;highlighted_blocks=148571307_376994761_2_2_0;hpos=1;matching_block_id=148571307_376994761_2_2_0;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;sr_pri_blocks=148571307_376994761_2_2_0__3100000;srepoch=1704469015;srpvid=01706dc7454c0161;type=total;ucfs=1&#hotelTmpl");
         } else if (clickedButton.getText().equals("Button 2")) {
-            try {
-                URI uri = new URI("https://www.makemytrip.com/hotels/hotel-details/?hotelId=201502101214012130&_uCurrency=INR&checkin=01052024&checkout=01112024&city=CTXGP&country=IN&homeStay=true&lat=17.16512&lng=73.27727&locusId=CTXGP&locusType=city&rank=1&reference=hotel&rf=directSearch&roomStayQualifier=2e0e&rsc=1e2e0e&searchText=Viki%20Holiday%20Home&topHtlId=201502101214012130&type=hotel&mtkeys=defaultMtkey");
-                Desktop.getDesktop().browse(uri);
-            } catch (URISyntaxException | IOException j) {
-                throw new RuntimeException(j);
-            }
+           openURIInBrowser("https://www.makemytrip.com/hotels/hotel-details/?hotelId=201502101214012130&_uCurrency=INR&checkin=01052024&checkout=01112024&city=CTXGP&country=IN&homeStay=true&lat=17.16512&lng=73.27727&locusId=CTXGP&locusType=city&rank=1&reference=hotel&rf=directSearch&roomStayQualifier=2e0e&rsc=1e2e0e&searchText=Viki%20Holiday%20Home&topHtlId=201502101214012130&type=hotel&mtkeys=defaultMtkey");
+
         } else if (clickedButton.getText().equals("Button 3")) {
-            try {
-                URI uri = new URI("https://www.makemytrip.com/hotels/hotel_waves_boutique-details-ganpatipule.html");
-                Desktop.getDesktop().browse(uri);
-            } catch (URISyntaxException | IOException j) {
-                throw new RuntimeException(j);
-            }
+           openURIInBrowser("https://www.makemytrip.com/hotels/hotel_waves_boutique-details-ganpatipule.html");
+
         } else if (clickedButton.getText().equals("Button 4")) {
-            try {
-                URI uri = new URI("https://www.makemytrip.com/hotels/hotel-details/?hotelId=202103161616038868&_uCurrency=INR&adg=136835929822&aid=613596584830&campaign_type=search&cid=CjwKCAiA7t6sBhAiEiwAsaieYmooE6fBggYCj9rnR1mOM7nAhN2uDEc9j5yBjNUkXSU-x9x-Kz__xBoCRKEQAvD_BwE&city=CTXGP&cmp=SEM%7CD%7CDH%7CG%7CHname%7CDomestic_HName_RLSA_Exact_9%7C202103161616038868%7CRSA&country=IN&device=c&gad_source=1&gclid=CjwKCAiA7t6sBhAiEiwAsaieYmooE6fBggYCj9rnR1mOM7nAhN2uDEc9j5yBjNUkXSU-x9x-Kz__xBoCRKEQAvD_BwE&kw=hotel%20madhuban%20ganpatipule&lat=17.14557&lng=73.26895&locusId=CTXGP&locusType=city&mf_campaign=%7BHARDCODE_CAMPAIGN_NAME%7D&mf_campaignid=17893254713&mf_medium=cpc&mf_source=google&pl=&rank=1&reference=hotel&roomStayQualifier=2e0e&searchText=Ganpatipule&topHtlId=202103161616038868&type=city&mtkeys=defaultMtkey");
-                Desktop.getDesktop().browse(uri);
-            } catch (URISyntaxException | IOException j) {
-                throw new RuntimeException(j);
-            }
+            openURIInBrowser("https://www.makemytrip.com/hotels/hotel-details/?hotelId=202103161616038868&_uCurrency=INR&adg=136835929822&aid=613596584830&campaign_type=search&cid=CjwKCAiA7t6sBhAiEiwAsaieYmooE6fBggYCj9rnR1mOM7nAhN2uDEc9j5yBjNUkXSU-x9x-Kz__xBoCRKEQAvD_BwE&city=CTXGP&cmp=SEM%7CD%7CDH%7CG%7CHname%7CDomestic_HName_RLSA_Exact_9%7C202103161616038868%7CRSA&country=IN&device=c&gad_source=1&gclid=CjwKCAiA7t6sBhAiEiwAsaieYmooE6fBggYCj9rnR1mOM7nAhN2uDEc9j5yBjNUkXSU-x9x-Kz__xBoCRKEQAvD_BwE&kw=hotel%20madhuban%20ganpatipule&lat=17.14557&lng=73.26895&locusId=CTXGP&locusType=city&mf_campaign=%7BHARDCODE_CAMPAIGN_NAME%7D&mf_campaignid=17893254713&mf_medium=cpc&mf_source=google&pl=&rank=1&reference=hotel&roomStayQualifier=2e0e&searchText=Ganpatipule&topHtlId=202103161616038868&type=city&mtkeys=defaultMtkey");
+
         } else if (clickedButton.getText().equals("Button 5")) {
             try {
                 URI uri = new URI("https://www.makemytrip.com/hotels/atharva_stay_home-details-ganpatipule.html");
@@ -351,6 +328,15 @@ import java.time.LocalDate;
             }
         }
 
+    }
+
+    public static void openURIInBrowser(String uriString) {
+        try {
+            URI uri = new URI(uriString);
+            Desktop.getDesktop().browse(uri);
+        } catch (URISyntaxException | IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static boolean isValidDate(int day, int month, int year)
