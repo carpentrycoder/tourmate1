@@ -27,7 +27,7 @@ import java.io.IOException;
 
 public class places_ratnagiri extends JFrame implements ActionListener {
     JScrollPane scrollPane;
-    JButton ganpatipule_temple, ganpatipule_beach,Jai_Vinayak_Temple,Ratnadurg_Fort,Jaigad_Lighthouse,Bhatye_Beach,Aare_ware_Beach,Ganesh_Ghule_Beach,Pawas,Kanakaditya_temple,thirdButton,secondButton;
+    JButton ganpatipule_temple, ganpatipule_beach,Jai_Vinayak_Temple,Ratnadurg_Fort,Jaigad_Lighthouse,Bhatye_Beach,Aare_ware_Beach,Ganesh_Ghule_Beach,Pawas,Kanakaditya_temple,thirdButton,secondButton, back;
     JFrame rtn;
 
     public static void main(String[] args) {
@@ -48,7 +48,7 @@ public class places_ratnagiri extends JFrame implements ActionListener {
         setupScrollBar();
         JPanel contentPanel = new JPanel();
         contentPanel.setLayout(null);
-        contentPanel.setPreferredSize(new Dimension(1366, 3200));
+        contentPanel.setPreferredSize(new Dimension(1366, 2000));
         contentPanel.setBackground(new Color(251, 155, 112, 255));
         scrollPane.setViewportView(contentPanel);
 
@@ -127,6 +127,16 @@ public class places_ratnagiri extends JFrame implements ActionListener {
         contentPanel.add(thirdButton);
         loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Thiba Palace", Font.BOLD, 30, new Color(69, 37, 52), 80 + (400 + 60) * 2, 70 + 1600 + 14, 378, 44);
 
+        int backButtonX = thirdButton.getX() + thirdButton.getWidth() - 80 ;
+        int backButtonY = thirdButton.getY() + thirdButton.getHeight() + 100; // Assuming a vertical space of 20 pixels between the buttons
+
+        ImageIcon backIcon = new ImageIcon("\\tourmate1\\src\\DButns\\Back.png");
+        back = new JButton(backIcon);
+        back.setBackground(new Color(0xFB9B70));
+        back.setBounds(backButtonX, backButtonY, 60, 60);
+        back.setBorder(BorderFactory.createEmptyBorder());
+        back.addActionListener(this);
+        contentPanel.add(back);
 
         rtn.setUndecorated(true);
         rtn.setVisible(true);
@@ -193,6 +203,9 @@ public class places_ratnagiri extends JFrame implements ActionListener {
             Hotel.openURIInBrowser("");
         } else if (e.getSource() == thirdButton) {
             Hotel.openURIInBrowser("");
+        } else if (e.getSource()==back) {
+            rtn.setVisible(false);
+            System.exit(0);
         }
     }
 }
