@@ -1,3 +1,4 @@
+import org.jxmapviewer.JXMapViewer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -216,10 +217,14 @@ public class placetemplate extends JFrame implements ActionListener {
             new places();
         } else if (e.getSource()==map) {
             try {
-                URI uri = new URI("https://www.google.com/maps/place/Ratnagiri,+Maharashtra/@16.9883994,73.2900679,13.1z/data=!4m6!3m5!1s0x3bea0d1839a6bb7f:0x63ab969b79bf6561!8m2!3d16.990215!4d73.3120233!16zL20vMDM0bjBx?entry=ttu");
-                Desktop.getDesktop().browse(uri);
-            } catch (URISyntaxException | IOException j) {
-                throw new RuntimeException(j);
+                MapInitializer.initializeMap(16.9883994, 73.2900679);
+            } catch (Exception s) {
+                try {
+                    URI uri = new URI("https://www.google.com/maps/place/Ratnagiri,+Maharashtra/@16.9883994,73.2900679,13.1z/data=!4m6!3m5!1s0x3bea0d1839a6bb7f:0x63ab969b79bf6561!8m2!3d16.990215!4d73.3120233!16zL20vMDM0bjBx?entry=ttu");
+                    Desktop.getDesktop().browse(uri);
+                } catch (URISyntaxException | IOException j) {
+                    throw new RuntimeException(j);
+                }
             }
         } else if (e.getSource()==wt) {
             try {
@@ -249,7 +254,7 @@ public class placetemplate extends JFrame implements ActionListener {
             setVisible(true);
             new rentalrtn();
         } else if (e.getSource()==hotl) {
-            new Hotel_ratnagiri();
+            new Hotel();
         }
     }
     public static void main(String[] args) {
