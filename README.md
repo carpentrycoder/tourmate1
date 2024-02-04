@@ -57,7 +57,7 @@ The "Tourmate" travel planning application is a comprehensive and user-centric d
 
 ## Author
 
-SUTAR(https://github.com/carpentrycoder
+SUTAR -(https://github.com/carpentrycoder)
 
 ## License
 
