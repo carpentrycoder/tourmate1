@@ -14,7 +14,7 @@ public class SwingHTMLViewer {
     static String htmlContent1,htmlContent2, htmlContent3 , htmlContent4,htmlContent5;
 
 
-    public static void main(String[] args) {
+    public static void showHTMLViewer() {
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Swing with JavaFX WebView");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
