@@ -223,7 +223,7 @@ public class dash extends JFrame implements ActionListener {
       else if (j.getSource()==j2) {
         new booking();
       } else if (j.getSource()==j4) {
-        new SwingHTMLViewer();
+        SwingHTMLViewer.showHTMLViewer();
 
       } else if (j.getSource()==j8) {
         setVisible(true);
