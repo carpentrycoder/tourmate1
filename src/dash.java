@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+//Copyright (c) 2024 Sutar
 
 public class dash extends JFrame implements ActionListener {
   JButton j1, j2, j3, j4, j5, j6, j7,j8,S;
@@ -48,11 +49,6 @@ public class dash extends JFrame implements ActionListener {
     a4.setBounds(6, 4, 50, 50);
     k1.add(a4);
 
-//    JLabel h = new JLabel("Dashboard");
-//    h.setBounds(58, 3, 200, 40);
-//    h.setFont(new Font("Atkinson Hyperlegible", Font.BOLD, 25));
-//    h.setForeground(new Color(0x000000));
-//    k1.add(h);
 
     ImageIcon s1 = new ImageIcon("\\tourmate1\\src\\icons\\profile1.png");
     S = new JButton(s1);

@@ -162,7 +162,7 @@ public class places_ratnagiri extends JFrame implements ActionListener {
         });
     }
 
-    public void loadAndSetCustomFont(Container container, String fontFilePath, String labelText, int fontStyle, float fontSize, Color foregroundColor, int x, int y, int width, int height) {
+    public static void loadAndSetCustomFont(Container container, String fontFilePath, String labelText, int fontStyle, float fontSize, Color foregroundColor, int x, int y, int width, int height) {
         try {
             // Load the font file
             Font customFont = Font.createFont(Font.TRUETYPE_FONT, new File(fontFilePath));
