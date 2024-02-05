@@ -12,35 +12,96 @@ import java.awt.event.ActionListener;
 
 public class restaurent_func extends JFrame {
     public JFrame frame;
+    JFXPanel jfxPanel;
+    JButton view_map,swiggy,Zomato,Uber_eats,Food_Panda,Dunzo;
+
     public JScrollPane scrollPane;
-    public void initializeFrame(String imagePath, String labelText) {
+    public void initializeFrame(String gmapurl)
+    {
         frame = new JFrame();
-        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frame.setExtendedState(MAXIMIZED_BOTH);
         scrollPane = new JScrollPane(); // Initialize scrollPane
         scrollPane.setBounds(0, 0, 1366, 766);
         scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         frame.add(scrollPane);
-
         // Use getContentPane() to get the contentPane of the frame
         Container contentPane = frame.getContentPane();
         contentPane.setBackground(new Color(0x592A7BA, true));
-
         setupScrollBar();
-
         JPanel contentPanel = new JPanel();
         contentPanel.setLayout(null);
         contentPanel.setPreferredSize(new Dimension(1366, 2000));
         contentPanel.setBackground(new Color(219, 146, 5, 255));
         scrollPane.setViewportView(contentPanel);
 
-        ImageIcon imageIcon = new ImageIcon(imagePath);
+        jfxPanel = new JFXPanel();
+
+        ImageIcon imageIcon = new ImageIcon("src/icons/ratangiri_places-restaurents.png");
         Image image = imageIcon.getImage().getScaledInstance(1366, 231, Image.SCALE_DEFAULT);
         imageIcon = new ImageIcon(image);
         JLabel label = new JLabel(imageIcon);
         label.setBounds(0, 0, 1366, 231);
         contentPanel.add(label);
 
-        places_ratnagiri.loadAndSetCustomFont(label, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", labelText, Font.BOLD, 33, new Color(0xFFFFFF), 280, 13, 531, 50);
+        ImageIcon backIcon = new ImageIcon("src/Dash_Icons/view_on_map.png");
+        view_map = new JButton(backIcon);
+        view_map.setBackground(new Color(0xDB9205));
+        view_map.setBounds(20, 250, 353, 223);
+        view_map.setBorder(BorderFactory.createEmptyBorder());
+
+// Adding an internal ActionListener
+        view_map.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Your action to perform when the button is clicked
+                displayGoogleMap(gmapurl);
+            }
+        });
+        contentPanel.add(view_map);
+
+        JLabel label_a = restaurents_rtn.createImageLabel("src/Dash_Icons/browse_restro.png", 845, 81, 250, 250);
+        contentPanel.add(label_a);
+        places_ratnagiri.loadAndSetCustomFont(label_a, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Browse Ratnagiri by Food", Font.BOLD, 33, new Color(0xFFFFFF), 280, 13, 531,50);
+
+        JLabel label_b = restaurents_rtn.createImageLabel("src/Dash_Icons/cuisines.png",386,499,12,490);
+        contentPanel.add(label_b);
+
+        JLabel label_c = restaurents_rtn.createImageLabel("src/DButns/Delivery.png",418,91,0,490+20+399+100);
+        contentPanel.add(label_c);
+
+        JLabel label_d = restaurents_rtn.createImageLabel("src/DButns/Delivery_box.png",394,636,0,490+20+399+100+91+20);
+        contentPanel.add(label_d);
+
+        JButton viewMapButton = restaurents_rtn.createImageButton("src/Dash_Icons/view_on_map.png", 20, 250, 353, 223);
+        viewMapButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                // Action to perform when the button is clicked
+                System.out.println("View Map button clicked!");
+            }
+        });
+        contentPanel.add(viewMapButton);
+
+        Zomato = restaurents_rtn.createImageButton("src/Dash_Icons/Zomato.png",-40,30,431,86);
+        Zomato.setBackground(new Color(0x21A9FF));
+        label_d.add(Zomato);
+
+        swiggy = restaurents_rtn.createImageButton("src/Dash_Icons/Swiggy.png",-40,130,431,86);
+        swiggy.setBackground(new Color(0x21A9FF));
+        label_d.add(swiggy);
+
+        Uber_eats = restaurents_rtn.createImageButton("src/Dash_Icons/Uber_Eats.png",-40,58+(86*2),431,86);
+        Uber_eats.setBackground(new Color(0x21A9FF));
+        label_d.add(Uber_eats);
+
+        Food_Panda = restaurents_rtn.createImageButton("src/Dash_Icons/Food_Panda.png",-40,74+(86*3),431,86);
+        Food_Panda.setBackground(new Color(0x21A9FF));
+        label_d.add(Food_Panda);
+
+        Dunzo = restaurents_rtn.createImageButton("src/Dash_Icons/Dunzo.png",-40,89+(86*4),431,86);
+        Dunzo.setBackground(new Color(0x21A9FF));
+        label_d.add(Dunzo);
+
+
         frame.setUndecorated(true);
         frame.setVisible(true);
     }
@@ -94,6 +155,48 @@ public class restaurent_func extends JFrame {
         // Display the JFrame
         frame.setUndecorated(true);
         frame.setVisible(true);
+    }
+
+    public static void displayGoogleMap(String embedUrl) {
+        JFrame frame1 = new JFrame();
+        frame1.setSize(1366, 771);
+        frame1.setExtendedState(Frame.MAXIMIZED_BOTH);
+
+        WebView webView = new WebView();
+
+        // Generate HTML content based on the embedUrl provided
+        String htmlContent = generateHTMLContent(embedUrl);
+
+        // Load HTML content into the WebView
+        webView.getEngine().loadContent(htmlContent);
+
+        // Create a JFXPanel
+        JFXPanel jfxPanel = new JFXPanel();
+        jfxPanel.setSize(1366, 771);
+
+        // Set up the JFXPanel with the WebView
+        jfxPanel.setScene(new Scene(webView));
+
+        // Add the JFXPanel to the JFrame
+        frame1.add(jfxPanel);
+        frame1.setVisible(true);
+        frame1.setLocationRelativeTo(null);
+    }
+
+    private static String generateHTMLContent(String embedUrl) {
+        return "<!DOCTYPE html>\n" +
+                "<html lang=\"en\">\n" +
+                "<head>\n" +
+                "    <meta charset=\"UTF-8\">\n" +
+                "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
+                "    <title>Embedded Google Map</title>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "    <iframe\n" +
+                "        src=\"" + embedUrl + "\" width=\"1366\" height=\"820\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\">\n" +
+                "    </iframe>\n" +
+                "</body>\n" +
+                "</html>";
     }
 
 
