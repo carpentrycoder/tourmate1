@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 
 public class restaurents_rtn extends JFrame implements ActionListener {
     JScrollPane scrollPane;
-    JButton view_map;
+    JButton view_map,swiggy,Zomato,Uber_eats,Food_Panda,Dunzo;
     JFXPanel jfxPanel;
 
     JFrame rtn;
@@ -63,8 +63,11 @@ public class restaurents_rtn extends JFrame implements ActionListener {
         JLabel label_b = createImageLabel("src/Dash_Icons/cuisines.png",386,499,12,490);
         contentPanel.add(label_b);
 
-        JLabel label_c = createImageLabel("src/Dash_Icons/Delivery.png",418,91,0,490+20+399+100);
+        JLabel label_c = createImageLabel("src/DButns/Delivery.png",418,91,0,490+20+399+100);
         contentPanel.add(label_c);
+
+        JLabel label_d = createImageLabel("src/DButns/Delivery_box.png",394,636,0,490+20+399+100+91+20);
+        contentPanel.add(label_d);
 
         JButton viewMapButton = createImageButton("src/Dash_Icons/view_on_map.png", 20, 250, 353, 223);
         viewMapButton.addActionListener(new ActionListener() {
@@ -74,6 +77,31 @@ public class restaurents_rtn extends JFrame implements ActionListener {
             }
         });
         contentPanel.add(viewMapButton);
+
+        Zomato = createImageButton("src/Dash_Icons/Zomato.png",-40,30,431,86);
+        Zomato.setBackground(new Color(0x21A9FF));
+        Zomato.addActionListener(this);
+        label_d.add(Zomato);
+
+        swiggy = createImageButton("src/Dash_Icons/Swiggy.png",-40,130,431,86);
+        swiggy.setBackground(new Color(0x21A9FF));
+        swiggy.addActionListener(this);
+        label_d.add(swiggy);
+
+        Uber_eats = createImageButton("src/Dash_Icons/Uber_Eats.png",-40,58+(86*2),431,86);
+        Uber_eats.setBackground(new Color(0x21A9FF));
+        Uber_eats.addActionListener(this);
+        label_d.add(Uber_eats);
+
+        Food_Panda = createImageButton("src/Dash_Icons/Food_Panda.png",-40,74+(86*3),431,86);
+        Food_Panda.setBackground(new Color(0x21A9FF));
+        Food_Panda.addActionListener(this);
+        label_d.add(Food_Panda);
+
+        Dunzo = createImageButton("src/Dash_Icons/Dunzo.png",-40,89+(86*4),431,86);
+        Dunzo.setBackground(new Color(0x21A9FF));
+        Dunzo.addActionListener(this);
+        label_d.add(Dunzo);
 
         rtn.setUndecorated(true);
         rtn.setVisible(true);
@@ -89,7 +117,7 @@ public class restaurents_rtn extends JFrame implements ActionListener {
         });
     }
 
-    public JLabel createImageLabel(String imagePath, int width, int height, int x, int y) {
+    public static JLabel createImageLabel(String imagePath, int width, int height, int x, int y) {
         ImageIcon imageIcon = new ImageIcon(imagePath);
         Image image = imageIcon.getImage().getScaledInstance(width, height, Image.SCALE_DEFAULT);
         imageIcon = new ImageIcon(image);
@@ -118,19 +146,20 @@ public class restaurents_rtn extends JFrame implements ActionListener {
                 WebView webView = new WebView();
 
                 // HTML content to be displayed
-                String htmlContent = "<!DOCTYPE html>\n" +
-                        "<html lang=\"en\">\n" +
-                        "<head>\n" +
-                        "    <meta charset=\"UTF-8\">\n" +
-                        "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
-                        "    <title>Embedded Google Map</title>\n" +
-                        "</head>\n" +
-                        "<body>\n" +
-                        "    <iframe\n" +
-                        "        src=\"https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d61050.185489388576!2d73.26917424414033!3d16.992416720036204!3m2!1i1024!2i768!4f13.1!2m1!1srestaurants%20in%20ratnagiri%20embed%20on%20map!5e0!3m2!1sen!2sin!4v1707014888645!5m2!1sen!2sin\" width=\"1366\" height=\"820\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\">\n" +
-                        "    </iframe>\n" +
-                        "</body>\n" +
-                        "</html>";
+                String htmlContent = """
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Embedded Google Map</title>
+                        </head>
+                        <body>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d61050.185489388576!2d73.26917424414033!3d16.992416720036204!3m2!1i1024!2i768!4f13.1!2m1!1srestaurants%20in%20ratnagiri%20embed%20on%20map!5e0!3m2!1sen!2sin!4v1707014888645!5m2!1sen!2sin" width="1366" height="820" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </body>
+                        </html>""";
 
                 // Load HTML content into the WebView
                 webView.getEngine().loadContent(htmlContent);
@@ -148,6 +177,16 @@ public class restaurents_rtn extends JFrame implements ActionListener {
                 frame1.setLocationRelativeTo(null);
             });
 
+        } else if (e.getSource()==Zomato) {
+            restaurent_func.Delivery_web("https://www.zomato.com/ratnagiri");
+        } else if (e.getSource()==swiggy) {
+            restaurent_func.Delivery_web("https://www.swiggy.com/city/ratnagiri");
+        } else if (e.getSource()==Uber_eats){
+            restaurent_func.Delivery_web("https://www.ubereats.com/");
+        } else if (e.getSource()==Dunzo){
+            restaurent_func.Delivery_web("https://www.dunzo.com/search");
+        } else if (e.getSource()==Food_Panda) {
+            restaurent_func.Delivery_web("https://www.eatsure.com/");
         }
 
     }
