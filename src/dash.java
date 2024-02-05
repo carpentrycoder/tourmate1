@@ -50,7 +50,7 @@ public class dash extends JFrame implements ActionListener {
     k1.add(a4);
 
 
-    ImageIcon s1 = new ImageIcon("\\tourmate1\\src\\icons\\profile1.png");
+    ImageIcon s1 = new ImageIcon("tourmate1\\src\\icons\\profile1.png");
     S = new JButton(s1);
     S.setLayout(null);
     S.setBounds(1300, 2, 50, 50);
@@ -59,89 +59,51 @@ public class dash extends JFrame implements ActionListener {
     S.addActionListener(this);
     k1.add(S);
 
-    ImageIcon p1 = new ImageIcon("\\tourmate1\\src\\DButns\\1.png");
-    j1 = new JButton(p1); //places
-    j1.setBackground(new Color(0xB7D1E2));
-    j1.setLayout(null);
-    j1.setBorder(BorderFactory.createEmptyBorder());
-    j1.setBounds(18, 128, 167, 50);
+    // Create button j1 using createButton function
+    j1 = createButton("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\1.png", 18, 128);
+    j1.setFont(new Font("open sauce", Font.BOLD, 20));
     j1.addActionListener(this);
     j.add(j1);
 
-    ImageIcon p2 = new ImageIcon("\\tourmate1\\src\\DButns\\2.png");
-    j2 = new JButton(p2); //bookings
-    j2.setBackground(new Color(0xB7D1E2));
-    j2.setLayout(null);
-    j2.setBorder(BorderFactory.createEmptyBorder());
-    j2.setBounds(18, 201, 168, 50);
+// Create button j2 using createButton function
+    j2 = createButton("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\2.png", 18, 201);
     j2.setFont(new Font("open sauce", Font.BOLD, 20));
-    j2.setForeground(Color.BLACK);
     j2.addActionListener(this);
     j.add(j2);
 
-    ImageIcon p3 = new ImageIcon("\\tourmate1\\src\\DButns\\3.png");
-    j3 = new JButton(p3); //iterneries
-    j3.setBackground(new Color(0xB7D1E2));
-    j3.setLayout(null);
-    j3.setBorder(BorderFactory.createEmptyBorder());
-    j3.setBounds(18, 274, 168, 50);
+// Create button j3 using createButton function
+    j3 = createButton("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\3.png", 18, 274);
     j3.setFont(new Font("open sauce", Font.BOLD, 20));
-    j3.setForeground(Color.BLACK);
     j3.addActionListener(this);
     j.add(j3);
 
-    ImageIcon p4 = new ImageIcon("\\tourmate1\\src\\DButns\\4.png");
-    j4 = new JButton(p4); //maps
-    j4.setBackground(new Color(0xB7D1E2));
-    j4.setLayout(null);
-    j4.setBorder(BorderFactory.createEmptyBorder());
-    j4.setBounds(18, 347, 168, 45);
+// Create button j4 using createButton function
+    j4 = createButton("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\4.png", 18, 347);
     j4.setFont(new Font("open sauce", Font.BOLD, 20));
-    j4.setForeground(Color.BLACK);
     j4.addActionListener(this);
     j.add(j4);
 
-    ImageIcon p5 = new ImageIcon("\\tourmate1\\src\\DButns\\5.png");
-    j5 = new JButton(p5); //restaurents
-    j5.setBackground(new Color(0xB7D1E2));
-    j5.setLayout(null);
-    j5.setBorder(BorderFactory.createEmptyBorder());
-    j5.setBounds(18, 420, 168, 45);
+// Create button j5 using createButton function
+    j5 = createButton("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\5.png", 18, 420);
     j5.setFont(new Font("open sauce", Font.BOLD, 20));
-    j5.setForeground(Color.BLACK);
     j5.addActionListener(this);
     j.add(j5);
 
-    ImageIcon p6 = new ImageIcon("\\tourmate1\\src\\DButns\\6.png");
-    j6 = new JButton(p6); //hotels
-    j6.setBackground(new Color(0xB7D1E2));
-    j6.setLayout(null);
-    j6.setBorder(BorderFactory.createEmptyBorder());
-    j6.setBounds(18, 493, 168, 45);
+// Create button j6 using createButton function
+    j6 = createButton("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\6.png", 18, 493);
     j6.setFont(new Font("open sauce", Font.BOLD, 20));
-    j6.setForeground(Color.BLACK);
     j6.addActionListener(this);
     j.add(j6);
 
-    ImageIcon p7 = new ImageIcon("\\tourmate1\\src\\DButns\\7.png");
-    j7 = new JButton(p7); //memeberships
-    j7.setBackground(new Color(0xB7D1E2));
-    j7.setLayout(null);
-    j7.setBorder(BorderFactory.createEmptyBorder());
-    j7.setBounds(18, 566, 168, 45);
+// Create button j7 using createButton function
+    j7 = createButton("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\7.png", 18, 566);
     j7.setFont(new Font("open sauce", Font.BOLD, 20));
-    j7.setForeground(Color.BLACK);
     j7.addActionListener(this);
     j.add(j7);
 
-    ImageIcon p8 = new ImageIcon("\\tourmate1\\src\\DButns\\8.png");
-    j8 = new JButton(p8); // support
-    j8.setBackground(new Color(0xB7D1E2));
-    j8.setLayout(null);
-    j8.setBorder(BorderFactory.createEmptyBorder());
-    j8.setBounds(18, 639, 168, 45);
+// Create button j8 using createButton function
+    j8 = createButton("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\8.png", 18, 639);
     j8.setFont(new Font("open sauce", Font.BOLD, 20));
-    j8.setForeground(Color.BLACK);
     j8.addActionListener(this);
     j.add(j8);
 
@@ -261,8 +223,8 @@ public class dash extends JFrame implements ActionListener {
       else if (j.getSource()==j2) {
         new booking();
       } else if (j.getSource()==j4) {
-        Map map = new Map();
-        map.setVisible(true);
+        new SwingHTMLViewer();
+
       } else if (j.getSource()==j8) {
         setVisible(true);
         new support();
@@ -271,6 +233,19 @@ public class dash extends JFrame implements ActionListener {
         new trip();
       }
     }
+
+  public static JButton createButton(String imagePath, int x, int y) {
+    ImageIcon icon = new ImageIcon(imagePath);
+    JButton button = new JButton(icon);
+    button.setBackground(new Color(0xB7D1E2));
+    button.setLayout(null);
+    button.setBorder(BorderFactory.createEmptyBorder());
+    button.setBounds(x, y, icon.getIconWidth(), icon.getIconHeight()); // Set bounds according to the icon size
+    button.setFont(new Font("open sauce", Font.BOLD, 20));
+    button.setForeground(Color.BLACK);
+    return button;
+  }
+
     public static void main(String[] args) {
         new dash();
     }
