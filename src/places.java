@@ -144,7 +144,7 @@ public class places extends JFrame implements ActionListener ,KeyListener {
         j8.addActionListener(this);
         j.add(j8);
 
-        ImageIcon backb = new ImageIcon("\\tourmate1\\src\\DButns\\Back.png");
+        ImageIcon backb = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
         back = new JButton(backb); // back
         back.setBackground(new Color(0x92A7BA));
         back.setLayout(null);
@@ -155,7 +155,7 @@ public class places extends JFrame implements ActionListener ,KeyListener {
         back.addActionListener(this);
         add(back);
 
-        ImageIcon Mumbai = new ImageIcon("\\tourmate1\\src\\Dash_Icons\\Mumbai.png");
+        ImageIcon Mumbai = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\Mumbai.png");
         mumbai = new JButton(Mumbai);
         mumbai.setBackground(new Color(0x92A7BA));
         mumbai.setLayout(null);
@@ -164,7 +164,7 @@ public class places extends JFrame implements ActionListener ,KeyListener {
         mumbai.addActionListener(this);
         add(mumbai);
 
-        ImageIcon Nashik = new ImageIcon("\\tourmate1\\src\\Dash_Icons\\Nashik.png");
+        ImageIcon Nashik = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\Nashik.png");
         nsk = new JButton(Nashik);
         nsk.setBackground(new Color(0x92A7BA));
         nsk.setLayout(null);
@@ -173,7 +173,7 @@ public class places extends JFrame implements ActionListener ,KeyListener {
         nsk.addActionListener(this);
         add(nsk);
 
-        ImageIcon Pune = new ImageIcon("\\tourmate1\\src\\Dash_Icons\\Pune.png");
+        ImageIcon Pune = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\Pune.png");
         pnu = new JButton(Pune);
         pnu.setBackground(new Color(0x92A7BA));
         pnu.setLayout(null);
@@ -182,7 +182,7 @@ public class places extends JFrame implements ActionListener ,KeyListener {
         pnu.addActionListener(this);
         add(pnu);
 
-        ImageIcon Ratnagiri = new ImageIcon("\\tourmate1\\src\\Dash_Icons\\Ratnagiri.png");
+        ImageIcon Ratnagiri = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\Ratnagiri.png");
         rtn = new JButton(Ratnagiri);
         rtn.setBackground(new Color(0x92A7BA));
         rtn.setLayout(null);
@@ -191,7 +191,7 @@ public class places extends JFrame implements ActionListener ,KeyListener {
         rtn.addActionListener(this);
         add(rtn);
 
-        ImageIcon Sambhajinager = new ImageIcon("\\tourmate1\\src\\Dash_Icons\\Sambhajinagar.png");
+        ImageIcon Sambhajinager = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\Sambhajinagar.png");
         smbj = new JButton(Sambhajinager);
         smbj.setBackground(new Color(0x92A7BA));
         smbj.setLayout(null);
