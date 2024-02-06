@@ -38,7 +38,7 @@ public class booking extends JFrame implements ActionListener {
         h.setForeground(new Color(0xF9F8FC));
         k1.add(h);
 
-        ImageIcon s1 = new ImageIcon("\\tourmate1\\src\\icons\\profile1.png");
+        ImageIcon s1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\profile1.png");
 
         S = new JButton(s1);
         S.setLayout(null);
@@ -48,7 +48,7 @@ public class booking extends JFrame implements ActionListener {
         S.addActionListener(this);
         k1.add(S);
 
-        ImageIcon p1 = new ImageIcon("\\tourmate1\\src\\DButns\\place.png");
+        ImageIcon p1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\place.png");
         j1 = new JButton(p1); //places
         j1.setBackground(new Color(0xF9F8FC));
         j1.setLayout(null);
@@ -57,7 +57,7 @@ public class booking extends JFrame implements ActionListener {
         j1.addActionListener(this);
         j.add(j1);
 
-        ImageIcon p2 = new ImageIcon("\\tourmate1\\src\\DButns\\booking.png");
+        ImageIcon p2 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\booking.png");
         j2 = new JButton(p2); //bookings
         j2.setBackground(new Color(0xF9F8FC));
         j2.setLayout(null);
@@ -68,7 +68,7 @@ public class booking extends JFrame implements ActionListener {
         j2.addActionListener(this);
         j.add(j2);
 
-        ImageIcon p3 = new ImageIcon("\\tourmate1\\src\\DButns\\internities.png");
+        ImageIcon p3 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\internities.png");
         j3 = new JButton(p3); //iterneries
         j3.setBackground(new Color(0xF9F8FC));
         j3.setLayout(null);
@@ -79,7 +79,7 @@ public class booking extends JFrame implements ActionListener {
         j3.addActionListener(this);
         j.add(j3);
 
-        ImageIcon p4 = new ImageIcon("\\tourmate1\\src\\DButns\\maps.png");
+        ImageIcon p4 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\maps.png");
         j4 = new JButton(p4); //maps
         j4.setBackground(new Color(0xF9F8FC));
         j4.setLayout(null);
@@ -90,7 +90,7 @@ public class booking extends JFrame implements ActionListener {
         j4.addActionListener(this);
         j.add(j4);
 
-        ImageIcon p5 = new ImageIcon("\\tourmate1\\src\\DButns\\restaurant.png");
+        ImageIcon p5 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\restaurant.png");
         j5 = new JButton(p5); //maps
         j5.setBackground(new Color(0xF9F8FC));
         j5.setLayout(null);
@@ -101,7 +101,7 @@ public class booking extends JFrame implements ActionListener {
         j5.addActionListener(this);
         j.add(j5);
 
-        ImageIcon p6 = new ImageIcon("\\tourmate1\\src\\DButns\\place.png");
+        ImageIcon p6 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\place.png");
         j6 = new JButton(p6); //restaurents
         j6.setBackground(new Color(0xF9F8FC));
         j6.setLayout(null);
@@ -112,7 +112,7 @@ public class booking extends JFrame implements ActionListener {
         j6.addActionListener(this);
         j.add(j6);
 
-        ImageIcon p7 = new ImageIcon("\\tourmate1\\src\\DButns\\card.png");
+        ImageIcon p7 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\card.png");
         j7 = new JButton(p7); //memeberships
         j7.setBackground(new Color(0xF9F8FC));
         j7.setLayout(null);
@@ -123,7 +123,7 @@ public class booking extends JFrame implements ActionListener {
         j7.addActionListener(this);
         j.add(j7);
 
-        ImageIcon p8 = new ImageIcon("\\tourmate1\\src\\DButns\\support.png");
+        ImageIcon p8 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\support.png");
         j8 = new JButton(p8); // support
         j8.setBackground(new Color(0xF9F8FC));
         j8.setLayout(null);
@@ -134,7 +134,7 @@ public class booking extends JFrame implements ActionListener {
         j8.addActionListener(this);
         j.add(j8);
 
-        ImageIcon backb = new ImageIcon("\\tourmate1\\src\\DButns\\Back.png");
+        ImageIcon backb = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
         back = new JButton(backb); // back
         back.setBackground(new Color(0x92A7BA));
         back.setLayout(null);

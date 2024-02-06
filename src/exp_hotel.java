@@ -10,7 +10,7 @@ public class exp_hotel extends JFrame {
         hotelFrame = Hotel.rtnhotelframe();
 
         // Add an image label to the content panel using the Hotel class function
-        Hotel.addImageLabel(Hotel.contentPanel, "E:\\tourmate1\\src\\icons\\mum_hotels.png");
+        Hotel.addImageLabel(Hotel.contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\mum_hotels.png");
 
         // Configure and add the checkin text field using the Hotel class function
         Hotel.checkin = Hotel.configureTextField(new JTextField());

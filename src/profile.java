@@ -68,6 +68,7 @@ public class profile extends JFrame implements ActionListener
         b3.addActionListener(this);
         i4.add(b3);
 
+        setUndecorated(true);
         setVisible(true);
 
     }

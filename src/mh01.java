@@ -47,7 +47,7 @@ public class mh01 extends JFrame implements ActionListener {
         n.setForeground(new Color(0xF9F8FC));
         contentPanel.add(n);
 
-        ImageIcon backb = new ImageIcon("\\tourmate1\\src\\DButns\\Back.png");
+        ImageIcon backb = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
         back = new JButton(backb); // back
         back.setBackground(new Color(0x474856));
         back.setLayout(null);
@@ -119,7 +119,7 @@ public class mh01 extends JFrame implements ActionListener {
         w4.setBounds(30, 378, 431,132);
         s4.add(w4);
 
-        ImageIcon rnt = new ImageIcon("\\tourmate1\\src\\DButns\\rental.png");
+        ImageIcon rnt = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\rental.png");
         rent = new JButton(rnt);
         rent.setBounds(350,1000,377,347);
         rent.setBackground(new Color(97, 131, 192, 255));
@@ -128,7 +128,7 @@ public class mh01 extends JFrame implements ActionListener {
         rent.addActionListener(this);
         contentPanel.add(rent);
 
-        ImageIcon mp = new ImageIcon("\\tourmate1\\src\\Dash_Icons\\rtnmap.png");
+        ImageIcon mp = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\rtnmap.png");
         map = new JButton(mp);
         map.setBackground(new Color(0x474856));
         map.setLayout(null);
@@ -137,7 +137,7 @@ public class mh01 extends JFrame implements ActionListener {
         map.addActionListener(this);
         contentPanel.add(map);
 
-        ImageIcon wethear = new ImageIcon("\\tourmate1\\src\\DButns\\weather.png");
+        ImageIcon wethear = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\weather.png");
         wt = new JButton(wethear);
         wt.setBackground(new Color(0xF9F8FC));
         wt.setLayout(null);
@@ -146,7 +146,7 @@ public class mh01 extends JFrame implements ActionListener {
         wt.addActionListener(this);
         contentPanel.add(wt);
 
-        ImageIcon iterniti = new ImageIcon("\\tourmate1\\src\\DButns\\direction.png");
+        ImageIcon iterniti = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\direction.png");
         itr = new JButton(iterniti);
         itr.setBackground(new Color(0x92A7BA));
         itr.setLayout(null);
@@ -170,7 +170,7 @@ public class mh01 extends JFrame implements ActionListener {
         trip.addActionListener(this);
         Q4.add(trip);
 
-        ImageIcon pkg = new ImageIcon("\\tourmate1\\src\\DButns\\pakgbutn.png");
+        ImageIcon pkg = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\pakgbutn.png");
         pckgbutn = new JButton(pkg);
         pckgbutn.setBounds(650,1450,597,95);
         pckgbutn.setBackground(new Color(71, 72, 86, 255));
@@ -186,7 +186,7 @@ public class mh01 extends JFrame implements ActionListener {
         f4.setBounds(50,1360, 480, 180);
         contentPanel.add(f4);
 
-        ImageIcon r2 = new ImageIcon("H:\\tourmate1\\src\\DButns\\hotelbutn (1).png");
+        ImageIcon r2 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\hotelbutn (1).png");
         hotl = new JButton(r2);
         hotl.setBounds(161,109, 296, 54);
         hotl.setBorder(BorderFactory.createLineBorder(new Color(0x0D1D34)));
@@ -213,6 +213,7 @@ public class mh01 extends JFrame implements ActionListener {
             try {
                 URI uri = new URI("https://weather.com/en-IN/weather/today/l/16.99,73.31?par=google");
                 Desktop.getDesktop().browse(uri);
+
             } catch (URISyntaxException | IOException j) {
                 throw new RuntimeException(j);
             }
@@ -246,13 +247,4 @@ public class mh01 extends JFrame implements ActionListener {
     }
 }
 
-//            try {
-//                    URI uri = new URI("");
-//                    Desktop.getDesktop().browse(uri);
-//                    } catch (URISyntaxException | IOException j) {
-//                    throw new RuntimeException(j);
-//                    }
 
-
-//        x-coordinate: 1104
-//        y-coordinate: 330

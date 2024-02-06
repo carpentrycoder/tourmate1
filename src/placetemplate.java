@@ -206,6 +206,7 @@ public class placetemplate extends JFrame implements ActionListener {
         hotl.addActionListener(this);
         f4.add(hotl);
 
+        setUndecorated(true);
         setVisible(true);
     }
 
@@ -261,14 +262,3 @@ public class placetemplate extends JFrame implements ActionListener {
         new placetemplate();
     }
 }
-
-//            try {
-//                    URI uri = new URI("");
-//                    Desktop.getDesktop().browse(uri);
-//                    } catch (URISyntaxException | IOException j) {
-//                    throw new RuntimeException(j);
-//                    }
-
-
-//        x-coordinate: 1104
-//        y-coordinate: 330

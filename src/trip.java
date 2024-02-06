@@ -134,7 +134,7 @@ public class trip extends JFrame implements ActionListener
         startPlanning.addActionListener(this);
         add(startPlanning);
 
-        ImageIcon a = new ImageIcon("\\tourmate1\\src\\DButns\\c1.png");
+        ImageIcon a = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\c1.png");
         c1 = new JButton(a);
         c1.setBounds(80, 128, 77, 24);
         c1.setBorder(BorderFactory.createEmptyBorder());
@@ -142,7 +142,7 @@ public class trip extends JFrame implements ActionListener
         c1.addActionListener(this);
         add(c1);
 
-        ImageIcon b = new ImageIcon("\\tourmate1\\src\\DButns\\c2.png");
+        ImageIcon b = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\c2.png");
         c2 = new JButton(b);
         c2.setBounds(160, 128, 77, 24);
         c2.setBorder(BorderFactory.createEmptyBorder());
@@ -150,7 +150,7 @@ public class trip extends JFrame implements ActionListener
         c2.setBackground(new Color(0x09389F));
         add(c2);
 
-        ImageIcon c = new ImageIcon("\\tourmate1\\src\\DButns\\c3.png");
+        ImageIcon c = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\c3.png");
         c3 = new JButton(c);
         c3.setBounds(240, 128, 77, 24);
         c3.setBorder(BorderFactory.createEmptyBorder());
@@ -159,7 +159,7 @@ public class trip extends JFrame implements ActionListener
         c3.setLayout(null);
         add(c3);
 
-        ImageIcon e = new ImageIcon("\\tourmate1\\src\\DButns\\c4.png");
+        ImageIcon e = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\c4.png");
         c4 = new JButton(e);
         c4.setBounds(320, 128, 77, 24);
         c4.setBorder(BorderFactory.createEmptyBorder());
@@ -167,7 +167,7 @@ public class trip extends JFrame implements ActionListener
         c4.setBackground(new Color(0x09389F));
         add(c4);
 
-        ImageIcon f = new ImageIcon("\\tourmate1\\src\\DButns\\c5.png");
+        ImageIcon f = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\c5.png");
         c5 = new JButton(f);
         c5.setBounds(400, 128, 77, 24);
         c5.setBorder(BorderFactory.createEmptyBorder());
@@ -284,12 +284,7 @@ public class trip extends JFrame implements ActionListener
         if (e.getSource() == b1) {
             // Handle action for places button (e.g., show a dialog to add a new place)
             if (citystr == rtnstr) {
-                try {
-                    URI uri = new URI("file:///E:/tourmate(webview)/index.html");
-                    Desktop.getDesktop().browse(uri);
-                } catch (URISyntaxException | IOException j) {
-                    throw new RuntimeException(j);
-                }
+                new places_ratnagiri();
             } else if (citystr == smbjstr ) {
                 JOptionPane.showMessageDialog(SambhajinagerFrame, "Button b1 (Places) clicked!");
             } else if (citystr == mumstr) {

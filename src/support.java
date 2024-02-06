@@ -12,6 +12,7 @@ public class support extends JFrame {
         JLabel a4 = new JLabel(a3);
         a4.setBounds(0, 0, 800, 700);
         f.add(a4);
+        f.setUndecorated(true);
         f.setLocationRelativeTo(null);
         f.setVisible(true);
     }

@@ -106,6 +106,7 @@ Font fontTxt = new Font("Open Sauce",Font.PLAIN,15);
        Back.addActionListener(this);
        p2.add(Back);
 
+       setUndecorated(true);
        setVisible(true);
    }
 

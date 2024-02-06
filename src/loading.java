@@ -56,6 +56,7 @@ public class loading extends JFrame implements Runnable{
       q4.add(sutar);
 
       t.start();
+      setUndecorated(true);
       setVisible(true);
     }
 
