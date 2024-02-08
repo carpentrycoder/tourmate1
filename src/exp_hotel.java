@@ -36,7 +36,7 @@ public class exp_hotel extends JFrame {
         // Revalidate the hotel frame to refresh the layout
         hotelFrame.revalidate();
     }
-    ActionListener buttonClickListener = new ActionListener() {
+    static ActionListener buttonClickListener = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
             JButton source = (JButton) e.getSource();
@@ -44,7 +44,7 @@ public class exp_hotel extends JFrame {
             openButtonLink(buttonText);
         }
     };
-    public void openButtonLink(String buttonText) 
+    public static void openButtonLink(String buttonText)
     {
         switch (buttonText) {
             case "Button 1":

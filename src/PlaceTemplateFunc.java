@@ -51,7 +51,6 @@ public class PlaceTemplateFunc {
         contentPanel.add(n);
 
 
-
         String backbstr = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png";
         ImageIcon backb = new ImageIcon(backbstr);
         JButton back = new JButton(backb); // back button

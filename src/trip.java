@@ -120,14 +120,14 @@ public class trip extends JFrame implements ActionListener
         startDateField.setFont(fontTxt);
         add(startDateField);
 
-        ImageIcon s = new ImageIcon("/tourmate1/src/DButns/invite.png");
+        ImageIcon s = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\invite.png");
         invite = new JButton(s);
         invite.setBounds(532, 230, 136, 38);
         invite.setBorder(BorderFactory.createEmptyBorder());
         invite.addActionListener(this);
         add(invite);
 
-        ImageIcon d = new ImageIcon("/tourmate1/src/DButns/start planning.png");
+        ImageIcon d = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\start planning.png");
         startPlanning = new JButton(d);
         startPlanning.setBounds(532, 280, 136, 38);
         startPlanning.setBorder(BorderFactory.createEmptyBorder());
@@ -418,28 +418,28 @@ public class trip extends JFrame implements ActionListener
             }
         });
 
-        ImageIcon imageIcon = new ImageIcon("/tourmate1/src/icons/Copy of iternary.png");
+        ImageIcon imageIcon = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Copy of iternary.png");
         Image image = imageIcon.getImage().getScaledInstance(1366, 768, Image.SCALE_SMOOTH);
         imageIcon = new ImageIcon(image);
         label = new JLabel(imageIcon);
         label.setSize(1366, 768);
         contentPanel.add(label);
 
-        place1 = new ImageIcon("\\tourmate1\\src\\DButns\\IB1.png");
+        place1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB1.png");
         b1 = new JButton(place1);
         b1.setBounds(130,250,354,187);
         b1.setBorder(BorderFactory.createEmptyBorder());
         b1.addActionListener(this);
         label.add(b1);
 
-        place2 = new ImageIcon("\\tourmate1\\src\\DButns\\IB2.png");
+        place2 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB2.png");
         b2 = new JButton(place2);
         b2.setBounds(130 + 354 + 71, 250, 354, 187);
         b2.setBorder(BorderFactory.createEmptyBorder());
         b2.addActionListener(this);
         label.add(b2);
 
-        place3 = new ImageIcon("\\tourmate1\\src\\DButns\\IB3.png");
+        place3 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB3.png");
         b3 = new JButton(place3);
         b3.setBounds(130 + (354 + 71) * 2, 250, 354, 187);
         b3.setBorder(BorderFactory.createEmptyBorder());
@@ -486,7 +486,7 @@ public class trip extends JFrame implements ActionListener
         //displaying using for loop places icons
         customButtons = new JButton[12];
         for (i = 1; i <= 12; i++) {
-            String imagePath = "\\tourmate1\\src\\Subplaces\\w" + i + ".png";
+            String imagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Subplaces\\w" + i + ".png";
             ImageIcon qImageIcon = new ImageIcon(imagePath);
             Image img = qImageIcon.getImage().getScaledInstance(535, 112, Image.SCALE_SMOOTH);
             qImageIcon = new ImageIcon(img);
@@ -495,7 +495,7 @@ public class trip extends JFrame implements ActionListener
             qLabel.setBounds(5, yPosition, 535, 112);
             subplaces.add(qLabel);
 
-            String buttonImagePath = "\\tourmate1\\src\\DButns\\plus-32_add.png";
+            String buttonImagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\plus-32_add.png";
             ImageIcon buttonIcon = new ImageIcon(buttonImagePath);
             Image buttonImage = buttonIcon.getImage().getScaledInstance(34, 34, Image.SCALE_SMOOTH);
             buttonIcon = new ImageIcon(buttonImage);
@@ -546,7 +546,7 @@ public class trip extends JFrame implements ActionListener
             customlabel[i] = blackPanels;
             label.add(blackPanels);
 
-            ImageIcon del = new ImageIcon("tourmate1\\src\\DButns\\Delete.png");
+            ImageIcon del = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Delete.png");
             yourButton = new JButton(del);
             yourButton.setSize(35, 35);
             // Set the location of the button to the right side of blackPanels
@@ -620,21 +620,21 @@ public class trip extends JFrame implements ActionListener
         contentPanel.setBackground(new Color(146, 167, 186, 255));
         scrollPane.setViewportView(contentPanel);
 
-        ImageIcon imageIcon = new ImageIcon("/tourmate1/src/icons/mumbai_iternary.png");
+        ImageIcon imageIcon = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\mumbai_iternary.png");
         Image image = imageIcon.getImage().getScaledInstance(1366, 768, Image.SCALE_SMOOTH);
         imageIcon = new ImageIcon(image);
         label = new JLabel(imageIcon);
         label.setSize(1366, 768);
         contentPanel.add(label);
 
-        place1 = new ImageIcon("\\tourmate1\\src\\DButns\\IB1.png");
+        place1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB1.png");
         b1 = new JButton(place1);
         b1.setBounds(130,250,354,187);
         b1.setBorder(BorderFactory.createEmptyBorder());
         b1.addActionListener(this);
         label.add(b1);
 
-        place2 = new ImageIcon("\\tourmate1\\src\\DButns\\IB2.png");
+        place2 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB2.png");
         b2 = new JButton(place2);
         b2.setBounds(130 + 354 + 71, 250, 354, 187);
         b2.setBorder(BorderFactory.createEmptyBorder());
@@ -642,7 +642,7 @@ public class trip extends JFrame implements ActionListener
         label.add(b2);
 
 // Third button with a space of 71
-        place3 = new ImageIcon("\\tourmate1\\src\\DButns\\IB3.png");
+        place3 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB3.png");
         b3 = new JButton(place3);
         b3.setBounds(130 + (354 + 71) * 2, 250, 354, 187);
         b3.setBorder(BorderFactory.createEmptyBorder());
@@ -688,7 +688,7 @@ public class trip extends JFrame implements ActionListener
 
         customButtons = new JButton[12];
         for (i = 1; i <= 12; i++) {
-            String imagePath = "\\tourmate1\\src\\Subplaces\\q" + i + ".png";
+            String imagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Subplaces\\q" + i + ".png";
             ImageIcon qImageIcon = new ImageIcon(imagePath);
             Image img = qImageIcon.getImage().getScaledInstance(535, 112, Image.SCALE_SMOOTH);
             qImageIcon = new ImageIcon(img);
@@ -697,7 +697,7 @@ public class trip extends JFrame implements ActionListener
             qLabel.setBounds(5, yPosition, 535, 112);
             subplaces.add(qLabel);
 
-            String buttonImagePath = "\\tourmate1\\src\\DButns\\plus-32_add.png";
+            String buttonImagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\plus-32_add.png";
             ImageIcon buttonIcon = new ImageIcon(buttonImagePath);
             Image buttonImage = buttonIcon.getImage().getScaledInstance(34, 34, Image.SCALE_SMOOTH);
             buttonIcon = new ImageIcon(buttonImage);
@@ -749,7 +749,7 @@ public class trip extends JFrame implements ActionListener
             customlabel[i] = blackPanels;
             label.add(blackPanels);
 
-            ImageIcon del = new ImageIcon("\\tourmate1\\src\\DButns\\Delete.png");
+            ImageIcon del = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Delete.png");
             yourButton = new JButton(del);
             yourButton.setSize(35, 35);
             // Set the location of the button to the right side of blackPanels
@@ -817,28 +817,28 @@ public class trip extends JFrame implements ActionListener
             }
         });
 
-        ImageIcon imageIcon = new ImageIcon("/tourmate1/src/icons/pune_iternary.png");
+        ImageIcon imageIcon = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\pune_iternary.png");
         Image image = imageIcon.getImage().getScaledInstance(1366, 768, Image.SCALE_SMOOTH);
         imageIcon = new ImageIcon(image);
         label = new JLabel(imageIcon);
         label.setSize(1366, 768);
         contentPanel.add(label);
 
-        ImageIcon place1 = new ImageIcon("\\tourmate1\\src\\DButns\\IB1.png");
+        ImageIcon place1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB1.png");
         b1 = new JButton(place1);
         b1.setBounds(130,250,354,187);
         b1.setBorder(BorderFactory.createEmptyBorder());
         b1.addActionListener(this);
         label.add(b1);
 
-        ImageIcon place2 = new ImageIcon("\\tourmate1\\src\\DButns\\IB2.png");
+        ImageIcon place2 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB2.png");
         b2 = new JButton(place2);
         b2.setBounds(130 + 354 + 71, 250, 354, 187);
         b2.setBorder(BorderFactory.createEmptyBorder());
         b2.addActionListener(this);
         label.add(b2);
 
-        ImageIcon place3 = new ImageIcon("\\tourmate1\\src\\DButns\\IB3.png");
+        ImageIcon place3 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB3.png");
         b3 = new JButton(place3);
         b3.setBounds(130 + (354 + 71) * 2, 250, 354, 187);
         b3.setBorder(BorderFactory.createEmptyBorder());
@@ -884,7 +884,7 @@ public class trip extends JFrame implements ActionListener
 
         customButtons = new JButton[12];
         for (i = 1; i <= 12; i++) {
-            String imagePath = "\\tourmate1\\src\\Subplaces\\d" + i + ".png";
+            String imagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Subplaces\\d" + i + ".png";
             ImageIcon qImageIcon = new ImageIcon(imagePath);
             Image img = qImageIcon.getImage().getScaledInstance(535, 112, Image.SCALE_SMOOTH);
             qImageIcon = new ImageIcon(img);
@@ -893,7 +893,7 @@ public class trip extends JFrame implements ActionListener
             qLabel.setBounds(5, yPosition, 535, 112);
             subplaces.add(qLabel);
 
-            String buttonImagePath = "\\tourmate1\\src\\DButns\\plus-32_add.png";
+            String buttonImagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\plus-32_add.png";
             ImageIcon buttonIcon = new ImageIcon(buttonImagePath);
             Image buttonImage = buttonIcon.getImage().getScaledInstance(34, 34, Image.SCALE_SMOOTH);
             buttonIcon = new ImageIcon(buttonImage);
@@ -945,7 +945,7 @@ public class trip extends JFrame implements ActionListener
             customlabel[i] = blackPanels;
             label.add(blackPanels);
 
-            ImageIcon del = new ImageIcon("\\tourmate1\\src\\DButns\\Delete.png");
+            ImageIcon del = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Delete.png");
             yourButton = new JButton(del);
             yourButton.setSize(35, 35);
             // Set the location of the button to the right side of blackPanels
@@ -1003,7 +1003,7 @@ public class trip extends JFrame implements ActionListener
         contentPanel.setBackground(new Color(146, 167, 186, 255));
         scrollPane.setViewportView(contentPanel);
 
-        ImageIcon imageIcon = new ImageIcon("/tourmate1/src/icons/smbj_iternary.png");
+        ImageIcon imageIcon = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\smbj_iternary.png");
         Image image = imageIcon.getImage().getScaledInstance(1366, 768, Image.SCALE_SMOOTH);
         imageIcon = new ImageIcon(image);
         label = new JLabel(imageIcon);
@@ -1019,14 +1019,14 @@ public class trip extends JFrame implements ActionListener
             }
         });
 
-        ImageIcon place1 = new ImageIcon("\\tourmate1\\src\\DButns\\IB1.png");
+        ImageIcon place1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB1.png");
         b1 = new JButton(place1);
         b1.setBounds(130,250,354,187);
         b1.setBorder(BorderFactory.createEmptyBorder());
         b1.addActionListener(this);
         label.add(b1);
 
-        ImageIcon place2 = new ImageIcon("\\tourmate1\\src\\DButns\\IB2.png");
+        ImageIcon place2 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB2.png");
         b2 = new JButton(place2);
         b2.setBounds(130 + 354 + 71, 250, 354, 187);
         b2.setBorder(BorderFactory.createEmptyBorder());
@@ -1034,7 +1034,7 @@ public class trip extends JFrame implements ActionListener
         label.add(b2);
 
 // Third button with a space of 71
-        ImageIcon place3 = new ImageIcon("\\tourmate1\\src\\DButns\\IB3.png");
+        ImageIcon place3 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB3.png");
         b3 = new JButton(place3);
         b3.setBounds(130 + (354 + 71) * 2, 250, 354, 187);
         b3.setBorder(BorderFactory.createEmptyBorder());
@@ -1080,7 +1080,7 @@ public class trip extends JFrame implements ActionListener
 
         customButtons = new JButton[12];
         for (i = 1; i <= 12; i++) {
-            String imagePath = "\\tourmate1\\src\\Subplaces\\r" + i + ".png";
+            String imagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Subplaces\\r" + i + ".png";
             ImageIcon qImageIcon = new ImageIcon(imagePath);
             Image img = qImageIcon.getImage().getScaledInstance(535, 112, Image.SCALE_SMOOTH);
             qImageIcon = new ImageIcon(img);
@@ -1089,7 +1089,7 @@ public class trip extends JFrame implements ActionListener
             qLabel.setBounds(5, yPosition, 535, 112);
             subplaces.add(qLabel);
 
-            String buttonImagePath = "\\tourmate1\\src\\DButns\\plus-32_add.png";
+            String buttonImagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\plus-32_add.png";
             ImageIcon buttonIcon = new ImageIcon(buttonImagePath);
             Image buttonImage = buttonIcon.getImage().getScaledInstance(34, 34, Image.SCALE_SMOOTH);
             buttonIcon = new ImageIcon(buttonImage);
@@ -1141,7 +1141,7 @@ public class trip extends JFrame implements ActionListener
             customlabel[i] = blackPanels;
             label.add(blackPanels);
 
-            ImageIcon del = new ImageIcon("\\tourmate1\\src\\DButns\\Delete.png");
+            ImageIcon del = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Delete.png");
             yourButton = new JButton(del);
             yourButton.setSize(35, 35);
             // Set the location of the button to the right side of blackPanels
@@ -1208,21 +1208,21 @@ public class trip extends JFrame implements ActionListener
             }
         });
 
-        ImageIcon imageIcon = new ImageIcon("/tourmate1/src/icons/nashik_iternary.png");
+        ImageIcon imageIcon = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\nashik_iternary.png");
         Image image = imageIcon.getImage().getScaledInstance(1366, 768, Image.SCALE_SMOOTH);
         imageIcon = new ImageIcon(image);
         label = new JLabel(imageIcon);
         label.setSize(1366, 768);
         contentPanel.add(label);
 
-        ImageIcon place1 = new ImageIcon("\\tourmate1\\src\\DButns\\IB1.png");
+        ImageIcon place1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB1.png");
         b1 = new JButton(place1);
         b1.setBounds(130,250,354,187);
         b1.setBorder(BorderFactory.createEmptyBorder());
         b1.addActionListener(this);
         label.add(b1);
 
-        ImageIcon place2 = new ImageIcon("\\tourmate1\\src\\DButns\\IB2.png");
+        ImageIcon place2 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB2.png");
         b2 = new JButton(place2);
         b2.setBounds(130 + 354 + 71, 250, 354, 187);
         b2.setBorder(BorderFactory.createEmptyBorder());
@@ -1230,7 +1230,7 @@ public class trip extends JFrame implements ActionListener
         label.add(b2);
 
 // Third button with a space of 71
-        ImageIcon place3 = new ImageIcon("\\tourmate1\\src\\DButns\\IB3.png");
+        ImageIcon place3 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB3.png");
         b3 = new JButton(place3);
         b3.setBounds(130 + (354 + 71) * 2, 250, 354, 187);
         b3.setBorder(BorderFactory.createEmptyBorder());
@@ -1276,7 +1276,7 @@ public class trip extends JFrame implements ActionListener
 
         customButtons = new JButton[12];
         for (i = 1; i <= 12; i++) {
-            String imagePath = "\\tourmate1\\src\\Subplaces\\z" + i + ".png";
+            String imagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Subplaces\\z" + i + ".png";
             ImageIcon qImageIcon = new ImageIcon(imagePath);
             Image img = qImageIcon.getImage().getScaledInstance(535, 112, Image.SCALE_SMOOTH);
             qImageIcon = new ImageIcon(img);
@@ -1285,7 +1285,7 @@ public class trip extends JFrame implements ActionListener
             qLabel.setBounds(5, yPosition, 535, 112);
             subplaces.add(qLabel);
 
-            String buttonImagePath = "\\tourmate1\\src\\DButns\\plus-32_add.png";
+            String buttonImagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\plus-32_add.png";
             ImageIcon buttonIcon = new ImageIcon(buttonImagePath);
             Image buttonImage = buttonIcon.getImage().getScaledInstance(34, 34, Image.SCALE_SMOOTH);
             buttonIcon = new ImageIcon(buttonImage);
@@ -1337,7 +1337,7 @@ public class trip extends JFrame implements ActionListener
             customlabel[i] = blackPanels;
             label.add(blackPanels);
 
-            ImageIcon del = new ImageIcon("\\tourmate1\\src\\DButns\\Delete.png");
+            ImageIcon del = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Delete.png");
             yourButton = new JButton(del);
             yourButton.setSize(35, 35);
             // Set the location of the button to the right side of blackPanels
