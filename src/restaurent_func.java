@@ -125,6 +125,21 @@ public class restaurent_func extends JFrame {
         Dunzo.setBackground(new Color(0x21A9FF));
         label_d.add(Dunzo);
 
+        ImageIcon backIcon1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
+        JButton back = new JButton(backIcon1); // back
+        back.setBackground(new Color(0xDB9205));
+        back.setBorder(BorderFactory.createEmptyBorder());
+        back.setBounds(1260, 1900, 60, 60);
+        back.setFont(new Font("open sauce", Font.BOLD, 20));
+        back.setForeground(Color.BLACK);
+        back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Set the JFrame to invisible when back button is clicked
+                frame.setVisible(false);
+            }
+        });
+        contentPanel.add(back);
 
         frame.setUndecorated(true);
         frame.setVisible(true);

@@ -36,7 +36,7 @@ import java.awt.event.ActionListener;
 
 public class restaurents_rtn extends JFrame implements ActionListener {
     JScrollPane scrollPane;
-    JButton view_map,swiggy,Zomato,Uber_eats,Food_Panda,Dunzo;
+    JButton view_map,swiggy,Zomato,Uber_eats,Food_Panda,Dunzo,back;
     JFXPanel jfxPanel;
 
     JFrame rtn;
@@ -128,7 +128,21 @@ public class restaurents_rtn extends JFrame implements ActionListener {
         Dunzo.addActionListener(this);
         label_d.add(Dunzo);
 
-
+        ImageIcon backIcon1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
+        back = new JButton(backIcon1); // back
+        back.setBackground(new Color(0xDB9205));
+        back.setBorder(BorderFactory.createEmptyBorder());
+        back.setBounds(1260, 1900, 60, 60);
+        back.setFont(new Font("open sauce", Font.BOLD, 20));
+        back.setForeground(Color.BLACK);
+        back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Set the JFrame to invisible when back button is clicked
+                rtn.setVisible(false);
+            }
+        });
+        contentPanel.add(back);
 
         rtn.setUndecorated(true);
         rtn.setVisible(true);
