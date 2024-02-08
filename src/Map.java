@@ -123,7 +123,6 @@ public class Map extends javax.swing.JFrame implements ActionListener {
         if(m.getSource()==back)
         {
             setVisible(false);
-
         }
     }
 

@@ -41,7 +41,7 @@ public class profile extends JFrame implements ActionListener
         JLabel i4 = new JLabel(i3);
         add(i4);
 
-        ImageIcon p1 = new ImageIcon("\\tourmate1\\src\\icons\\probutns1.png");
+        ImageIcon p1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\probutns1.png");
         b1 = new JButton(p1);//show
         b1.setLayout(null);
         b1.setBounds(11,14,333,52);
@@ -50,7 +50,7 @@ public class profile extends JFrame implements ActionListener
         b1.addActionListener(this);
         i4.add(b1);
 
-        ImageIcon p2 = new ImageIcon("\\tourmate1\\src\\icons\\probutns2.png");
+        ImageIcon p2 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\probutns2.png");
         b2 = new JButton(p2);//update
         b2.setLayout(null);
         b2.setBounds(11,70,333,52);
@@ -59,7 +59,7 @@ public class profile extends JFrame implements ActionListener
         b2.addActionListener(this);
         i4.add(b2);
 
-        ImageIcon p3 = new ImageIcon("\\tourmate1\\src\\icons\\probutns3.png");
+        ImageIcon p3 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\probutns3.png");
         b3 = new JButton(p3);//delete
         b3.setLayout(null);
         b3.setBounds(11,128,333,52);
@@ -68,7 +68,7 @@ public class profile extends JFrame implements ActionListener
         b3.addActionListener(this);
         i4.add(b3);
 
-        setUndecorated(true);
+
         setVisible(true);
 
     }

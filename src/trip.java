@@ -559,6 +559,23 @@ public class trip extends JFrame implements ActionListener
             yourButton.addActionListener(this);
             label.add(yourButton);
 
+            ImageIcon backIcon1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
+            JButton back = new JButton(backIcon1); // back
+            back.setBackground(new Color(0x2FA3FF));
+            back.setBorder(BorderFactory.createEmptyBorder());
+            back.setBounds(1260, 1450, 60, 60);
+            back.setFont(new Font("open sauce", Font.BOLD, 20));
+            back.setForeground(Color.BLACK);
+            back.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    // Set the JFrame to invisible when back button is clicked
+                    ratnagiriFrame.setVisible(false);
+
+                }
+            });
+            contentPanel.add(back);
+
             contentPanel.add(label);
             OGHeight = Math.max(OGHeight, yPosition + 110);
         }
@@ -788,6 +805,38 @@ public class trip extends JFrame implements ActionListener
         mumbsiLabel.setForeground(new Color(0x000000));
         a4.add(mumbsiLabel);
 
+        ImageIcon backIcon1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
+        JButton back = new JButton(backIcon1); // back
+        back.setBackground(new Color(0xDB9205));
+        back.setBorder(BorderFactory.createEmptyBorder());
+        back.setBounds(1260, 1900, 60, 60);
+        back.setFont(new Font("open sauce", Font.BOLD, 20));
+        back.setForeground(Color.BLACK);
+        back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Set the JFrame to invisible when back button is clicked
+                mumbaiFrame.setVisible(false);
+                ImageIcon backIcon1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
+                JButton back = new JButton(backIcon1); // back
+                back.setBackground(new Color(0x2FA3FF));
+                back.setBorder(BorderFactory.createEmptyBorder());
+                back.setBounds(1260, 1450, 60, 60);
+                back.setFont(new Font("open sauce", Font.BOLD, 20));
+                back.setForeground(Color.BLACK);
+                back.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Set the JFrame to invisible when back button is clicked
+                        mumbaiFrame.setVisible(false);
+
+                    }
+                });
+                contentPanel.add(back);
+            }
+        });
+        contentPanel.add(back);
+
         mumbaiFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         mumbaiFrame.setLocationRelativeTo(null);
         mumbaiFrame.setVisible(true);
@@ -957,6 +1006,23 @@ public class trip extends JFrame implements ActionListener
             yourdel[i] = yourButton; // Fix the array index here
             yourButton.addActionListener(this);
             label.add(yourButton);
+
+            ImageIcon backIcon1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
+            JButton back = new JButton(backIcon1); // back
+            back.setBackground(new Color(0x2FA3FF));
+            back.setBorder(BorderFactory.createEmptyBorder());
+            back.setBounds(1260, 1450, 60, 60);
+            back.setFont(new Font("open sauce", Font.BOLD, 20));
+            back.setForeground(Color.BLACK);
+            back.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    // Set the JFrame to invisible when back button is clicked
+                    puneFrame.setVisible(false);
+
+                }
+            });
+            contentPanel.add(back);
 
             contentPanel.add(label);
             OGHeight = Math.max(OGHeight, yPosition + 110);
@@ -1153,6 +1219,23 @@ public class trip extends JFrame implements ActionListener
             yourdel[i] = yourButton; // Fix the array index here
             yourButton.addActionListener(this);
             label.add(yourButton);
+
+            ImageIcon backIcon1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
+            JButton back = new JButton(backIcon1); // back
+            back.setBackground(new Color(0x2FA3FF));
+            back.setBorder(BorderFactory.createEmptyBorder());
+            back.setBounds(1260, 1450, 60, 60);
+            back.setFont(new Font("open sauce", Font.BOLD, 20));
+            back.setForeground(Color.BLACK);
+            back.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    // Set the JFrame to invisible when back button is clicked
+                    SambhajinagerFrame.setVisible(false);
+
+                }
+            });
+            contentPanel.add(back);
 
             contentPanel.add(label);
             OGHeight = Math.max(OGHeight, yPosition + 110);
@@ -1374,6 +1457,22 @@ public class trip extends JFrame implements ActionListener
         nashikLabel.setFont(font);
         nashikLabel.setForeground(new Color(0x000000));
         a4.add(nashikLabel);
+
+        ImageIcon backIcon1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
+        JButton back = new JButton(backIcon1); // back
+        back.setBackground(new Color(0x2FA3FF));
+        back.setBorder(BorderFactory.createEmptyBorder());
+        back.setBounds(1260, 1450, 60, 60);
+        back.setFont(new Font("open sauce", Font.BOLD, 20));
+        back.setForeground(Color.BLACK);
+        back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Set the JFrame to invisible when back button is clicked
+                nashikFrame.setVisible(false);
+            }
+        });
+        contentPanel.add(back);
 
         nashikFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         nashikFrame.setLocationRelativeTo(null);
