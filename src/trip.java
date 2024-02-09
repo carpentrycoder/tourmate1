@@ -563,7 +563,7 @@ public class trip extends JFrame implements ActionListener
             JButton back = new JButton(backIcon1); // back
             back.setBackground(new Color(0x2FA3FF));
             back.setBorder(BorderFactory.createEmptyBorder());
-            back.setBounds(1260, 1450, 60, 60);
+            back.setBounds(1260, 1300, 60, 60);
             back.setFont(new Font("open sauce", Font.BOLD, 20));
             back.setForeground(Color.BLACK);
             back.addActionListener(new ActionListener() {
@@ -821,7 +821,7 @@ public class trip extends JFrame implements ActionListener
                 JButton back = new JButton(backIcon1); // back
                 back.setBackground(new Color(0x2FA3FF));
                 back.setBorder(BorderFactory.createEmptyBorder());
-                back.setBounds(1260, 1450, 60, 60);
+                back.setBounds(1260, 1300, 60, 60);
                 back.setFont(new Font("open sauce", Font.BOLD, 20));
                 back.setForeground(Color.BLACK);
                 back.addActionListener(new ActionListener() {
@@ -1011,7 +1011,7 @@ public class trip extends JFrame implements ActionListener
             JButton back = new JButton(backIcon1); // back
             back.setBackground(new Color(0x2FA3FF));
             back.setBorder(BorderFactory.createEmptyBorder());
-            back.setBounds(1260, 1450, 60, 60);
+            back.setBounds(1260, 1300, 60, 60);
             back.setFont(new Font("open sauce", Font.BOLD, 20));
             back.setForeground(Color.BLACK);
             back.addActionListener(new ActionListener() {
@@ -1224,7 +1224,7 @@ public class trip extends JFrame implements ActionListener
             JButton back = new JButton(backIcon1); // back
             back.setBackground(new Color(0x2FA3FF));
             back.setBorder(BorderFactory.createEmptyBorder());
-            back.setBounds(1260, 1450, 60, 60);
+            back.setBounds(1260, 1300, 60, 60);
             back.setFont(new Font("open sauce", Font.BOLD, 20));
             back.setForeground(Color.BLACK);
             back.addActionListener(new ActionListener() {
@@ -1462,7 +1462,7 @@ public class trip extends JFrame implements ActionListener
         JButton back = new JButton(backIcon1); // back
         back.setBackground(new Color(0x2FA3FF));
         back.setBorder(BorderFactory.createEmptyBorder());
-        back.setBounds(1260, 1450, 60, 60);
+        back.setBounds(1260, 1300, 60, 60);
         back.setFont(new Font("open sauce", Font.BOLD, 20));
         back.setForeground(Color.BLACK);
         back.addActionListener(new ActionListener() {
