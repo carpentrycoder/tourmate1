@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 public class profile extends JFrame implements ActionListener
 {
    JButton b1,b2,b3;
+    private Timer timer;
     String Sname, Saadhar, SphoneNo, Saddress, Sbldgrp, Sgender, Sdob;
     int x = 80;
     int txtX = 250;
@@ -68,8 +69,17 @@ public class profile extends JFrame implements ActionListener
         b3.addActionListener(this);
         i4.add(b3);
 
-
         setVisible(true);
+
+        int delay = 10 * 1000; // 15 seconds
+        timer = new Timer(delay, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+            }
+        });
+        // Start the timer
+        timer.start();
 
     }
 
@@ -325,18 +335,17 @@ public class profile extends JFrame implements ActionListener
                 int option = JOptionPane.showConfirmDialog(null, "Do you want to delete your profile?", "Delete", JOptionPane.YES_NO_OPTION);
 
                 if (option == JOptionPane.YES_OPTION) {
-                    String nameString = "user.txt";
-                    String passString = "pass.txt";
+                    String nameString = login.Username;
+                    String passString = login.Password;
 
-                    try (BufferedReader reader1 = new BufferedReader(new FileReader("user.txt"));
-                         BufferedReader reader2 = new BufferedReader(new FileReader("pass.txt"))) {
+                    try  {
 
-                        nameString = reader1.readLine();
-                        passString = reader2.readLine();
+                        nameString = login.Username;
+                        passString = login.Password;
 
                         if (nameString != null) {
-                            System.out.println("Stored string: " + nameString);
-                            System.out.println("Stored string: " + passString);
+                            System.out.println("Stored string: " + login.Username);
+                            System.out.println("Stored string: " + login.Password);
 
                             try {
                                 // Check if the record exists before attempting deletion
@@ -360,14 +369,14 @@ public class profile extends JFrame implements ActionListener
                                 }
                             } catch (Exception e) {
                                 JOptionPane.showMessageDialog(null, "Error occurred: " + e.getMessage());
-                                e.printStackTrace();
+                                System.out.println(e);
                             }
 
                         } else {
                             System.out.println("No string stored yet.");
                         }
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                    } catch (Exception e) {
+                        System.out.println(e);
                     }
                 }
             } catch (Exception e) {
