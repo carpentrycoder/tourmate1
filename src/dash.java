@@ -190,6 +190,7 @@ public class dash extends JFrame implements ActionListener {
     k.add(dayLable);
     k.add(dateLable);
 
+    setUndecorated(true);
     setVisible(true);
     setTime();
   }
