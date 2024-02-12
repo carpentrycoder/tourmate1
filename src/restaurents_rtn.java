@@ -82,7 +82,7 @@ public class restaurents_rtn extends JFrame implements ActionListener {
 
         JLabel label_a = createImageLabel("src/Dash_Icons/browse_restro.png", 845, 81, 250, 250);
         contentPanel.add(label_a);
-        places_ratnagiri.loadAndSetCustomFont(label_a, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Browse Ratnagiri by Food", Font.BOLD, 33, new Color(0xFFFFFF), 280, 13, 531,50);
+        places_ratnagiri.loadAndSetCustomFont(label_a, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Browse Ratnagiri by Food", Font.BOLD, 33, new Color(0xF9F8FC), 280, 13, 531,50);
 
 
         JLabel label_b = createImageLabel("src/Dash_Icons/cuisines.png",386,499,12,490);
@@ -93,6 +93,26 @@ public class restaurents_rtn extends JFrame implements ActionListener {
 
         JLabel label_d = createImageLabel("src/DButns/Delivery_box.png",394,636,0,490+20+399+100+91+20);
         contentPanel.add(label_d);
+
+        JLabel cuisene_1 = createImageLabel("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\cuisens\\indian.png",290,174,400+10,340+10);
+        contentPanel.add(cuisene_1);
+
+        // Create cuisene_2
+        JLabel cuisene_2 = createImageLabel("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\cuisens\\Sean-food.png", 290, 174, 400+290 + 17+10, 340+10);
+        contentPanel.add(cuisene_2);
+
+       // Create cuisene_3
+        JLabel cuisene_3 = createImageLabel("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\cuisens\\Asian.png", 290, 174, 400 +(290+290)+ 2 * 17+10, 340+10);
+        contentPanel.add(cuisene_3);
+
+        JLabel cuisene_4 = createImageLabel("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\cuisens\\Chinese.png", 290, 174, 400+290 + 17+10, 340+174+13+10);
+        contentPanel.add(cuisene_4);
+
+        JLabel cuisene_5 = createImageLabel("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\cuisens\\Cafe.png", 290, 174, 400+10, 340+174 + 13+10);
+        contentPanel.add(cuisene_5);
+
+        JLabel cuisene_6 = createImageLabel("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\cuisens\\Pub.png", 290, 174, 400 +(290+290)+ 2 * 17+10, 335+174+ 17+10);
+        contentPanel.add(cuisene_6);
 
         JButton viewMapButton = createImageButton("src/Dash_Icons/view_on_map.png", 20, 250, 353, 223);
         viewMapButton.addActionListener(new ActionListener() {

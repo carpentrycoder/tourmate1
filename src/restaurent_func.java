@@ -96,6 +96,26 @@ public class restaurent_func extends JFrame {
         JLabel label_d = restaurents_rtn.createImageLabel("src/DButns/Delivery_box.png",394,636,0,490+20+399+100+91+20);
         contentPanel.add(label_d);
 
+        JLabel cuisene_1 = restaurents_rtn.createImageLabel("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\cuisens\\indian.png",290,174,400+10,340+10);
+        contentPanel.add(cuisene_1);
+
+        // Create cuisene_2
+        JLabel cuisene_2 = restaurents_rtn.createImageLabel("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\cuisens\\Sean-food.png", 290, 174, 400+290 + 17+10, 340+10);
+        contentPanel.add(cuisene_2);
+
+        // Create cuisene_3
+        JLabel cuisene_3 = restaurents_rtn.createImageLabel("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\cuisens\\Asian.png", 290, 174, 400 +(290+290)+ 2 * 17+10, 340+10);
+        contentPanel.add(cuisene_3);
+
+        JLabel cuisene_4 = restaurents_rtn.createImageLabel("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\cuisens\\Chinese.png", 290, 174, 400+290 + 17+10, 340+174+13+10);
+        contentPanel.add(cuisene_4);
+
+        JLabel cuisene_5 = restaurents_rtn.createImageLabel("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\cuisens\\Cafe.png", 290, 174, 400+10, 340+174 + 13+10);
+        contentPanel.add(cuisene_5);
+
+        JLabel cuisene_6 = restaurents_rtn.createImageLabel("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\cuisens\\Pub.png", 290, 174, 400 +(290+290)+ 2 * 17+10, 335+174+ 17+10);
+        contentPanel.add(cuisene_6);
+
         JButton viewMapButton = restaurents_rtn.createImageButton("src/Dash_Icons/view_on_map.png", 20, 250, 353, 223);
         viewMapButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -221,6 +241,8 @@ public class restaurent_func extends JFrame {
         frame1.setVisible(true);
         frame1.setLocationRelativeTo(null);
     }
+
+
 
     private static String generateHTMLContent(String embedUrl) {
         return "<!DOCTYPE html>\n" +
