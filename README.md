@@ -26,7 +26,7 @@ The "Tourmate" travel planning application is a comprehensive and user-centric d
 
 - Java Development Kit (JDK) installed
 - MySQL database
-- jar files : jconnector,javaFX-sdk,jx-mapviewer
+- jar files : jconnector,javaFX-sdk,jx-mapviewer,j-calendar 
 
 ### Build and Run
 
