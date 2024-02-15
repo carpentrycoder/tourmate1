@@ -40,7 +40,9 @@ public class restaurent_func extends JFrame {
     JButton view_map,swiggy,Zomato,Uber_eats,Food_Panda,Dunzo;
 
     public JScrollPane scrollPane;
-    public void initializeFrame(String gmapurl)
+
+
+    public void initializeFrame(String gmapurl,String[] hotelImagePaths)
     {
         frame = new JFrame();
         frame.setExtendedState(MAXIMIZED_BOTH);
@@ -78,7 +80,7 @@ public class restaurent_func extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Your action to perform when the button is clicked
-                displayGoogleMap(gmapurl);
+                generateHTMLContent(gmapurl);
             }
         });
         contentPanel.add(view_map);
@@ -116,14 +118,38 @@ public class restaurent_func extends JFrame {
         JLabel cuisene_6 = restaurents_rtn.createImageLabel("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\cuisens\\Pub.png", 290, 174, 400 +(290+290)+ 2 * 17+10, 335+174+ 17+10);
         contentPanel.add(cuisene_6);
 
-        JButton viewMapButton = restaurents_rtn.createImageButton("src/Dash_Icons/view_on_map.png", 20, 250, 353, 223);
-        viewMapButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                // Action to perform when the button is clicked
-                System.out.println("View Map button clicked!");
-            }
-        });
-        contentPanel.add(viewMapButton);
+        int initialX = 450;
+        int initialY = 120 + (174 * 4);
+        int buttonWidth = 198;
+        int buttonHeight = 172;
+        int horizontalSpacing = 20;
+
+        // Loop through the hotel image paths array and create buttons
+        for (int i = 0; i < hotelImagePaths.length; i++) {
+            JButton hotelButton = restaurents_rtn.createImageButton(hotelImagePaths[i], initialX + (buttonWidth + horizontalSpacing) * i, initialY, buttonWidth, buttonHeight);
+            contentPanel.add(hotelButton);
+
+            // Create a final variable to capture the current value of i
+            final int buttonIndex = i;
+
+            // Add ActionListener to the button
+            hotelButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    // Action to perform when this specific button is clicked
+                    // You can write your code here for each button's action
+                    if (buttonIndex == 0) {
+                        System.out.println("sutar1");
+                    } else if (buttonIndex == 1) {
+                        System.out.println("sutar2");
+                    } else if (buttonIndex == 2) {
+                        System.out.println("sutar3");
+                    } else if (buttonIndex == 3) {
+                        System.out.println("sutar4");
+                    }
+                }
+            });
+        }
 
         Zomato = restaurents_rtn.createImageButton("src/Dash_Icons/Zomato.png",-40,30,431,86);
         Zomato.setBackground(new Color(0x21A9FF));
@@ -216,7 +242,7 @@ public class restaurent_func extends JFrame {
         frame.setVisible(true);
     }
 
-    public static void displayGoogleMap(String embedUrl) {
+    public static void web_opener(String embedUrl) {
         JFrame frame1 = new JFrame();
         frame1.setSize(1366, 771);
         frame1.setExtendedState(Frame.MAXIMIZED_BOTH);

@@ -36,10 +36,18 @@ import java.awt.event.ActionListener;
 
 public class restaurents_rtn extends JFrame implements ActionListener {
     JScrollPane scrollPane;
-    JButton view_map,swiggy,Zomato,Uber_eats,Food_Panda,Dunzo,back;
+    JButton view_map,swiggy,Zomato,Uber_eats,Food_Panda,Dunzo,back,hotelButton;
     JFXPanel jfxPanel;
+    int i;
 
     JFrame rtn;
+
+    String[] hotelImagePaths = {
+            "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\hotels\\Mithila Restaurant.png",
+            "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\hotels\\Masala Kitchen.png",
+            "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\hotels\\Kokani Angan.png",
+            "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\hotels\\Amantran.png"
+    };
     public static void main(String[] args) {
         restaurents_rtn restro1 = new restaurents_rtn();
         restro1.initializeFrame();
@@ -82,7 +90,9 @@ public class restaurents_rtn extends JFrame implements ActionListener {
 
         JLabel label_a = createImageLabel("src/Dash_Icons/browse_restro.png", 845, 81, 250, 250);
         contentPanel.add(label_a);
-        places_ratnagiri.loadAndSetCustomFont(label_a, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Browse Ratnagiri by Food", Font.BOLD, 33, new Color(0xF9F8FC), 280, 13, 531,50);
+        places_ratnagiri.loadAndSetCustomFont(label_a, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Browse Ratnagiri by Food", Font.BOLD, 38, new Color(0xF9F8FC), 280, 15, 531,50);
+
+        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Budget-friendly bites", Font.BOLD, 38, new Color(0x0B1E33), 450,740, 531,50);
 
 
         JLabel label_b = createImageLabel("src/Dash_Icons/cuisines.png",386,499,12,490);
@@ -114,16 +124,49 @@ public class restaurents_rtn extends JFrame implements ActionListener {
         JLabel cuisene_6 = createImageLabel("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\cuisens\\Pub.png", 290, 174, 400 +(290+290)+ 2 * 17+10, 335+174+ 17+10);
         contentPanel.add(cuisene_6);
 
+        int initialX = 450;
+        int initialY = 120 + (174 * 4);
+        int buttonWidth = 198;
+        int buttonHeight = 172;
+        int horizontalSpacing = 20;
+
+        // Loop through the hotel image paths array and create buttons
+        for (int i = 0; i < hotelImagePaths.length; i++) {
+            JButton hotelButton = restaurents_rtn.createImageButton(hotelImagePaths[i], initialX + (buttonWidth + horizontalSpacing) * i, initialY, buttonWidth, buttonHeight);
+            contentPanel.add(hotelButton);
+
+            // Create a final variable to capture the current value of i
+            final int buttonIndex = i;
+
+            // Add ActionListener to the button
+            hotelButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    // Action to perform when this specific button is clicked
+                    // You can write your code here for each button's action
+                    if (buttonIndex == 0) {
+                        System.out.println("sutar1");
+                    } else if (buttonIndex == 1) {
+                        System.out.println("sutar2");
+                    } else if (buttonIndex == 2) {
+                        System.out.println("sutar3");
+                    } else if (buttonIndex == 3) {
+                        System.out.println("sutar4");
+                    }
+                }
+            });
+        }
+
         JButton viewMapButton = createImageButton("src/Dash_Icons/view_on_map.png", 20, 250, 353, 223);
         viewMapButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                // Action to perform when the button is clicked
+                // Action to perform when the button is clicke
                 System.out.println("View Map button clicked!");
             }
         });
         contentPanel.add(viewMapButton);
 
-        Zomato = createImageButton("src/Dash_Icons/Zomato.png",-40,30,431,86);
+        Zomato = createImageButton("src/Dash_Icons/Zomato.png", -40, 30, 431, 86);
         Zomato.setBackground(new Color(0x21A9FF));
         Zomato.addActionListener(this);
         label_d.add(Zomato);
