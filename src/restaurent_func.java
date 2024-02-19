@@ -42,7 +42,7 @@ public class restaurent_func extends JFrame {
     public JScrollPane scrollPane;
 
 
-    public void initializeFrame(String gmapurl,String[] hotelImagePaths)
+    public void initializeFrame(String gmapurl,String[] hotelImagePaths, String[] HotelImagePaths_part1)
     {
         frame = new JFrame();
         frame.setExtendedState(MAXIMIZED_BOTH);
@@ -87,8 +87,11 @@ public class restaurent_func extends JFrame {
 
         JLabel label_a = restaurents_rtn.createImageLabel("src/Dash_Icons/browse_restro.png", 845, 81, 250, 250);
         contentPanel.add(label_a);
-        places_ratnagiri.loadAndSetCustomFont(label_a, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Browse Ratnagiri by Food", Font.BOLD, 33, new Color(0xFFFFFF), 280, 13, 531,50);
+        places_ratnagiri.loadAndSetCustomFont(label_a, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Browse Ratnagiri by Food", Font.BOLD, 33, new Color(0xFFFFFF), 280, 13, 531,50);
 
+        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Budget-friendly bites", Font.BOLD, 38, new Color(0x0B1E33), 450,740, 531,50);
+
+        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Cheap eats", Font.BOLD, 38, new Color(0x0B1E33), 450,740+170+90, 531,50);
         JLabel label_b = restaurents_rtn.createImageLabel("src/Dash_Icons/cuisines.png",386,499,12,490);
         contentPanel.add(label_b);
 
@@ -119,7 +122,7 @@ public class restaurent_func extends JFrame {
         contentPanel.add(cuisene_6);
 
         int initialX = 450;
-        int initialY = 120 + (174 * 4);
+        int initialY = 110 + (174 * 4);
         int buttonWidth = 198;
         int buttonHeight = 172;
         int horizontalSpacing = 20;
@@ -146,6 +149,39 @@ public class restaurent_func extends JFrame {
                         System.out.println("sutar3");
                     } else if (buttonIndex == 3) {
                         System.out.println("sutar4");
+                    }
+                }
+            });
+        }
+
+        int initialX1 = 450;
+        int initialY1 = 90+172+110 + (174 * 4);
+        int buttonWidth1 = 198;
+        int buttonHeight1 = 172;
+        int horizontalSpacing1 = 20;
+
+        // Loop through the hotel image paths array and create buttons
+        for (int i = 0; i < HotelImagePaths_part1.length; i++) {
+            JButton hotelButton = restaurents_rtn.createImageButton(HotelImagePaths_part1[i], initialX1 + (buttonWidth1 + horizontalSpacing1) * i, initialY1, buttonWidth1, buttonHeight1);
+            contentPanel.add(hotelButton);
+
+            // Create a final variable to capture the current value of i
+            final int buttonIndex = i;
+
+            // Add ActionListener to the button
+            hotelButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    // Action to perform when this specific button is clicked
+                    // You can write your code here for each button's action
+                    if (buttonIndex == 0) {
+                        System.out.println("sutar5");
+                    } else if (buttonIndex == 1) {
+                        System.out.println("sutar6");
+                    } else if (buttonIndex == 2) {
+                        System.out.println("sutar7");
+                    } else if (buttonIndex == 3) {
+                        System.out.println("sutar8");
                     }
                 }
             });
