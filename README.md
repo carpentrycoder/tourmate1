@@ -1,6 +1,6 @@
 # Tourmate Travel Planning Application
 
- **Check here if you want application preview**
+ **Check here if you want application preview on youtube **
 - tourmate1 part one : https://youtu.be/5XdAwDO7KKw
 
 
