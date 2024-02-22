@@ -62,6 +62,13 @@ public class restaurents_rtn extends JFrame implements ActionListener {
             "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\hotels\\Soul Curry Restaurant.png",
             "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\hotels\\Kokani Tadka.png",
     };
+
+    String[] Delivery_Available = {
+            "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\hotels\\Darbar Family Restaurant.png",
+            "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\hotels\\Masala Kitchen.png",
+            "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\hotels\\Kokani Angan.png",
+            "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\hotels\\Drive  Inn Carnival.png",
+    };
     public static void main(String[] args) {
         restaurents_rtn restro1 = new restaurents_rtn();
         restro1.initializeFrame();
@@ -111,6 +118,8 @@ public class restaurents_rtn extends JFrame implements ActionListener {
         places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Cheap eats", Font.BOLD, 38, new Color(0x0B1E33), 450,740+170+90, 531,50);
 
         places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Dinner", Font.BOLD, 38, new Color(0x0B1E33), 450,740+370+90+60, 531,50);
+
+        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Delivery Available", Font.BOLD, 38, new Color(0x0B1E33), 450,740+670+80+30, 531,50);
 
         JLabel label_b = createImageLabel("src/Dash_Icons/cuisines.png",386,499,12,490);
         contentPanel.add(label_b);
@@ -235,6 +244,39 @@ public class restaurents_rtn extends JFrame implements ActionListener {
                         System.out.println("sutar11");
                     } else if (buttonIndex == 3) {
                         System.out.println("sutar12");
+                    }
+                }
+            });
+        }
+
+        int initialX3 = 450;
+        int initialY3 = 105+172+610 + (174 * 4);
+        int buttonWidth3 = 198;
+        int buttonHeight3 = 172;
+        int horizontalSpacing3 = 20;
+
+        // Loop through the hotel image paths array and create buttons
+        for (int i = 0; i < Delivery_Available.length; i++) {
+            JButton hotelButton = restaurents_rtn.createImageButton(Delivery_Available[i], initialX3 + (buttonWidth3 + horizontalSpacing3) * i, initialY3, buttonWidth3, buttonHeight3);
+            contentPanel.add(hotelButton);
+
+            // Create a final variable to capture the current value of i
+            final int buttonIndex = i;
+
+            // Add ActionListener to the button
+            hotelButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    // Action to perform when this specific button is clicked
+                    // You can write your code here for each button's action
+                    if (buttonIndex == 0) {
+                        System.out.println("sutar13");
+                    } else if (buttonIndex == 1) {
+                        System.out.println("sutar14");
+                    } else if (buttonIndex == 2) {
+                        System.out.println("sutar15");
+                    } else if (buttonIndex == 3) {
+                        System.out.println("sutar16");
                     }
                 }
             });
