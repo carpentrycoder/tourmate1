@@ -42,7 +42,7 @@ public class restaurent_func extends JFrame {
     public JScrollPane scrollPane;
 
 
-    public void initializeFrame(String gmapurl,String[] hotelImagePaths, String[] HotelImagePaths_part1)
+    public void initializeFrame(String gmapurl,String[] Budget_friendly_bites, String[] Cheap_eats,String[] Dinner)
     {
         frame = new JFrame();
         frame.setExtendedState(MAXIMIZED_BOTH);
@@ -92,6 +92,9 @@ public class restaurent_func extends JFrame {
         places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Budget-friendly bites", Font.BOLD, 38, new Color(0x0B1E33), 450,740, 531,50);
 
         places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Cheap eats", Font.BOLD, 38, new Color(0x0B1E33), 450,740+170+90, 531,50);
+
+        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Dinner", Font.BOLD, 38, new Color(0x0B1E33), 450,740+370+90+60, 531,50);
+
         JLabel label_b = restaurents_rtn.createImageLabel("src/Dash_Icons/cuisines.png",386,499,12,490);
         contentPanel.add(label_b);
 
@@ -128,8 +131,8 @@ public class restaurent_func extends JFrame {
         int horizontalSpacing = 20;
 
         // Loop through the hotel image paths array and create buttons
-        for (int i = 0; i < hotelImagePaths.length; i++) {
-            JButton hotelButton = restaurents_rtn.createImageButton(hotelImagePaths[i], initialX + (buttonWidth + horizontalSpacing) * i, initialY, buttonWidth, buttonHeight);
+        for (int i = 0; i < Budget_friendly_bites.length; i++) {
+            JButton hotelButton = restaurents_rtn.createImageButton(Budget_friendly_bites[i], initialX + (buttonWidth + horizontalSpacing) * i, initialY, buttonWidth, buttonHeight);
             contentPanel.add(hotelButton);
 
             // Create a final variable to capture the current value of i
@@ -161,8 +164,8 @@ public class restaurent_func extends JFrame {
         int horizontalSpacing1 = 20;
 
         // Loop through the hotel image paths array and create buttons
-        for (int i = 0; i < HotelImagePaths_part1.length; i++) {
-            JButton hotelButton = restaurents_rtn.createImageButton(HotelImagePaths_part1[i], initialX1 + (buttonWidth1 + horizontalSpacing1) * i, initialY1, buttonWidth1, buttonHeight1);
+        for (int i = 0; i < Cheap_eats.length; i++) {
+            JButton hotelButton = restaurents_rtn.createImageButton(Cheap_eats[i], initialX1 + (buttonWidth1 + horizontalSpacing1) * i, initialY1, buttonWidth1, buttonHeight1);
             contentPanel.add(hotelButton);
 
             // Create a final variable to capture the current value of i
@@ -182,6 +185,40 @@ public class restaurent_func extends JFrame {
                         System.out.println("sutar7");
                     } else if (buttonIndex == 3) {
                         System.out.println("sutar8");
+                    }
+                }
+            });
+        }
+
+
+        int initialX2 = 450;
+        int initialY2 = 150+172+310 + (174 * 4);
+        int buttonWidth2 = 198;
+        int buttonHeight2 = 172;
+        int horizontalSpacing2 = 20;
+
+        // Loop through the hotel image paths array and create buttons
+        for (int i = 0; i < Dinner.length; i++) {
+            JButton hotelButton = restaurents_rtn.createImageButton(Dinner[i], initialX2 + (buttonWidth2 + horizontalSpacing2) * i, initialY2, buttonWidth2, buttonHeight2);
+            contentPanel.add(hotelButton);
+
+            // Create a final variable to capture the current value of i
+            final int buttonIndex = i;
+
+            // Add ActionListener to the button
+            hotelButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    // Action to perform when this specific button is clicked
+                    // You can write your code here for each button's action
+                    if (buttonIndex == 0) {
+                        System.out.println("sutar9");
+                    } else if (buttonIndex == 1) {
+                        System.out.println("sutar10");
+                    } else if (buttonIndex == 2) {
+                        System.out.println("sutar11");
+                    } else if (buttonIndex == 3) {
+                        System.out.println("sutar12");
                     }
                 }
             });
