@@ -42,7 +42,7 @@ public class restaurent_func extends JFrame {
     public JScrollPane scrollPane;
 
 
-    public void initializeFrame(String gmapurl,String[] Budget_friendly_bites, String[] Cheap_eats,String[] Dinner,String[] Delivery_Available)
+    public void initializeFrame(String gmapurl,String[] restaurents_link,String[] Budget_friendly_bites, String[] Cheap_eats,String[] Dinner,String[] Delivery_Available)
     {
         frame = new JFrame();
         frame.setExtendedState(MAXIMIZED_BOTH);
@@ -147,13 +147,13 @@ public class restaurent_func extends JFrame {
                     // Action to perform when this specific button is clicked
                     // You can write your code here for each button's action
                     if (buttonIndex == 0) {
-                        System.out.println("sutar1");
+                        web_opener(restaurents_link[0]);
                     } else if (buttonIndex == 1) {
-                        System.out.println("sutar2");
+                        web_opener(restaurents_link[1]);
                     } else if (buttonIndex == 2) {
-                        System.out.println("sutar3");
+                        web_opener(restaurents_link[2]);
                     } else if (buttonIndex == 3) {
-                        System.out.println("sutar4");
+                        web_opener(restaurents_link[3]);
                     }
                 }
             });
@@ -180,13 +180,13 @@ public class restaurent_func extends JFrame {
                     // Action to perform when this specific button is clicked
                     // You can write your code here for each button's action
                     if (buttonIndex == 0) {
-                        System.out.println("sutar5");
+                        web_opener(restaurents_link[5]);
                     } else if (buttonIndex == 1) {
-                        System.out.println("sutar6");
+                        web_opener(restaurents_link[6]);
                     } else if (buttonIndex == 2) {
-                        System.out.println("sutar7");
+                        web_opener(restaurents_link[7]);
                     } else if (buttonIndex == 3) {
-                        System.out.println("sutar8");
+                        web_opener(restaurents_link[8]);
                     }
                 }
             });
@@ -215,12 +215,16 @@ public class restaurent_func extends JFrame {
                     // You can write your code here for each button's action
                     if (buttonIndex == 0) {
                         System.out.println("sutar9");
+                        web_opener(restaurents_link[9]);
                     } else if (buttonIndex == 1) {
                         System.out.println("sutar10");
+                        web_opener(restaurents_link[10]);
                     } else if (buttonIndex == 2) {
                         System.out.println("sutar11");
+                        web_opener(restaurents_link[11]);
                     } else if (buttonIndex == 3) {
                         System.out.println("sutar12");
+                        web_opener(restaurents_link[12]);
                     }
                 }
             });
@@ -248,12 +252,16 @@ public class restaurent_func extends JFrame {
                     // You can write your code here for each button's action
                     if (buttonIndex == 0) {
                         System.out.println("sutar13");
+                        web_opener(restaurents_link[13]);
                     } else if (buttonIndex == 1) {
                         System.out.println("sutar14");
+                        web_opener(restaurents_link[14]);
                     } else if (buttonIndex == 2) {
                         System.out.println("sutar15");
+                        web_opener(restaurents_link[15]);
                     } else if (buttonIndex == 3) {
                         System.out.println("sutar16");
+                        web_opener(restaurents_link[16]);
                     }
                 }
             });
@@ -262,6 +270,14 @@ public class restaurent_func extends JFrame {
         Zomato = restaurents_rtn.createImageButton("src/Dash_Icons/Zomato.png",-40,30,431,86);
         Zomato.setBackground(new Color(0x21A9FF));
         label_d.add(Zomato);
+        Zomato.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Your code for Zomato button action here
+                // For example, opening a web link
+                Delivery_web("https://www.zomato.com/india");
+            }
+        });
 
         swiggy = restaurents_rtn.createImageButton("src/Dash_Icons/Swiggy.png",-40,130,431,86);
         swiggy.setBackground(new Color(0x21A9FF));
@@ -278,6 +294,34 @@ public class restaurent_func extends JFrame {
         Dunzo = restaurents_rtn.createImageButton("src/Dash_Icons/Dunzo.png",-40,89+(86*4),431,86);
         Dunzo.setBackground(new Color(0x21A9FF));
         label_d.add(Dunzo);
+
+        swiggy.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Your code for Zomato button action here
+                // For example, opening a web link
+                Delivery_web("https://www.swiggy.com/");
+            }
+        });
+
+        Uber_eats.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Delivery_web("https://www.ubereats.com/");
+            }
+        });
+        Food_Panda.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Delivery_web("https://www.foodpanda.com/");
+            }
+        });
+        Dunzo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Delivery_web("https://www.dunzo.com/bangalore");
+            }
+        });
 
         ImageIcon backIcon1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
         JButton back = new JButton(backIcon1); // back
