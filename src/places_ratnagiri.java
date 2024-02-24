@@ -1,20 +1,25 @@
-/**
-// Coordinates for the first button
-int x1 = 50; // X coordinate for the first button
-int y1 = 250; // Y coordinate for the first button
-
-// Coordinates for the second button
-int x2 = x1 + 400 + 42; // X coordinate for the second button (start from the end of the first button plus the space)
-int y2 = 250; // Y coordinate for the second button (assuming it's aligned with the first button)
-
-// Coordinates for the third button
-int x3 = x2 + 400 + 42; // X coordinate for the third button (start from the end of the second button plus the space)
-int y3 = 250; // Y coordinate for the third button (assuming it's aligned with the first and second button)
-
-// Use these coordinates to set bounds for your buttons
-ganpatipule_temple.setBounds(x1, y1, 400, 300);
-// Set bounds for other buttons similarly
-
+/*
+ * MIT License
+ *
+ * Copyright (c) 2024 Sutar
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
  */
 
 import javax.swing.*;
@@ -70,67 +75,67 @@ public class places_ratnagiri extends JFrame implements ActionListener {
         ganpatipule_temple = createButton("src/Dash_Icons/Ganpatipule_Temple.png",this);
         ganpatipule_temple.setBounds(x1,y1, 400, 300);
         contentPanel.add(ganpatipule_temple);
-        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ganpatipule Temple", Font.BOLD, 30, new Color(69, 37, 52), 80, 560, 378,44);
+        loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ganpatipule Temple", Font.BOLD, 30, new Color(69, 37, 52), 80, 560, 378,44);
 
         ganpatipule_beach = createButton("src/Dash_Icons/Ganpule_beach.png",this);
         ganpatipule_beach.setBounds(x2,y2, 400, 300);
         contentPanel.add(ganpatipule_beach);
-        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ganpatipule Beach ", Font.BOLD, 30, new Color(69, 37, 52), 120+378+44, 560, 378,44);
+        loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ganpatipule Beach ", Font.BOLD, 30, new Color(69, 37, 52), 120+378+44, 560, 378,44);
 
         Jai_Vinayak_Temple = createButton("src/Dash_Icons/Jai_Vinayak_Temple.png",this);
         Jai_Vinayak_Temple.setBounds(x2 + 400 + 42,y2, 400, 300);
         contentPanel.add(Jai_Vinayak_Temple);
-        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Jai Vinayak Temple", Font.BOLD, 30, new Color(69, 37, 52), 260+678+44, 560, 378,44);
+        loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Jai Vinayak Temple", Font.BOLD, 30, new Color(69, 37, 52), 260+678+44, 560, 378,44);
 
         Ratnadurg_Fort = createButton("src/Dash_Icons/Ratnadurg Fort.png",this);
         Ratnadurg_Fort.setBounds(x1,y1 + 300 + 73, 400, 300);
         contentPanel.add(Ratnadurg_Fort);
-        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ratnadurg Fort", Font.BOLD, 30, new Color(69, 37, 52), 120, 90+800+44, 378,44);
+        loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ratnadurg Fort", Font.BOLD, 30, new Color(69, 37, 52), 120, 90+800+44, 378,44);
 
         Jaigad_Lighthouse = createButton("src/Dash_Icons/Jaigad_Lighthouse.png",this);
         Jaigad_Lighthouse.setBounds(x1 + 400 + 42,y1 + 300 + 73, 400, 300);
         contentPanel.add(Jaigad_Lighthouse);
-        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Jaigad Lighthouse", Font.BOLD, 30, new Color(69, 37, 52), 120+378+44, 90+800+44, 378,44);
+        loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Jaigad Lighthouse", Font.BOLD, 30, new Color(69, 37, 52), 120+378+44, 90+800+44, 378,44);
 
         Bhatye_Beach = createButton("src/Dash_Icons/Bhatye_Beach.png",this);
         Bhatye_Beach.setBounds(x2 + 400 + 42,y1 + 300 + 73, 400, 300);
         contentPanel.add(Bhatye_Beach);
-        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Bhatye Beach", Font.BOLD, 30, new Color(69, 37, 52), 260+678+80, 90+800+44, 378,44);
+        loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Bhatye Beach", Font.BOLD, 30, new Color(69, 37, 52), 260+678+80, 90+800+44, 378,44);
 
         Aare_ware_Beach = createButton("src/Dash_Icons/Aare_ware_Beach.png",this);
         Aare_ware_Beach.setBounds(x1,y1 + 600 + 150, 400, 300);
         contentPanel.add(Aare_ware_Beach);
-        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Aare ware Beach", Font.BOLD, 30, new Color(69, 37, 52), 90, 70+1200+44, 378,44);
+        loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Aare ware Beach", Font.BOLD, 30, new Color(69, 37, 52), 90, 70+1200+44, 378,44);
 
         Ganesh_Ghule_Beach = createButton("src/Dash_Icons/Ganesh_Ghule_Beach.png",this);
         Ganesh_Ghule_Beach.setBounds(x1 + 400 + 42,y1 + 600 + 150, 400, 300);
         contentPanel.add(Ganesh_Ghule_Beach);
-        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ganesh Ghule Beach", Font.BOLD, 30, new Color(69, 37, 52), 120+378+38, 70+1200+44, 378,44);
+        loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ganesh Ghule Beach", Font.BOLD, 30, new Color(69, 37, 52), 120+378+38, 70+1200+44, 378,44);
 
         Pawas = createButton("src/Dash_Icons/Ganesh_Ghule_Beach.png",this);
         Pawas.setBounds(x2 + 400 + 42,y1 + 600 + 150, 400, 300);
         contentPanel.add(Pawas);
-        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Pawas", Font.BOLD, 30, new Color(69, 37, 52), 260+678+120, 70+1200+44, 378,44);
+        loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Pawas", Font.BOLD, 30, new Color(69, 37, 52), 260+678+120, 70+1200+44, 378,44);
 
         Kanakaditya_temple = createButton("src/Dash_Icons/Kanakaditya_temple.png",this);
         Kanakaditya_temple.setBounds(x1,y1 + 900 + 150 +73, 400, 300);
         contentPanel.add(Kanakaditya_temple);
-        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Kanakaditya Temple", Font.BOLD, 30, new Color(69, 37, 52),80, 70+1600+14, 378,44);
+        loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Kanakaditya Temple", Font.BOLD, 30, new Color(69, 37, 52),80, 70+1600+14, 378,44);
 
         secondButton = createButton("src/Dash_Icons/Tilak ali_Museum.png", this);
         secondButton.setBounds(x1 + 400 + 40, y1 + 900 + 150 + 73, 400, 300);
         contentPanel.add(secondButton);
-        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Tilak Ali Museum", Font.BOLD, 30, new Color(69, 37, 52), 80 + 400 + 60, 70 + 1600 + 14, 378, 44);
+        loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Tilak Ali Museum", Font.BOLD, 30, new Color(69, 37, 52), 80 + 400 + 60, 70 + 1600 + 14, 378, 44);
 
         thirdButton = createButton("src/Dash_Icons/Thiba_Palace.png", this);
         thirdButton.setBounds(x1 + (400 + 40) * 2, y1 + 900 + 150 + 73, 400, 300);
         contentPanel.add(thirdButton);
-        loadAndSetCustomFont(contentPanel, "\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Thiba Palace", Font.BOLD, 30, new Color(69, 37, 52), 80 + (400 + 60) * 2, 70 + 1600 + 14, 378, 44);
+        loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Thiba Palace", Font.BOLD, 30, new Color(69, 37, 52), 80 + (400 + 60) * 2, 70 + 1600 + 14, 378, 44);
 
         int backButtonX = thirdButton.getX() + thirdButton.getWidth() - 80 ;
         int backButtonY = thirdButton.getY() + thirdButton.getHeight() + 100; // Assuming a vertical space of 20 pixels between the buttons
 
-        ImageIcon backIcon = new ImageIcon("\\tourmate1\\src\\DButns\\Back.png");
+        ImageIcon backIcon = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
         back = new JButton(backIcon);
         back.setBackground(new Color(0xFB9B70));
         back.setBounds(backButtonX, backButtonY, 60, 60);
