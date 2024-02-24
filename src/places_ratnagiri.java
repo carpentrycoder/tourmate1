@@ -31,7 +31,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class places_ratnagiri extends JFrame implements ActionListener {
-    JScrollPane scrollPane;
+    static JScrollPane scrollPane;
     JButton ganpatipule_temple, ganpatipule_beach,Jai_Vinayak_Temple,Ratnadurg_Fort,Jaigad_Lighthouse,Bhatye_Beach,Aare_ware_Beach,Ganesh_Ghule_Beach,Pawas,Kanakaditya_temple,thirdButton,secondButton, back;
     JFrame rtn;
 
@@ -156,7 +156,7 @@ public class places_ratnagiri extends JFrame implements ActionListener {
         return button;
     }
 
-    public void setupScrollBar() {
+    public static void setupScrollBar() {
         JScrollBar verticalScrollBar1 = scrollPane.getVerticalScrollBar();
         verticalScrollBar1.setUI(new BasicScrollBarUI() {
             @Override
