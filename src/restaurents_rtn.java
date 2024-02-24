@@ -70,8 +70,8 @@ public class restaurents_rtn extends JFrame implements ActionListener {
             "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\hotels\\Drive  Inn Carnival.png",
     };
     public static void main(String[] args) {
-        restaurents_rtn restro1 = new restaurents_rtn();
-        restro1.initializeFrame();
+        restaurents_rtn restro_main = new restaurents_rtn();
+        restro_main.initializeFrame();
 
     }
     public void initializeFrame()

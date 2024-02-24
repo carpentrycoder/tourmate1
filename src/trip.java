@@ -3,9 +3,6 @@ import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.Scanner;
@@ -283,9 +280,7 @@ public class trip extends JFrame implements ActionListener
 
         if (e.getSource() == b1) {
             // Handle action for places button (e.g., show a dialog to add a new place)
-            if (citystr == rtnstr) {
-                new places_ratnagiri();
-            } else if (citystr == smbjstr ) {
+            if (citystr == smbjstr ) {
                 JOptionPane.showMessageDialog(SambhajinagerFrame, "Button b1 (Places) clicked!");
             } else if (citystr == mumstr) {
                 JOptionPane.showMessageDialog(mumbaiFrame, "Button b1 (Places) clicked!" );
@@ -297,9 +292,7 @@ public class trip extends JFrame implements ActionListener
         }
         // Check if b2 (hotels) button is clicked
         else if (e.getSource() == b2) {
-            if (citystr == rtnstr) {
-                new Hotel_ratnagiri();
-            } else if (citystr == smbjstr ) {
+             if (citystr == smbjstr ) {
                 JOptionPane.showMessageDialog(SambhajinagerFrame, "Button b2 (Places) clicked!");
             } else if (citystr == mumstr) {
                 JOptionPane.showMessageDialog(mumbaiFrame, "Button b2 (Places) clicked!" );
@@ -311,10 +304,8 @@ public class trip extends JFrame implements ActionListener
         }
         // Check if b3 (restaurants) button is clicked
         else if (e.getSource() == b3) {
-            if (citystr == rtnstr) {
-                JOptionPane.showMessageDialog(null,"click");
-                new restaurents_rtn();
-            } else if (citystr == smbjstr ) {
+
+             if (citystr == smbjstr ) {
                 JOptionPane.showMessageDialog(SambhajinagerFrame, "Button b3 (Places) clicked!");
             } else if (citystr == mumstr) {
                 JOptionPane.showMessageDialog(mumbaiFrame, "Button b3 (Places) clicked!" );
@@ -433,7 +424,8 @@ public class trip extends JFrame implements ActionListener
         b1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new places_ratnagiri();
+                places_ratnagiri ratnagiri = new places_ratnagiri();
+                ratnagiri.initializeFrame();
             }
         });
         label.add(b1);
@@ -454,10 +446,11 @@ public class trip extends JFrame implements ActionListener
         b3 = new JButton(place3);
         b3.setBounds(130 + (354 + 71) * 2, 250, 354, 187);
         b3.setBorder(BorderFactory.createEmptyBorder());
-        b2.addActionListener(new ActionListener() {
+        b3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new restaurents_rtn();
+                restaurents_rtn restro1 = new restaurents_rtn();
+                restro1.initializeFrame();
             }
         });
         label.add(b3);
@@ -579,7 +572,7 @@ public class trip extends JFrame implements ActionListener
             JButton back = new JButton(backIcon1); // back
             back.setBackground(new Color(0x2FA3FF));
             back.setBorder(BorderFactory.createEmptyBorder());
-            back.setBounds(1260, 1300, 60, 60);
+            back.setBounds(1260, 1400, 60, 60);
             back.setFont(new Font("open sauce", Font.BOLD, 20));
             back.setForeground(Color.BLACK);
             back.addActionListener(new ActionListener() {
