@@ -12,11 +12,11 @@ import java.util.Scanner;
 
 public class trip extends JFrame implements ActionListener
 {
-    JButton startPlanning, invite, c1,c2,c3,c4,c5,b1,b2,b3,button1,yourButton,saveButton;
+    static JButton startPlanning, invite, c1,c2,c3,c4,c5,b1,b2,b3,button1,yourButton,saveButton;
     int days, day;
-    JButton[] customButtons,yourdel;
-    JFrame itineraryFrame;
-    String[] placesList = {
+    static JButton[] customButtons,yourdel;
+    static JFrame itineraryFrame;
+    static String[] placesList = {
             "Ganpatipule Temple",
             "Ganpatipule Beach",
             "Jai Vinayak Temple",
@@ -30,7 +30,7 @@ public class trip extends JFrame implements ActionListener
             "Tilak Ali Museum",
             "Thiba Palace"
     };
-    String[] mumList = {
+    static String[] mumList = {
             "Gateway of India",
             "Siddhivinayak Temple",
             "Chhatrapati Shivaji Maharaj Terminus (CSMT)",
@@ -44,7 +44,7 @@ public class trip extends JFrame implements ActionListener
             "Nehru Science Centre",
             "Mumbai Film City"
     };
-    String[] nashikList = {
+    static String[] nashikList = {
             "Trimbakeshwar Temple",
             "Saptashrungi Devi Temple",
             "Kalaram Temple",
@@ -58,7 +58,7 @@ public class trip extends JFrame implements ActionListener
             "Ram Kund",
             "Nashik Caves"
     };
-    String[] sambhajinagarList = {
+    static String[] sambhajinagarList = {
             "Bibi Ka Maqbara",
             "Ellora Caves",
             "Daulatabad Fort",
@@ -72,7 +72,7 @@ public class trip extends JFrame implements ActionListener
             "Prozone Mall",
             "Goga Baba Hill"
     };
-    String[] puneList = {
+    static String[] puneList = {
             "Shaniwar Wada",
             "Aga Khan Palace",
             "Sinhagad Fort",
@@ -87,16 +87,16 @@ public class trip extends JFrame implements ActionListener
             "Chaturshringi Temple"
     };
     int OGHeight =1500,MaxHeight = OGHeight+100,i = 1,yPosition=10;
-    JScrollPane scrollPane1;
-    JPanel contentPanel,blackPanels;
-    JPanel[] customlabel;
-    ImageIcon place1,place2,place3;
-    JFrame ratnagiriFrame,mumbaiFrame,puneFrame,SambhajinagerFrame,nashikFrame;
+    static JScrollPane scrollPane1;
+    static JPanel contentPanel,blackPanels;
+    static JPanel[] customlabel;
+    static ImageIcon place1,place2,place3;
+    static JFrame ratnagiriFrame,mumbaiFrame,puneFrame,SambhajinagerFrame,nashikFrame;
 
-    JLabel label, startDateLabel, endDateLabel;
-    String endDateStr, startDateStr, citystr, rtnstr, mumstr, pnstr, smbjstr, nshkstr;
-    JTextField startDateField, endDateField;
-    Font fontTxt = new Font("Open sauce", Font.PLAIN, 20);
+    static JLabel label, startDateLabel, endDateLabel;
+    static String endDateStr, startDateStr, citystr, rtnstr, mumstr, pnstr, smbjstr, nshkstr;
+    static JTextField startDateField, endDateField;
+    static Font fontTxt = new Font("Open sauce", Font.PLAIN, 20);
     Font font = new Font("Arial", Font.BOLD, 29);
 
     trip() {
@@ -312,7 +312,8 @@ public class trip extends JFrame implements ActionListener
         // Check if b3 (restaurants) button is clicked
         else if (e.getSource() == b3) {
             if (citystr == rtnstr) {
-                JOptionPane.showMessageDialog(ratnagiriFrame, "Button b3 (Places) clicked!");
+                JOptionPane.showMessageDialog(null,"click");
+                new restaurents_rtn();
             } else if (citystr == smbjstr ) {
                 JOptionPane.showMessageDialog(SambhajinagerFrame, "Button b3 (Places) clicked!");
             } else if (citystr == mumstr) {
@@ -429,21 +430,36 @@ public class trip extends JFrame implements ActionListener
         b1 = new JButton(place1);
         b1.setBounds(130,250,354,187);
         b1.setBorder(BorderFactory.createEmptyBorder());
-        b1.addActionListener(this);
+        b1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new places_ratnagiri();
+            }
+        });
         label.add(b1);
 
         place2 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB2.png");
         b2 = new JButton(place2);
         b2.setBounds(130 + 354 + 71, 250, 354, 187);
         b2.setBorder(BorderFactory.createEmptyBorder());
-        b2.addActionListener(this);
+        b2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Hotel_ratnagiri();
+            }
+        });
         label.add(b2);
 
         place3 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB3.png");
         b3 = new JButton(place3);
         b3.setBounds(130 + (354 + 71) * 2, 250, 354, 187);
         b3.setBorder(BorderFactory.createEmptyBorder());
-        b3.addActionListener(this);
+        b2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new restaurents_rtn();
+            }
+        });
         label.add(b3);
 
         ImageIcon a1 = new ImageIcon(ClassLoader.getSystemResource("DButns/JPanal.png"));
