@@ -1,10 +1,28 @@
-/*
- * Copyright (c) 2024. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
- * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
- * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
- * Vestibulum commodo. Ut rhoncus gravida arcu.
- */
+/**
+* MIT License
+        *
+        * Copyright (c) 2024 Sutar
+        *
+        * Permission is hereby granted, free of charge, to any person obtaining a copy
+        * of this software and associated documentation files (the "Software"), to deal
+        * in the Software without restriction, including without limitation the rights
+        * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        * copies of the Software, and to permit persons to whom the Software is
+        * furnished to do so, subject to the following conditions:
+        *
+        * The above copyright notice and this permission notice shall be included in all
+        * copies or substantial portions of the Software.
+        *
+        * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        * SOFTWARE.
+        */
+
+
 
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicScrollBarUI;
@@ -22,13 +40,9 @@ public class Hotel_func extends JFrame {
     static JButton[] buttons;
     static JFrame rtnhotels;
     static String strday, endday;
-    static int i,buttonNumber;
 
-    Hotel_func(){
-        func_hotel();
-    };
-
-    public static ActionListener func_hotel(){
+    public static void func_hotel(String[] urls)
+    {
         rtnhotels = new JFrame();
         rtnhotels.setTitle("ratagirihotels");
         rtnhotels.setExtendedState(MAXIMIZED_BOTH);
@@ -99,29 +113,33 @@ public class Hotel_func extends JFrame {
 // Calculate X-coordinates for the second row
         int xSecondRow = xFirstRow + buttonWidth + 480; // Adjust this spacing as needed
 
+        ActionListener buttonClickListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JButton source = (JButton) e.getSource();
+                String buttonText = source.getText();
+                openButtonLink(buttonText,urls);
+            }
+        };
+
 // First loop
-        // First loop
-        ActionListener[] buttonListeners = new ActionListener[21];
         for (int i = 0; i < 10; i++) {
             buttons[i] = new JButton("Button " + (i + 1), icon);
             buttons[i].setBounds(xFirstRow, yCoordinates[i], buttonWidth, buttonHeight);
-            // Add ActionListener to the button
-            buttons[i].addActionListener(buttonListeners[i]);
+            buttons[i].addActionListener(buttonClickListener);
+            buttons[i].setBorder(BorderFactory.createEmptyBorder());
+            buttons[i].setBackground(new Color(0xF9F8FC));
+            contentPanel.add(buttons[i]);
+        }
+        for (int i = 10; i < buttons.length; i++) {
+            buttons[i] = new JButton("Button " + (i + 1), icon);
+            buttons[i].setBounds(xSecondRow, yCoordinates[i - 10], buttonWidth, buttonHeight);
+            buttons[i].addActionListener(buttonClickListener);
             buttons[i].setBorder(BorderFactory.createEmptyBorder());
             buttons[i].setBackground(new Color(0xF9F8FC));
             contentPanel.add(buttons[i]);
         }
 
-// Second loop
-        for (int i = 10; i < buttons.length; i++) {
-            buttons[i] = new JButton("Button " + (i + 1), icon);
-            buttons[i].setBounds(xSecondRow, yCoordinates[i - 10], buttonWidth, buttonHeight);
-            // Add ActionListener to the button
-            buttons[i].addActionListener(buttonListeners[i]);
-            buttons[i].setBorder(BorderFactory.createEmptyBorder());
-            buttons[i].setBackground(new Color(0xF9F8FC));
-            contentPanel.add(buttons[i]);
-        }
         ImageIcon imageIcon = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\rtnhotels.png");
         Image image = imageIcon.getImage().getScaledInstance(1366, 3000, Image.SCALE_DEFAULT);
         imageIcon = new ImageIcon(image);
@@ -162,7 +180,6 @@ public class Hotel_func extends JFrame {
         rtnhotels.setLayout(null);
         rtnhotels.setVisible(true);
     }
-
     public static void openURIInBrowser(String uriString) {
         try {
             URI uri = new URI(uriString);
@@ -171,8 +188,72 @@ public class Hotel_func extends JFrame {
             throw new RuntimeException(e);
         }
     }
-
-    public static void main(String[] args) {
-        new Hotel_func();
+    public static void openButtonLink(String buttonText, String[] links) {
+        switch (buttonText) {
+            case "Button 1":
+                openURIInBrowser(links[0]);
+                break;
+            case "Button 2":
+                openURIInBrowser(links[1]);
+                break;
+            case "Button 3":
+                openURIInBrowser(links[2]);
+                break;
+            case "Button 4":
+                openURIInBrowser(links[3]);
+                break;
+            case "Button 5":
+                openURIInBrowser(links[4]);
+                break;
+            case "Button 6":
+                openURIInBrowser(links[5]);
+                break;
+            case "Button 7":
+                openURIInBrowser(links[6]);
+                break;
+            case "Button 8":
+                openURIInBrowser(links[7]);
+                break;
+            case "Button 9":
+                openURIInBrowser(links[8]);
+                break;
+            case "Button 10":
+                openURIInBrowser(links[9]);
+                break;
+            case "Button 11":
+                openURIInBrowser(links[10]);
+                break;
+            case "Button 12":
+                openURIInBrowser(links[11]);
+                break;
+            case "Button 13":
+                openURIInBrowser(links[12]);
+                break;
+            case "Button 14":
+                openURIInBrowser(links[13]);
+                break;
+            case "Button 15":
+                openURIInBrowser(links[14]);
+                break;
+            case "Button 16":
+                openURIInBrowser(links[15]);
+                break;
+            case "Button 17":
+                openURIInBrowser(links[16]);
+                break;
+            case "Button 18":
+                openURIInBrowser(links[17]);
+                break;
+            case "Button 19":
+                openURIInBrowser(links[18]);
+                break;
+            case "Button 20":
+                openURIInBrowser(links[19]);
+                break;
+            default:
+                // Handle default case or throw an exception if needed
+                throw new IllegalArgumentException("Invalid button text: " + buttonText);
+        }
     }
+
 }
