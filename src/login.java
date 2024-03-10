@@ -2,13 +2,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.sql.*;
 
 public class login extends JFrame implements ActionListener {
 JButton Back,code,Signup,Login;
 JTextField tfusername, tfpass;
+static String Username,Password;
 Font fontTxt = new Font("Open Sauce",Font.PLAIN,15);
    login()
    {
@@ -106,6 +105,7 @@ Font fontTxt = new Font("Open Sauce",Font.PLAIN,15);
        Back.addActionListener(this);
        p2.add(Back);
 
+       setUndecorated(true);
        setVisible(true);
    }
 
@@ -128,18 +128,14 @@ Font fontTxt = new Font("Open Sauce",Font.PLAIN,15);
         }
         else if (dj.getSource() == Login)
         {
+             Username = tfusername.getText();
+             Password = tfpass.getText();
             try
            {
-              String Username = tfusername.getText();
-              String Password = tfpass.getText();
-              FileWriter writer1 = new FileWriter("pass.txt");
-              FileWriter writer = new FileWriter("user.txt");
                try
               {
-                  writer.write(Username);
-                  writer1.write(Password);
-                   System.out.println("String stored in user.txt\n" +"pass.txt");
-               } catch (IOException e) {
+                  System.out.println(Username+" and "+Password);
+               } catch (Exception e) {
                     System.out.println(e);
                }
 
@@ -159,7 +155,7 @@ Font fontTxt = new Font("Open Sauce",Font.PLAIN,15);
            }
            catch(Exception e)
            {
-               e.printStackTrace();
+               System.out.println(e);
            }
         }
 

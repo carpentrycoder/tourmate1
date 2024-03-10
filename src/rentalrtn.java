@@ -13,7 +13,7 @@ public class rentalrtn extends JFrame {
         JLabel Q4 = new JLabel(Q3);
         Q4.setBounds(0, 0, 900,400);
         add(Q4);
-//        setUndecorated(true);
+        setUndecorated(true);
         setLocationRelativeTo(null);
         setVisible(true);
     }

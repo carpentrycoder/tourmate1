@@ -10,7 +10,7 @@ public class exp_hotel extends JFrame {
         hotelFrame = Hotel.rtnhotelframe();
 
         // Add an image label to the content panel using the Hotel class function
-        Hotel.addImageLabel(Hotel.contentPanel, "E:\\tourmate1\\src\\icons\\mum_hotels.png");
+        Hotel.addImageLabel(Hotel.contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\mum_hotels.png");
 
         // Configure and add the checkin text field using the Hotel class function
         Hotel.checkin = Hotel.configureTextField(new JTextField());
@@ -36,7 +36,7 @@ public class exp_hotel extends JFrame {
         // Revalidate the hotel frame to refresh the layout
         hotelFrame.revalidate();
     }
-    ActionListener buttonClickListener = new ActionListener() {
+    static ActionListener buttonClickListener = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
             JButton source = (JButton) e.getSource();
@@ -44,7 +44,7 @@ public class exp_hotel extends JFrame {
             openButtonLink(buttonText);
         }
     };
-    public void openButtonLink(String buttonText) 
+    public static void openButtonLink(String buttonText)
     {
         switch (buttonText) {
             case "Button 1":

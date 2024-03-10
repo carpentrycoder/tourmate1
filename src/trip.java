@@ -122,21 +122,21 @@ public class trip extends JFrame implements ActionListener
         startDateField.setFont(fontTxt);
         add(startDateField);
 
-        ImageIcon s = new ImageIcon("/tourmate1/src/DButns/invite.png");
+        ImageIcon s = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\invite.png");
         invite = new JButton(s);
         invite.setBounds(532, 230, 136, 38);
         invite.setBorder(BorderFactory.createEmptyBorder());
         invite.addActionListener(this);
         add(invite);
 
-        ImageIcon d = new ImageIcon("/tourmate1/src/DButns/start planning.png");
+        ImageIcon d = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\start planning.png");
         startPlanning = new JButton(d);
         startPlanning.setBounds(532, 280, 136, 38);
         startPlanning.setBorder(BorderFactory.createEmptyBorder());
         startPlanning.addActionListener(this);
         add(startPlanning);
 
-        ImageIcon a = new ImageIcon("\\tourmate1\\src\\DButns\\c1.png");
+        ImageIcon a = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\c1.png");
         c1 = new JButton(a);
         c1.setBounds(80, 128, 77, 24);
         c1.setBorder(BorderFactory.createEmptyBorder());
@@ -144,7 +144,7 @@ public class trip extends JFrame implements ActionListener
         c1.addActionListener(this);
         add(c1);
 
-        ImageIcon b = new ImageIcon("\\tourmate1\\src\\DButns\\c2.png");
+        ImageIcon b = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\c2.png");
         c2 = new JButton(b);
         c2.setBounds(160, 128, 77, 24);
         c2.setBorder(BorderFactory.createEmptyBorder());
@@ -152,7 +152,7 @@ public class trip extends JFrame implements ActionListener
         c2.setBackground(new Color(0x09389F));
         add(c2);
 
-        ImageIcon c = new ImageIcon("\\tourmate1\\src\\DButns\\c3.png");
+        ImageIcon c = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\c3.png");
         c3 = new JButton(c);
         c3.setBounds(240, 128, 77, 24);
         c3.setBorder(BorderFactory.createEmptyBorder());
@@ -161,7 +161,7 @@ public class trip extends JFrame implements ActionListener
         c3.setLayout(null);
         add(c3);
 
-        ImageIcon e = new ImageIcon("\\tourmate1\\src\\DButns\\c4.png");
+        ImageIcon e = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\c4.png");
         c4 = new JButton(e);
         c4.setBounds(320, 128, 77, 24);
         c4.setBorder(BorderFactory.createEmptyBorder());
@@ -169,7 +169,7 @@ public class trip extends JFrame implements ActionListener
         c4.setBackground(new Color(0x09389F));
         add(c4);
 
-        ImageIcon f = new ImageIcon("\\tourmate1\\src\\DButns\\c5.png");
+        ImageIcon f = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\c5.png");
         c5 = new JButton(f);
         c5.setBounds(400, 128, 77, 24);
         c5.setBorder(BorderFactory.createEmptyBorder());
@@ -286,12 +286,7 @@ public class trip extends JFrame implements ActionListener
         if (e.getSource() == b1) {
             // Handle action for places button (e.g., show a dialog to add a new place)
             if (citystr == rtnstr) {
-                try {
-                    URI uri = new URI("file:///E:/tourmate(webview)/index.html");
-                    Desktop.getDesktop().browse(uri);
-                } catch (URISyntaxException | IOException j) {
-                    throw new RuntimeException(j);
-                }
+                new places_ratnagiri();
             } else if (citystr == smbjstr ) {
                 JOptionPane.showMessageDialog(SambhajinagerFrame, "Button b1 (Places) clicked!");
             } else if (citystr == mumstr) {
@@ -425,28 +420,28 @@ public class trip extends JFrame implements ActionListener
             }
         });
 
-        ImageIcon imageIcon = new ImageIcon("/tourmate1/src/icons/Copy of iternary.png");
+        ImageIcon imageIcon = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Copy of iternary.png");
         Image image = imageIcon.getImage().getScaledInstance(1366, 768, Image.SCALE_SMOOTH);
         imageIcon = new ImageIcon(image);
         label = new JLabel(imageIcon);
         label.setSize(1366, 768);
         contentPanel.add(label);
 
-        place1 = new ImageIcon("\\tourmate1\\src\\DButns\\IB1.png");
+        place1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB1.png");
         b1 = new JButton(place1);
         b1.setBounds(130,250,354,187);
         b1.setBorder(BorderFactory.createEmptyBorder());
         b1.addActionListener(this);
         label.add(b1);
 
-        place2 = new ImageIcon("\\tourmate1\\src\\DButns\\IB2.png");
+        place2 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB2.png");
         b2 = new JButton(place2);
         b2.setBounds(130 + 354 + 71, 250, 354, 187);
         b2.setBorder(BorderFactory.createEmptyBorder());
         b2.addActionListener(this);
         label.add(b2);
 
-        place3 = new ImageIcon("\\tourmate1\\src\\DButns\\IB3.png");
+        place3 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB3.png");
         b3 = new JButton(place3);
         b3.setBounds(130 + (354 + 71) * 2, 250, 354, 187);
         b3.setBorder(BorderFactory.createEmptyBorder());
@@ -493,7 +488,7 @@ public class trip extends JFrame implements ActionListener
         //displaying using for loop places icons
         customButtons = new JButton[12];
         for (i = 1; i <= 12; i++) {
-            String imagePath = "\\tourmate1\\src\\Subplaces\\w" + i + ".png";
+            String imagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Subplaces\\w" + i + ".png";
             ImageIcon qImageIcon = new ImageIcon(imagePath);
             Image img = qImageIcon.getImage().getScaledInstance(535, 112, Image.SCALE_SMOOTH);
             qImageIcon = new ImageIcon(img);
@@ -502,7 +497,7 @@ public class trip extends JFrame implements ActionListener
             qLabel.setBounds(5, yPosition, 535, 112);
             subplaces.add(qLabel);
 
-            String buttonImagePath = "\\tourmate1\\src\\DButns\\plus-32_add.png";
+            String buttonImagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\plus-32_add.png";
             ImageIcon buttonIcon = new ImageIcon(buttonImagePath);
             Image buttonImage = buttonIcon.getImage().getScaledInstance(34, 34, Image.SCALE_SMOOTH);
             buttonIcon = new ImageIcon(buttonImage);
@@ -553,7 +548,7 @@ public class trip extends JFrame implements ActionListener
             customlabel[i] = blackPanels;
             label.add(blackPanels);
 
-            ImageIcon del = new ImageIcon("tourmate1\\src\\DButns\\Delete.png");
+            ImageIcon del = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Delete.png");
             yourButton = new JButton(del);
             yourButton.setSize(35, 35);
             // Set the location of the button to the right side of blackPanels
@@ -565,6 +560,23 @@ public class trip extends JFrame implements ActionListener
             yourdel[i] = yourButton; // Fix the array index here
             yourButton.addActionListener(this);
             label.add(yourButton);
+
+            ImageIcon backIcon1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
+            JButton back = new JButton(backIcon1); // back
+            back.setBackground(new Color(0x2FA3FF));
+            back.setBorder(BorderFactory.createEmptyBorder());
+            back.setBounds(1260, 1300, 60, 60);
+            back.setFont(new Font("open sauce", Font.BOLD, 20));
+            back.setForeground(Color.BLACK);
+            back.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    // Set the JFrame to invisible when back button is clicked
+                    ratnagiriFrame.setVisible(false);
+
+                }
+            });
+            contentPanel.add(back);
 
             contentPanel.add(label);
             OGHeight = Math.max(OGHeight, yPosition + 110);
@@ -627,21 +639,21 @@ public class trip extends JFrame implements ActionListener
         contentPanel.setBackground(new Color(146, 167, 186, 255));
         scrollPane.setViewportView(contentPanel);
 
-        ImageIcon imageIcon = new ImageIcon("/tourmate1/src/icons/mumbai_iternary.png");
+        ImageIcon imageIcon = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\mumbai_iternary.png");
         Image image = imageIcon.getImage().getScaledInstance(1366, 768, Image.SCALE_SMOOTH);
         imageIcon = new ImageIcon(image);
         label = new JLabel(imageIcon);
         label.setSize(1366, 768);
         contentPanel.add(label);
 
-        place1 = new ImageIcon("\\tourmate1\\src\\DButns\\IB1.png");
+        place1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB1.png");
         b1 = new JButton(place1);
         b1.setBounds(130,250,354,187);
         b1.setBorder(BorderFactory.createEmptyBorder());
         b1.addActionListener(this);
         label.add(b1);
 
-        place2 = new ImageIcon("\\tourmate1\\src\\DButns\\IB2.png");
+        place2 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB2.png");
         b2 = new JButton(place2);
         b2.setBounds(130 + 354 + 71, 250, 354, 187);
         b2.setBorder(BorderFactory.createEmptyBorder());
@@ -649,7 +661,7 @@ public class trip extends JFrame implements ActionListener
         label.add(b2);
 
 // Third button with a space of 71
-        place3 = new ImageIcon("\\tourmate1\\src\\DButns\\IB3.png");
+        place3 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB3.png");
         b3 = new JButton(place3);
         b3.setBounds(130 + (354 + 71) * 2, 250, 354, 187);
         b3.setBorder(BorderFactory.createEmptyBorder());
@@ -695,7 +707,7 @@ public class trip extends JFrame implements ActionListener
 
         customButtons = new JButton[12];
         for (i = 1; i <= 12; i++) {
-            String imagePath = "\\tourmate1\\src\\Subplaces\\q" + i + ".png";
+            String imagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Subplaces\\q" + i + ".png";
             ImageIcon qImageIcon = new ImageIcon(imagePath);
             Image img = qImageIcon.getImage().getScaledInstance(535, 112, Image.SCALE_SMOOTH);
             qImageIcon = new ImageIcon(img);
@@ -704,7 +716,7 @@ public class trip extends JFrame implements ActionListener
             qLabel.setBounds(5, yPosition, 535, 112);
             subplaces.add(qLabel);
 
-            String buttonImagePath = "\\tourmate1\\src\\DButns\\plus-32_add.png";
+            String buttonImagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\plus-32_add.png";
             ImageIcon buttonIcon = new ImageIcon(buttonImagePath);
             Image buttonImage = buttonIcon.getImage().getScaledInstance(34, 34, Image.SCALE_SMOOTH);
             buttonIcon = new ImageIcon(buttonImage);
@@ -756,7 +768,7 @@ public class trip extends JFrame implements ActionListener
             customlabel[i] = blackPanels;
             label.add(blackPanels);
 
-            ImageIcon del = new ImageIcon("\\tourmate1\\src\\DButns\\Delete.png");
+            ImageIcon del = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Delete.png");
             yourButton = new JButton(del);
             yourButton.setSize(35, 35);
             // Set the location of the button to the right side of blackPanels
@@ -795,6 +807,38 @@ public class trip extends JFrame implements ActionListener
         mumbsiLabel.setForeground(new Color(0x000000));
         a4.add(mumbsiLabel);
 
+        ImageIcon backIcon1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
+        JButton back = new JButton(backIcon1); // back
+        back.setBackground(new Color(0xDB9205));
+        back.setBorder(BorderFactory.createEmptyBorder());
+        back.setBounds(1260, 1900, 60, 60);
+        back.setFont(new Font("open sauce", Font.BOLD, 20));
+        back.setForeground(Color.BLACK);
+        back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Set the JFrame to invisible when back button is clicked
+                mumbaiFrame.setVisible(false);
+                ImageIcon backIcon1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
+                JButton back = new JButton(backIcon1); // back
+                back.setBackground(new Color(0x2FA3FF));
+                back.setBorder(BorderFactory.createEmptyBorder());
+                back.setBounds(1260, 1300, 60, 60);
+                back.setFont(new Font("open sauce", Font.BOLD, 20));
+                back.setForeground(Color.BLACK);
+                back.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Set the JFrame to invisible when back button is clicked
+                        mumbaiFrame.setVisible(false);
+
+                    }
+                });
+                contentPanel.add(back);
+            }
+        });
+        contentPanel.add(back);
+
         mumbaiFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         mumbaiFrame.setLocationRelativeTo(null);
         mumbaiFrame.setVisible(true);
@@ -824,28 +868,28 @@ public class trip extends JFrame implements ActionListener
             }
         });
 
-        ImageIcon imageIcon = new ImageIcon("/tourmate1/src/icons/pune_iternary.png");
+        ImageIcon imageIcon = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\pune_iternary.png");
         Image image = imageIcon.getImage().getScaledInstance(1366, 768, Image.SCALE_SMOOTH);
         imageIcon = new ImageIcon(image);
         label = new JLabel(imageIcon);
         label.setSize(1366, 768);
         contentPanel.add(label);
 
-        ImageIcon place1 = new ImageIcon("\\tourmate1\\src\\DButns\\IB1.png");
+        ImageIcon place1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB1.png");
         b1 = new JButton(place1);
         b1.setBounds(130,250,354,187);
         b1.setBorder(BorderFactory.createEmptyBorder());
         b1.addActionListener(this);
         label.add(b1);
 
-        ImageIcon place2 = new ImageIcon("\\tourmate1\\src\\DButns\\IB2.png");
+        ImageIcon place2 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB2.png");
         b2 = new JButton(place2);
         b2.setBounds(130 + 354 + 71, 250, 354, 187);
         b2.setBorder(BorderFactory.createEmptyBorder());
         b2.addActionListener(this);
         label.add(b2);
 
-        ImageIcon place3 = new ImageIcon("\\tourmate1\\src\\DButns\\IB3.png");
+        ImageIcon place3 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB3.png");
         b3 = new JButton(place3);
         b3.setBounds(130 + (354 + 71) * 2, 250, 354, 187);
         b3.setBorder(BorderFactory.createEmptyBorder());
@@ -891,7 +935,7 @@ public class trip extends JFrame implements ActionListener
 
         customButtons = new JButton[12];
         for (i = 1; i <= 12; i++) {
-            String imagePath = "\\tourmate1\\src\\Subplaces\\d" + i + ".png";
+            String imagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Subplaces\\d" + i + ".png";
             ImageIcon qImageIcon = new ImageIcon(imagePath);
             Image img = qImageIcon.getImage().getScaledInstance(535, 112, Image.SCALE_SMOOTH);
             qImageIcon = new ImageIcon(img);
@@ -900,7 +944,7 @@ public class trip extends JFrame implements ActionListener
             qLabel.setBounds(5, yPosition, 535, 112);
             subplaces.add(qLabel);
 
-            String buttonImagePath = "\\tourmate1\\src\\DButns\\plus-32_add.png";
+            String buttonImagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\plus-32_add.png";
             ImageIcon buttonIcon = new ImageIcon(buttonImagePath);
             Image buttonImage = buttonIcon.getImage().getScaledInstance(34, 34, Image.SCALE_SMOOTH);
             buttonIcon = new ImageIcon(buttonImage);
@@ -952,7 +996,7 @@ public class trip extends JFrame implements ActionListener
             customlabel[i] = blackPanels;
             label.add(blackPanels);
 
-            ImageIcon del = new ImageIcon("\\tourmate1\\src\\DButns\\Delete.png");
+            ImageIcon del = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Delete.png");
             yourButton = new JButton(del);
             yourButton.setSize(35, 35);
             // Set the location of the button to the right side of blackPanels
@@ -964,6 +1008,23 @@ public class trip extends JFrame implements ActionListener
             yourdel[i] = yourButton; // Fix the array index here
             yourButton.addActionListener(this);
             label.add(yourButton);
+
+            ImageIcon backIcon1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
+            JButton back = new JButton(backIcon1); // back
+            back.setBackground(new Color(0x2FA3FF));
+            back.setBorder(BorderFactory.createEmptyBorder());
+            back.setBounds(1260, 1300, 60, 60);
+            back.setFont(new Font("open sauce", Font.BOLD, 20));
+            back.setForeground(Color.BLACK);
+            back.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    // Set the JFrame to invisible when back button is clicked
+                    puneFrame.setVisible(false);
+
+                }
+            });
+            contentPanel.add(back);
 
             contentPanel.add(label);
             OGHeight = Math.max(OGHeight, yPosition + 110);
@@ -1010,7 +1071,7 @@ public class trip extends JFrame implements ActionListener
         contentPanel.setBackground(new Color(146, 167, 186, 255));
         scrollPane.setViewportView(contentPanel);
 
-        ImageIcon imageIcon = new ImageIcon("/tourmate1/src/icons/smbj_iternary.png");
+        ImageIcon imageIcon = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\smbj_iternary.png");
         Image image = imageIcon.getImage().getScaledInstance(1366, 768, Image.SCALE_SMOOTH);
         imageIcon = new ImageIcon(image);
         label = new JLabel(imageIcon);
@@ -1026,14 +1087,14 @@ public class trip extends JFrame implements ActionListener
             }
         });
 
-        ImageIcon place1 = new ImageIcon("\\tourmate1\\src\\DButns\\IB1.png");
+        ImageIcon place1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB1.png");
         b1 = new JButton(place1);
         b1.setBounds(130,250,354,187);
         b1.setBorder(BorderFactory.createEmptyBorder());
         b1.addActionListener(this);
         label.add(b1);
 
-        ImageIcon place2 = new ImageIcon("\\tourmate1\\src\\DButns\\IB2.png");
+        ImageIcon place2 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB2.png");
         b2 = new JButton(place2);
         b2.setBounds(130 + 354 + 71, 250, 354, 187);
         b2.setBorder(BorderFactory.createEmptyBorder());
@@ -1041,7 +1102,7 @@ public class trip extends JFrame implements ActionListener
         label.add(b2);
 
 // Third button with a space of 71
-        ImageIcon place3 = new ImageIcon("\\tourmate1\\src\\DButns\\IB3.png");
+        ImageIcon place3 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB3.png");
         b3 = new JButton(place3);
         b3.setBounds(130 + (354 + 71) * 2, 250, 354, 187);
         b3.setBorder(BorderFactory.createEmptyBorder());
@@ -1087,7 +1148,7 @@ public class trip extends JFrame implements ActionListener
 
         customButtons = new JButton[12];
         for (i = 1; i <= 12; i++) {
-            String imagePath = "\\tourmate1\\src\\Subplaces\\r" + i + ".png";
+            String imagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Subplaces\\r" + i + ".png";
             ImageIcon qImageIcon = new ImageIcon(imagePath);
             Image img = qImageIcon.getImage().getScaledInstance(535, 112, Image.SCALE_SMOOTH);
             qImageIcon = new ImageIcon(img);
@@ -1096,7 +1157,7 @@ public class trip extends JFrame implements ActionListener
             qLabel.setBounds(5, yPosition, 535, 112);
             subplaces.add(qLabel);
 
-            String buttonImagePath = "\\tourmate1\\src\\DButns\\plus-32_add.png";
+            String buttonImagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\plus-32_add.png";
             ImageIcon buttonIcon = new ImageIcon(buttonImagePath);
             Image buttonImage = buttonIcon.getImage().getScaledInstance(34, 34, Image.SCALE_SMOOTH);
             buttonIcon = new ImageIcon(buttonImage);
@@ -1148,7 +1209,7 @@ public class trip extends JFrame implements ActionListener
             customlabel[i] = blackPanels;
             label.add(blackPanels);
 
-            ImageIcon del = new ImageIcon("\\tourmate1\\src\\DButns\\Delete.png");
+            ImageIcon del = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Delete.png");
             yourButton = new JButton(del);
             yourButton.setSize(35, 35);
             // Set the location of the button to the right side of blackPanels
@@ -1160,6 +1221,23 @@ public class trip extends JFrame implements ActionListener
             yourdel[i] = yourButton; // Fix the array index here
             yourButton.addActionListener(this);
             label.add(yourButton);
+
+            ImageIcon backIcon1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
+            JButton back = new JButton(backIcon1); // back
+            back.setBackground(new Color(0x2FA3FF));
+            back.setBorder(BorderFactory.createEmptyBorder());
+            back.setBounds(1260, 1300, 60, 60);
+            back.setFont(new Font("open sauce", Font.BOLD, 20));
+            back.setForeground(Color.BLACK);
+            back.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    // Set the JFrame to invisible when back button is clicked
+                    SambhajinagerFrame.setVisible(false);
+
+                }
+            });
+            contentPanel.add(back);
 
             contentPanel.add(label);
             OGHeight = Math.max(OGHeight, yPosition + 110);
@@ -1215,21 +1293,21 @@ public class trip extends JFrame implements ActionListener
             }
         });
 
-        ImageIcon imageIcon = new ImageIcon("/tourmate1/src/icons/nashik_iternary.png");
+        ImageIcon imageIcon = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\nashik_iternary.png");
         Image image = imageIcon.getImage().getScaledInstance(1366, 768, Image.SCALE_SMOOTH);
         imageIcon = new ImageIcon(image);
         label = new JLabel(imageIcon);
         label.setSize(1366, 768);
         contentPanel.add(label);
 
-        ImageIcon place1 = new ImageIcon("\\tourmate1\\src\\DButns\\IB1.png");
+        ImageIcon place1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB1.png");
         b1 = new JButton(place1);
         b1.setBounds(130,250,354,187);
         b1.setBorder(BorderFactory.createEmptyBorder());
         b1.addActionListener(this);
         label.add(b1);
 
-        ImageIcon place2 = new ImageIcon("\\tourmate1\\src\\DButns\\IB2.png");
+        ImageIcon place2 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB2.png");
         b2 = new JButton(place2);
         b2.setBounds(130 + 354 + 71, 250, 354, 187);
         b2.setBorder(BorderFactory.createEmptyBorder());
@@ -1237,7 +1315,7 @@ public class trip extends JFrame implements ActionListener
         label.add(b2);
 
 // Third button with a space of 71
-        ImageIcon place3 = new ImageIcon("\\tourmate1\\src\\DButns\\IB3.png");
+        ImageIcon place3 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\IB3.png");
         b3 = new JButton(place3);
         b3.setBounds(130 + (354 + 71) * 2, 250, 354, 187);
         b3.setBorder(BorderFactory.createEmptyBorder());
@@ -1283,7 +1361,7 @@ public class trip extends JFrame implements ActionListener
 
         customButtons = new JButton[12];
         for (i = 1; i <= 12; i++) {
-            String imagePath = "\\tourmate1\\src\\Subplaces\\z" + i + ".png";
+            String imagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Subplaces\\z" + i + ".png";
             ImageIcon qImageIcon = new ImageIcon(imagePath);
             Image img = qImageIcon.getImage().getScaledInstance(535, 112, Image.SCALE_SMOOTH);
             qImageIcon = new ImageIcon(img);
@@ -1292,7 +1370,7 @@ public class trip extends JFrame implements ActionListener
             qLabel.setBounds(5, yPosition, 535, 112);
             subplaces.add(qLabel);
 
-            String buttonImagePath = "\\tourmate1\\src\\DButns\\plus-32_add.png";
+            String buttonImagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\plus-32_add.png";
             ImageIcon buttonIcon = new ImageIcon(buttonImagePath);
             Image buttonImage = buttonIcon.getImage().getScaledInstance(34, 34, Image.SCALE_SMOOTH);
             buttonIcon = new ImageIcon(buttonImage);
@@ -1344,7 +1422,7 @@ public class trip extends JFrame implements ActionListener
             customlabel[i] = blackPanels;
             label.add(blackPanels);
 
-            ImageIcon del = new ImageIcon("\\tourmate1\\src\\DButns\\Delete.png");
+            ImageIcon del = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Delete.png");
             yourButton = new JButton(del);
             yourButton.setSize(35, 35);
             // Set the location of the button to the right side of blackPanels
@@ -1381,6 +1459,22 @@ public class trip extends JFrame implements ActionListener
         nashikLabel.setFont(font);
         nashikLabel.setForeground(new Color(0x000000));
         a4.add(nashikLabel);
+
+        ImageIcon backIcon1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
+        JButton back = new JButton(backIcon1); // back
+        back.setBackground(new Color(0x2FA3FF));
+        back.setBorder(BorderFactory.createEmptyBorder());
+        back.setBounds(1260, 1450, 60, 60);
+        back.setFont(new Font("open sauce", Font.BOLD, 20));
+        back.setForeground(Color.BLACK);
+        back.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Set the JFrame to invisible when back button is clicked
+                nashikFrame.setVisible(false);
+            }
+        });
+        contentPanel.add(back);
 
         nashikFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         nashikFrame.setLocationRelativeTo(null);

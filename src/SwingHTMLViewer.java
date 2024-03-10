@@ -167,7 +167,7 @@ public class SwingHTMLViewer {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     frame.setVisible(false);
-                    System.exit(0); // Hide the frame
+
                 }
             });
             n.add(specialButton);

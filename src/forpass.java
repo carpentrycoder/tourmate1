@@ -35,7 +35,7 @@ public class forpass extends JFrame implements ActionListener {
         image.add(tfname);
 
         //search button
-        ImageIcon s1 = new ImageIcon("H:\\tourmate1\\src\\icons\\search.png");
+        ImageIcon s1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\search.png");
 
         S = new JButton(s1);
         S.setBounds(442,172,35,35);
@@ -89,7 +89,7 @@ public class forpass extends JFrame implements ActionListener {
         image.add(tfans);
 
         //search button
-        ImageIcon retrive1 = new ImageIcon("\\tourmate1\\src\\icons\\retrive.png");
+        ImageIcon retrive1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\retrive.png");
 
         retrive = new JButton(retrive1);
         retrive.setBounds(410,298,30,30);
@@ -124,6 +124,7 @@ public class forpass extends JFrame implements ActionListener {
         image.add(b);
         setLayout(new FlowLayout());
 
+        setUndecorated(true);
         setVisible(true);
     }
 

@@ -50,7 +50,7 @@ public class dash extends JFrame implements ActionListener {
     k1.add(a4);
 
 
-    ImageIcon s1 = new ImageIcon("tourmate1\\src\\icons\\profile1.png");
+    ImageIcon s1 = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\profile1.png");
     S = new JButton(s1);
     S.setLayout(null);
     S.setBounds(1300, 2, 50, 50);
@@ -190,6 +190,7 @@ public class dash extends JFrame implements ActionListener {
     k.add(dayLable);
     k.add(dateLable);
 
+    setUndecorated(true);
     setVisible(true);
     setTime();
   }

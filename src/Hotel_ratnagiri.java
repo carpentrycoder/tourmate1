@@ -60,7 +60,7 @@ public class Hotel_ratnagiri extends JFrame implements ActionListener {
         endday = checkout.getText();
         contentPanel.add(checkout);
 
-        ImageIcon ok = new ImageIcon("\\tourmate1\\src\\DButns\\done_80.png");
+        ImageIcon ok = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\done_80.png");
         done = new JButton(ok);
         done.setLayout(null);
         done.setBorder(BorderFactory.createEmptyBorder());
@@ -77,7 +77,7 @@ public class Hotel_ratnagiri extends JFrame implements ActionListener {
         // Calculate Y-coordinates based on the provided reference
         int startY = 630; // Adjusted starting Y-coordinate
         int[] yCoordinates = new int[10];
-        String imagePath = "\\tourmate1\\src\\DButns\\deal_button.png";
+        String imagePath = "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\deal_button.png";
         ImageIcon icon = new ImageIcon(imagePath);
 
         for (int i = 0; i < yCoordinates.length; i++) {
@@ -105,7 +105,7 @@ public class Hotel_ratnagiri extends JFrame implements ActionListener {
             contentPanel.add(buttons[i]);
         }
 
-        ImageIcon imageIcon = new ImageIcon("E:\\tourmate1\\src\\icons\\rtnhotels.png");
+        ImageIcon imageIcon = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\rtnhotels.png");
         Image image = imageIcon.getImage().getScaledInstance(1366, 3000, Image.SCALE_DEFAULT);
         imageIcon = new ImageIcon(image);
         JLabel label = new JLabel(imageIcon);
@@ -121,7 +121,7 @@ public class Hotel_ratnagiri extends JFrame implements ActionListener {
             }
         });
 
-        ImageIcon backb = new ImageIcon("E:\\tourmate1\\src\\DButns\\Back.png");
+        ImageIcon backb = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\Back.png");
         back = new JButton(backb); // back
         back.setBackground(new Color(0xC8C8C8));
         back.setLayout(null);
