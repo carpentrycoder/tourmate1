@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.Scanner;
 
+
 public class trip extends JFrame implements ActionListener
 {
     static JButton startPlanning, invite, c1,c2,c3,c4,c5,b1,b2,b3,button1,yourButton,saveButton;
