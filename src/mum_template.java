@@ -1,21 +1,38 @@
-/*
- * Copyright (c) 2024. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
- * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
- * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
- * Vestibulum commodo. Ut rhoncus gravida arcu.
- */
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class mum_template{
     public static void main(String[] args) {
-        PlaceTemplateFunc.PlaceTemplateFunc("Mumbai","Dash_Icons/queens-necklace.png","Dash_Icons/gate-of-india.png","Dash_Icons/info-mum.png","Dash_Icons/vadapav.png","Dash_Icons/mum-client1.png","Dash_Icons/mum-client2.png","Dash_Icons/mum-client3.png");
+        PlaceTemplateFunc.PlaceTemplateFunc("Mumbai","Dash_Icons/queens-necklace.png","Dash_Icons/gate-of-india.png","Dash_Icons/famous-mum.png","Dash_Icons/info-mum.png","Dash_Icons/vadapav.png","Dash_Icons/mum-client1.png","Dash_Icons/mum-client2.png","Dash_Icons/mum-client3.png");
         PlaceTemplateFunc.getaskme().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("sutar");
+                String url = "http://surl.li/rrunl"; // Replace this with your actual delivery website URL
+                restaurent_func.Delivery_web(url);
+            }
+        });
+
+        PlaceTemplateFunc.getMapButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String url = "http://surl.li/rrupi"; // Replace this with your actual delivery website URL
+                restaurent_func.Delivery_web(url);
+            }
+        });
+
+        PlaceTemplateFunc.getDirectionButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String url = "http://surl.li/rrunl"; // Replace this with your actual delivery website URL
+                restaurent_func.Delivery_web(url);
+            }
+        });
+
+        PlaceTemplateFunc.getWeatherButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String url = "https://www.accuweather.com/en/in/mumbai/204842/weather-forecast/204842"; // Replace this with your actual delivery website URL
+                restaurent_func.Delivery_web(url);
             }
         });
     }
