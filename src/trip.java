@@ -6,6 +6,8 @@ import java.awt.event.ActionListener;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.Scanner;
+import okhttp3.*;
+
 
 
 public class trip extends JFrame implements ActionListener
@@ -1572,12 +1574,52 @@ public class trip extends JFrame implements ActionListener
                 inviteFrame.dispose();
                 System.out.println(name);
                 System.out.println(mobile);
+
+                try {
+                    sendMessage( mobile);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
             }
         });
         inviteFrame.add(saveButton);
         inviteFrame.setLocationRelativeTo(null);
         inviteFrame.setVisible(true);
     }
+
+    private static void sendMessage( String mobile) throws Exception {
+        OkHttpClient client = new OkHttpClient();
+
+        // Create request body
+        MediaType mediaType = MediaType.parse("application/json");
+        String requestBody = "{\n" +
+                "    \"token\": \"d40a2b7d6cmsh6083b6f39dfd065p1f0472jsn64091a089a98\",\n" +
+                "    \"phone_number_or_group_id\": \"" + mobile + "\",\n" +
+                "    \"is_group\": false,\n" +
+                "    \"message\": \"Hello! This API really works! https://rapidapi.com/finestoreuk/api/whatsapp-messaging-hub\",\n" +
+                "    \"mentioned_ids\": \"\",\n" +
+                "    \"quoted_message_id\": \"\"\n" +
+                "}";
+        RequestBody body = RequestBody.create(mediaType, requestBody);
+
+        // Create request
+        Request request = new Request.Builder()
+                .url("https://whatsapp-messaging-hub.p.rapidapi.com/WhatsappSendMessage")
+                .post(body)
+                .addHeader("content-type", "application/json")
+                .addHeader("X-RapidAPI-Key", "d40a2b7d6cmsh6083b6f39dfd065p1f0472jsn64091a089a98")
+                .addHeader("X-RapidAPI-Host", "whatsapp-messaging-hub.p.rapidapi.com")
+                .build();
+
+        // Execute request and handle response
+        Response response = client.newCall(request).execute();
+        if (!response.isSuccessful()) {
+            throw new IOException("Unexpected response code: " + response);
+        }
+
+        System.out.println(response.body().string());
+    }
+
     public static void main(String[] args) {
         new trip();
     }
