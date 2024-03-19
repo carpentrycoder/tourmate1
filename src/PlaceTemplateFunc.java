@@ -15,7 +15,7 @@ public class PlaceTemplateFunc {
         return button;
     }
 
-    public static void PlaceTemplateFunc(String cityName,String imagePath1,String imagePath2,String famous,String Food,String review1,String review2,String review3) { // Corrected constructor
+    public static void PlaceTemplateFunc(String cityName,String imagePath1,String imagePath2,String famous,String about,String Food,String review1,String review2,String review3) { // Corrected constructor
         frame = new JFrame();
 //        frame.setSize(1366,768);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -80,7 +80,7 @@ public class PlaceTemplateFunc {
         h4.setBounds(778, 528, 487, 318);
         contentPanel.add(h4);
 
-        String z1str = "icons/info.png";
+        String z1str = about;
         ImageIcon z1 = new ImageIcon(ClassLoader.getSystemResource(z1str));
         Image z2 = z1.getImage().getScaledInstance(400, 452, Image.SCALE_DEFAULT);
         ImageIcon z3 = new ImageIcon(z2);
