@@ -96,7 +96,7 @@ public class dash extends JFrame implements ActionListener {
     j.add(j6);
 
 // Create button j7 using createButton function
-    j7 = createButton("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\7.png", 18, 566);
+    j7 = createButton("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\mini_tv_-removebg-preview.png", 18, 566);
     j7.setFont(new Font("open sauce", Font.BOLD, 20));
     j7.addActionListener(this);
     j.add(j7);
@@ -232,6 +232,9 @@ public class dash extends JFrame implements ActionListener {
       } else if (j.getSource()==j3) {
         setVisible(true);
         new trip();
+      } else if (j.getSource()==j7) {
+        String url = "https://www.amazon.in/minitv?mtv_pt=external&refMarker=AVOD_gs_mw_BRND_EDU_GS_TXT_Desk_skey28&gad_source=1&gclid=CjwKCAjwnv-vBhBdEiwABCYQA2XLgWAnuldro82cRVNpAhSaBK5hFI0i5bIGDzZOp0zgMypfigGqsxoCZ7gQAvD_BwE"; // Replace this with your actual delivery website URL
+        restaurent_func.Delivery_web(url);
       }
     }
 
