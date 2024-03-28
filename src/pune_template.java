@@ -2,8 +2,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class pune_template {
-    public static void main(String[] args) {
-        PlaceTemplateFunc.PlaceTemplateFunc("Pune","Dash_Icons/pune-img1.png","Dash_Icons/dagdu-shet.png","Dash_Icons/famous -pune.png","Dash_Icons/about -pune.png","Dash_Icons/misal-pune.png","Dash_Icons/pune-review1.png","Dash_Icons/pune-review2.png","Dash_Icons/pune-review3.png");
+    public static void openPuneTemplate(String title) {
+        PlaceTemplateFunc.PlaceTemplateFunc(title,"Dash_Icons/pune-img1.png","Dash_Icons/dagdu-shet.png","Dash_Icons/famous -pune.png","Dash_Icons/about -pune.png","Dash_Icons/misal-pune.png","Dash_Icons/pune-review1.png","Dash_Icons/pune-review2.png","Dash_Icons/pune-review3.png");
 
         PlaceTemplateFunc.getaskme().addActionListener(new ActionListener() {
             @Override

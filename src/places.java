@@ -212,9 +212,10 @@ public class places extends JFrame implements ActionListener ,KeyListener {
         }
         else if (e.getSource()==back) {
             setVisible(false);
+            new dash();
         }
         else if(e.getSource()==rtn){
-            setVisible(false);
+            setVisible(true);
             new placetemplate();
         } else if (e.getSource()==mumbai) {
             setVisible(false);
@@ -222,6 +223,12 @@ public class places extends JFrame implements ActionListener ,KeyListener {
         } else if (e.getSource()==j1) {
             setVisible(true);
             new placetemplate();
+        } else if (e.getSource()==nsk) {
+            setVisible(true);
+            nashik_template.openNashikTemplate("Nashik");
+        } else if (e.getSource()==pnu) {
+            setVisible(true);
+            pune_template.openPuneTemplate("Pune");
         }
 
     }

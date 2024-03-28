@@ -183,4 +183,9 @@ public class SwingHTMLViewer {
             frame.setVisible(true);
         });
     }
+
+    public static void main(String[] args) {
+        SwingHTMLViewer.showHTMLViewer();
+
+    }
 }
