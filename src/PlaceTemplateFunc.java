@@ -15,7 +15,8 @@ public class PlaceTemplateFunc {
         return button;
     }
 
-    public static void PlaceTemplateFunc(String cityName,String imagePath1,String imagePath2,String famous,String about,String Food,String review1,String review2,String review3) { // Corrected constructor
+    public static void PlaceTemplateFunc(String cityName,String imagePath1,String imagePath2,String famous,String about,String Food,String review1,String review2,String review3)
+    { // Corrected constructor
         frame = new JFrame();
 //        frame.setSize(1366,768);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -162,7 +163,7 @@ public class PlaceTemplateFunc {
         rent.setForeground(new Color(0xFFFFFF));
         contentPanel.add(rent);
 
-         map = createButton("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\rtnmap.png", 658, 150, 282, 355);
+         map = createButton("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\mapicon-universal.png", 658, 150, 282, 355);
         contentPanel.add(map);
 
         wt = createButton("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\DButns\\weather.png", 958, 150, 300, 171);

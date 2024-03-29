@@ -218,8 +218,8 @@ public class places extends JFrame implements ActionListener ,KeyListener {
             setVisible(true);
             new placetemplate();
         } else if (e.getSource()==mumbai) {
-            setVisible(false);
-            new mh01();
+            setVisible(true);
+            mum_template.openmum_template("Mumbai");
         } else if (e.getSource()==j1) {
             setVisible(true);
             new placetemplate();
@@ -229,6 +229,9 @@ public class places extends JFrame implements ActionListener ,KeyListener {
         } else if (e.getSource()==pnu) {
             setVisible(true);
             pune_template.openPuneTemplate("Pune");
+        } else if (e.getSource()==smbj) {
+            setVisible(true);
+            smbj_template.opensmbj_template("Chhatrapati Sambhaji Nagar");
         }
 
     }
