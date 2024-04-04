@@ -8,6 +8,7 @@ import java.awt.event.KeyListener;
 public class places extends JFrame implements ActionListener ,KeyListener {
     JButton j1, j2, j3, j4, j5, j6, j7,j8,S,back,mumbai,nsk,pnu,rtn,smbj,close,open;
     JPanel j;
+    static String cityname = "City is not selected ";
 
     places()
     {
@@ -217,21 +218,27 @@ public class places extends JFrame implements ActionListener ,KeyListener {
         else if(e.getSource()==rtn){
             setVisible(true);
             new placetemplate();
+            cityname = "Ratanagiri";
         } else if (e.getSource()==mumbai) {
             setVisible(true);
             mum_template.openmum_template("Mumbai");
+            cityname = "Mumbai";
         } else if (e.getSource()==j1) {
             setVisible(true);
             new placetemplate();
         } else if (e.getSource()==nsk) {
             setVisible(true);
             nashik_template.openNashikTemplate("Nashik");
+            cityname = "Nashik";
         } else if (e.getSource()==pnu) {
             setVisible(true);
             pune_template.openPuneTemplate("Pune");
+            cityname = "Pune";
         } else if (e.getSource()==smbj) {
             setVisible(true);
-            smbj_template.opensmbj_template("Chhatrapati Sambhaji Nagar");
+            smbj_template.opensmbj_template("Chatrapati Sambhaji Nagar");
+            cityname = "Chatrapati Sambhaji Nagar";
+
         }
 
     }
