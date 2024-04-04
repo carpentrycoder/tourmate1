@@ -236,7 +236,7 @@ public class mh01 extends JFrame implements ActionListener {
             new booking();
         } else if (e.getSource()==rent) {
             setVisible(true);
-            new rentalrtn();
+            rentalcar.rentalrtn("icons/vehicle_contact.png");
         } else if (e.getSource()==hotl) {
             setVisible(true);
 
