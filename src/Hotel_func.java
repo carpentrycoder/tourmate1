@@ -32,6 +32,7 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.time.LocalDate;
 
 public class Hotel_func extends JFrame {
     static JPanel contentPanel;
@@ -41,10 +42,10 @@ public class Hotel_func extends JFrame {
     static JFrame rtnhotels;
     static String strday, endday;
 
-    public static void func_hotel(String[] urls)
+    public static void func_hotel(String[] urls,String title)
     {
         rtnhotels = new JFrame();
-        rtnhotels.setTitle("ratagirihotels");
+        rtnhotels.setTitle(title);
         rtnhotels.setExtendedState(MAXIMIZED_BOTH);
         rtnhotels.setSize(1366, 766);
 
@@ -89,7 +90,7 @@ public class Hotel_func extends JFrame {
         done.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Done button clicked");
+                validateAndDisplayDates(checkin,checkout);
             }
         });
         contentPanel.add(done);
@@ -110,7 +111,7 @@ public class Hotel_func extends JFrame {
         }
         // Calculate X-coordinates for the first row
         int xFirstRow = 490;
-// Calculate X-coordinates for the second row
+        // Calculate X-coordinates for the second row
         int xSecondRow = xFirstRow + buttonWidth + 480; // Adjust this spacing as needed
 
         ActionListener buttonClickListener = new ActionListener() {
@@ -255,5 +256,49 @@ public class Hotel_func extends JFrame {
                 throw new IllegalArgumentException("Invalid button text: " + buttonText);
         }
     }
+
+    public static void validateAndDisplayDates(JTextField checkin, JTextField checkout)
+    {
+        LocalDate currentDate = LocalDate.now();
+        int day1 = currentDate.getDayOfMonth();
+        int month1 = currentDate.getMonthValue();
+        int year1 = currentDate.getYear();
+
+        String strCheckin = checkin.getText();
+        String[] arr_in = strCheckin.split("-");
+        int d_in = Integer.parseInt(arr_in[0]);
+        int m_in = Integer.parseInt(arr_in[1]);
+        int y_in = Integer.parseInt(arr_in[2]);
+
+        String strCheckout = checkout.getText();
+        String[] arr_out = strCheckout.split("-");
+        int d_out = Integer.parseInt(arr_out[0]);
+        int m_out = Integer.parseInt(arr_out[1]);
+        int y_out = Integer.parseInt(arr_out[2]);
+
+        if ((isValidDate(d_in, m_in, y_in) && isValidDate(d_out, m_out, y_out))
+                && ((y_in > year1) || (y_in == year1 && m_in > month1) || (y_in == year1 && m_in == month1 && d_in >= day1))
+                && ((y_out > year1) || (y_out == year1 && m_out > month1) || (y_out == year1 && m_out == month1 && d_out >= day1)))
+        {
+            JOptionPane.showMessageDialog(null, "Dates are valid  \uD83D\uDCC5");
+            strday = checkin.getText();
+            endday = checkout.getText();
+        } else
+        {
+            JOptionPane.showInternalMessageDialog(null, "Dates are Invalid  \uD83D\uDCC5", "Error", JOptionPane.ERROR_MESSAGE);
+            checkin.setText("");
+            checkout.setText("");
+        }
+    }
+    public static boolean isValidDate(int day, int month, int year)
+    {
+        // Check if the month is valid (between 1 and 12)
+        if (month < 1 || month > 12) {
+            return false;
+        }
+        return true;
+    }
+
+
 
 }

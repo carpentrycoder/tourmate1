@@ -8,9 +8,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.time.LocalDate;
 
-//<<<<<<< HEAD
 public class Hotel_ratnagiri extends JFrame implements ActionListener {
-    ///>>>>>>> afb4408bd9170331efa2f2b63100eb49458abe8d
     JPanel contentPanel;
     JTextField checkin, checkout;
     JButton back, done;
