@@ -2,10 +2,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.ResultSet;
 
 public class booking extends JFrame implements ActionListener {
     JButton j1, j2, j3, j4, j5, j6, j7, j8, S, back;
+    String fontpath ="C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf";
 
     booking() {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -145,7 +145,19 @@ public class booking extends JFrame implements ActionListener {
         back.addActionListener(this);
         add(back);
 
+        JPanel packege = new JPanel();
+        packege.setBounds(80,90,1180,600);
+        packege.setBackground(new Color(0x0D8AF1));
+        packege.setLayout(null);
+        add(packege);
 
+        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Your Package is here",Font.BOLD,40,new Color(0xE7E7EE),40, 20, 500, 50);
+        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,places.cityname,Font.BOLD,30,new Color(0xE7E7EE),40, 90, 400, 30);
+        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Hotel Check-In Date: "+Hotel_func.strday,Font.BOLD,20,new Color(0xE7E7EE),40, 90+30+20, 400, 30);
+        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Hotel Check-Out Date: "+Hotel_func.endday,Font.BOLD,20,new Color(0xE7E7EE),40, 90+30+30+20, 400,30);
+
+
+        setUndecorated(true);
         setVisible(true);
     }
 
@@ -156,6 +168,7 @@ public class booking extends JFrame implements ActionListener {
             new profile();
         } else if (e.getSource() == back) {
             setVisible(false);
+            System.exit(0);
         }
     }
 
