@@ -250,31 +250,36 @@ public class dash extends JFrame implements ActionListener {
       // Add action listeners to the buttons
       ratnagiriButton.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
-          // Call method or perform action for Ratnagiri
+          restaurents_rtn restro_main = new restaurents_rtn();
+          restro_main.initializeFrame();
         }
       });
 
       mumbaiButton.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
           // Call method or perform action for Mumbai
+          mum_retaurents.mum_restro();
         }
       });
 
       nashikButton.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
           // Call method or perform action for Nashik
+          Nashik_restaurents.nashik_restro();
         }
       });
 
       sambhajinagarButton.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
           // Call method or perform action for Sambhajinagar
+          smbj_restaurents.smbj_restro();
         }
       });
 
       puneButton.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
           // Call method or perform action for Pune
+          pune_restaurents.pune_restro();
         }
       });
 

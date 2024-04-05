@@ -74,7 +74,7 @@ public class restaurents_rtn extends JFrame implements ActionListener {
         restro_main.initializeFrame();
 
     }
-    public void initializeFrame()
+    public  void initializeFrame()
     {
         rtn = new JFrame();
         rtn.setExtendedState(MAXIMIZED_BOTH);

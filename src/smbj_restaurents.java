@@ -24,7 +24,7 @@
 
 public class smbj_restaurents {
 
-    public static void main(String[] args)
+    public static void smbj_restro()
     {
         String maplink = "https://www.google.com/maps/search/restaurants+in+Aurangabad,+Maharashtra/@19.8762058,75.3154282,13.63z?entry=ttu";
         String[] restaurantLinks = {
@@ -79,7 +79,7 @@ public class smbj_restaurents {
 
 
         // Call initializeFrame method from restaurent_func class
-        restaurent_func.restaurenttemplate("Pune",maplink, restaurantLinks, budgetFriendlyBites, cheapEats, dinner, deliveryAvailable);
+        restaurent_func.restaurenttemplate("Sambhaji nager",maplink, restaurantLinks, budgetFriendlyBites, cheapEats, dinner, deliveryAvailable);
     }
 
 }

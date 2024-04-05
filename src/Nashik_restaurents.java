@@ -23,7 +23,7 @@
  */
 public class Nashik_restaurents {
 
-    public static void main(String[] args)
+    public static void nashik_restro()
     {
         String maplink = "https://www.google.com/maps/search/Restaurants+in+Nashik/@19.985219,73.7279252,13z/data=!3m1!4b1?entry=ttu";
         String[] restaurantLinks = {

@@ -24,7 +24,7 @@
 
 public class pune_restaurents {
 
-    public static void main(String[] args)
+    public static void pune_restro()
     {
         String maplink = "https://www.google.com/maps/search/Restaurants+in+Pune/@19.9846009,73.7883379,14.34z?entry=ttu";
         String[] restaurantLinks = {

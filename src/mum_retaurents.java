@@ -23,7 +23,7 @@
  */
 public class mum_retaurents {
 
-    public static void main(String[] args)
+    public static void mum_restro()
     {
         String maplink = "https://www.google.com/maps/search/mumbai+restaurants/@19.0208078,72.7772194,12z/data=!3m1!4b1?entry=ttu";
         String[] restaurantLinks = {
