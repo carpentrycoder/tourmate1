@@ -36,7 +36,7 @@ import java.awt.event.ActionListener;
 
 public class restaurents_rtn extends JFrame implements ActionListener {
     JScrollPane scrollPane;
-    JButton view_map,swiggy,Zomato,Uber_eats,Food_Panda,Dunzo,back,hotelButton;
+    JButton view_map,swiggy,Zomato,Uber_eats,Food_Panda,Dunzo,back;
     JFXPanel jfxPanel;
     int i;
 
@@ -137,7 +137,6 @@ public class restaurents_rtn extends JFrame implements ActionListener {
         JLabel cuisene_2 = createImageLabel("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\cuisens\\Sean-food.png", 290, 174, 400+290 + 17+10, 340+10);
         contentPanel.add(cuisene_2);
 
-       // Create cuisene_3
         JLabel cuisene_3 = createImageLabel("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\cuisens\\Asian.png", 290, 174, 400 +(290+290)+ 2 * 17+10, 340+10);
         contentPanel.add(cuisene_3);
 

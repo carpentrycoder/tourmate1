@@ -35,14 +35,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class restaurent_func extends JFrame {
-    public JFrame frame;
-    JFXPanel jfxPanel;
-    JButton view_map,swiggy,Zomato,Uber_eats,Food_Panda,Dunzo;
+    public static JFrame frame;
+    public static JFXPanel jfxPanel;
+    public static JButton view_map,swiggy,Zomato,Uber_eats,Food_Panda,Dunzo;
 
-    public JScrollPane scrollPane;
+    public static JScrollPane scrollPane;
 
 
-    public void initializeFrame(String gmapurl,String[] restaurents_link,String[] Budget_friendly_bites, String[] Cheap_eats,String[] Dinner,String[] Delivery_Available)
+    public static void restaurenttemplate(String city ,String gmapurl,String[] restaurents_link,String[] Budget_friendly_bites, String[] Cheap_eats,String[] Dinner,String[] Delivery_Available)
     {
         frame = new JFrame();
         frame.setExtendedState(MAXIMIZED_BOTH);
@@ -80,14 +80,14 @@ public class restaurent_func extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Your action to perform when the button is clicked
-                generateHTMLContent(gmapurl);
+                Delivery_web(gmapurl);
             }
         });
         contentPanel.add(view_map);
 
         JLabel label_a = restaurents_rtn.createImageLabel("src/Dash_Icons/browse_restro.png", 845, 81, 250, 250);
         contentPanel.add(label_a);
-        places_ratnagiri.loadAndSetCustomFont(label_a, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Browse Ratnagiri by Food", Font.BOLD, 33, new Color(0xFFFFFF), 280, 13, 531,50);
+        places_ratnagiri.loadAndSetCustomFont(label_a, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Browse " +city+ " by Food", Font.BOLD, 33, new Color(0xFFFFFF), 280, 13, 531,50);
 
         places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Budget-friendly bites", Font.BOLD, 38, new Color(0x0B1E33), 450,740, 531,50);
 
@@ -147,13 +147,13 @@ public class restaurent_func extends JFrame {
                     // Action to perform when this specific button is clicked
                     // You can write your code here for each button's action
                     if (buttonIndex == 0) {
-                        web_opener(restaurents_link[0]);
+                        Delivery_web(restaurents_link[0]);
                     } else if (buttonIndex == 1) {
-                        web_opener(restaurents_link[1]);
+                        Delivery_web(restaurents_link[1]);
                     } else if (buttonIndex == 2) {
-                        web_opener(restaurents_link[2]);
+                        Delivery_web(restaurents_link[2]);
                     } else if (buttonIndex == 3) {
-                        web_opener(restaurents_link[3]);
+                        Delivery_web(restaurents_link[3]);
                     }
                 }
             });
@@ -180,13 +180,13 @@ public class restaurent_func extends JFrame {
                     // Action to perform when this specific button is clicked
                     // You can write your code here for each button's action
                     if (buttonIndex == 0) {
-                        web_opener(restaurents_link[5]);
+                        Delivery_web(restaurents_link[5]);
                     } else if (buttonIndex == 1) {
-                        web_opener(restaurents_link[6]);
+                        Delivery_web(restaurents_link[6]);
                     } else if (buttonIndex == 2) {
-                        web_opener(restaurents_link[7]);
+                        Delivery_web(restaurents_link[7]);
                     } else if (buttonIndex == 3) {
-                        web_opener(restaurents_link[8]);
+                        Delivery_web(restaurents_link[8]);
                     }
                 }
             });
@@ -215,16 +215,16 @@ public class restaurent_func extends JFrame {
                     // You can write your code here for each button's action
                     if (buttonIndex == 0) {
                         System.out.println("sutar9");
-                        web_opener(restaurents_link[9]);
+                        Delivery_web(restaurents_link[9]);
                     } else if (buttonIndex == 1) {
                         System.out.println("sutar10");
-                        web_opener(restaurents_link[10]);
+                        Delivery_web(restaurents_link[10]);
                     } else if (buttonIndex == 2) {
                         System.out.println("sutar11");
-                        web_opener(restaurents_link[11]);
+                        Delivery_web(restaurents_link[11]);
                     } else if (buttonIndex == 3) {
                         System.out.println("sutar12");
-                        web_opener(restaurents_link[12]);
+                        Delivery_web(restaurents_link[12]);
                     }
                 }
             });
@@ -252,16 +252,16 @@ public class restaurent_func extends JFrame {
                     // You can write your code here for each button's action
                     if (buttonIndex == 0) {
                         System.out.println("sutar13");
-                        web_opener(restaurents_link[13]);
+                        Delivery_web(restaurents_link[13]);
                     } else if (buttonIndex == 1) {
                         System.out.println("sutar14");
-                        web_opener(restaurents_link[14]);
+                        Delivery_web(restaurents_link[14]);
                     } else if (buttonIndex == 2) {
                         System.out.println("sutar15");
-                        web_opener(restaurents_link[15]);
+                        Delivery_web(restaurents_link[15]);
                     } else if (buttonIndex == 3) {
                         System.out.println("sutar16");
-                        web_opener(restaurents_link[16]);
+                        Delivery_web(restaurents_link[16]);
                     }
                 }
             });
@@ -343,7 +343,7 @@ public class restaurent_func extends JFrame {
         frame.setVisible(true);
     }
 
-    public void setupScrollBar() {
+    public static void setupScrollBar() {
         JScrollBar verticalScrollBar1 = scrollPane.getVerticalScrollBar();
         verticalScrollBar1.setUI(new BasicScrollBarUI() {
             @Override
