@@ -222,7 +222,78 @@ public class dash extends JFrame implements ActionListener {
     } else if (j.getSource() == j7) {
       String url = "https://www.amazon.in/minitv?mtv_pt=external&refMarker=AVOD_gs_mw_BRND_EDU_GS_TXT_Desk_skey28&gad_source=1&gclid=CjwKCAjwnv-vBhBdEiwABCYQA2XLgWAnuldro82cRVNpAhSaBK5hFI0i5bIGDzZOp0zgMypfigGqsxoCZ7gQAvD_BwE";
       restaurent_func.Delivery_web(url);
+    } else if (j.getSource() == j5) {
+      JFrame cityFrame = new JFrame("Select City");
+      JPanel cityPanel = new JPanel();
+
+      // Create buttons for each city
+      JButton ratnagiriButton = new JButton("Ratnagiri");
+      ratnagiriButton.setBackground(new Color(214, 128, 7)); // Red
+      ratnagiriButton.setPreferredSize(new Dimension(200, 50)); // Increase button size
+
+      JButton mumbaiButton = new JButton("Mumbai");
+      mumbaiButton.setBackground(new Color(214, 128, 7)); // Green
+      mumbaiButton.setPreferredSize(new Dimension(200, 50)); // Increase button size
+
+      JButton nashikButton = new JButton("Nashik");
+      nashikButton.setBackground(new Color(214, 128, 7)); // Blue
+      nashikButton.setPreferredSize(new Dimension(200, 50)); // Increase button size
+
+      JButton sambhajinagarButton = new JButton("Sambhajinagar");
+      sambhajinagarButton.setBackground(new Color(214, 128, 7)); // Yellow
+      sambhajinagarButton.setPreferredSize(new Dimension(200, 50)); // Increase button size
+
+      JButton puneButton = new JButton("Pune");
+      puneButton.setBackground(new Color(214, 128, 7)); // Magenta
+      puneButton.setPreferredSize(new Dimension(200, 50)); // Increase button size
+
+      // Add action listeners to the buttons
+      ratnagiriButton.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+          // Call method or perform action for Ratnagiri
+        }
+      });
+
+      mumbaiButton.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+          // Call method or perform action for Mumbai
+        }
+      });
+
+      nashikButton.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+          // Call method or perform action for Nashik
+        }
+      });
+
+      sambhajinagarButton.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+          // Call method or perform action for Sambhajinagar
+        }
+      });
+
+      puneButton.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+          // Call method or perform action for Pune
+        }
+      });
+
+      // Add buttons to the panel
+      cityPanel.add(ratnagiriButton);
+      cityPanel.add(mumbaiButton);
+      cityPanel.add(nashikButton);
+      cityPanel.add(sambhajinagarButton);
+      cityPanel.add(puneButton);
+
+      // Add panel to the frame and set frame properties
+      cityFrame.add(cityPanel);
+      cityFrame.setSize(400, 450); // Increase frame size
+      cityFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+      cityFrame.setLocationRelativeTo(null);
+      cityPanel.setBackground(new Color(0x2093F3));
+      cityFrame.setVisible(true);
     }
+
   }
 
   public static JButton createButton(String imagePath, int x, int y) {
