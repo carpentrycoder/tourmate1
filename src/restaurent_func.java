@@ -339,7 +339,6 @@ public class restaurent_func extends JFrame {
             }
         });
         contentPanel.add(back);
-
         frame.setUndecorated(true);
         frame.setVisible(true);
     }
