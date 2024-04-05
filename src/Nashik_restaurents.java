@@ -27,26 +27,22 @@ public class Nashik_restaurents {
     {
         String maplink = "https://www.google.com/maps/search/Restaurants+in+Nashik/@19.985219,73.7279252,13z/data=!3m1!4b1?entry=ttu";
         String[] restaurantLinks = {
-                "https://www.google.com/maps/place/Bombay+Tandoori+Family+Restaurant/@19.1186353,72.8828589,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7c9a56da7dc59:0x3d7d65ea30e5432!8m2!3d19.1186302!4d72.8854338!16s%2Fg%2F11sn2htdn0?entry=ttu",
-                "https://www.google.com/maps/place/Cafe+Madras%C2%AE%EF%B8%8F/@19.0276253,72.8504281,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7cf28fa60319d:0xf8101e76f66ded35!8m2!3d19.0276203!4d72.8550415!16s%2Fg%2F1tlbs5wz?entry=ttu",
-                "https://www.google.com/maps/place/Colaba+SOCIAL/@18.921667,72.8297235,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7d1c0ea74b9bf:0x41c1d5b1ada97f8c!8m2!3d18.9216619!4d72.8322984!16s%2Fg%2F11bby4kzhy?entry=ttu",
-                "https://www.google.com/maps/place/Leopold+Cafe/@18.9226453,72.8290652,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7d1c0fb6b23a9:0x1ccd311198f0c5a2!8m2!3d18.9226402!4d72.8316401!16s%2Fm%2F04zww53?entry=ttu",
-                "https://www.google.com/maps/place/Mumbai+Express/@19.122828,72.8559095,14z/data=!4m10!1m2!2m1!1sMumbai+express+!3m6!1s0x3be7b80060f2fa67:0x7981ebf961dd5da5!8m2!3d19.122828!4d72.8919584!15sCg5NdW1iYWkgZXhwcmVzc1oQIg5tdW1iYWkgZXhwcmVzc5IBBGRlbGngAQA!16s%2Fg%2F1vyn2b65?entry=ttu",
-                "https://www.google.com/maps/place/One8+Commune,+Juhu/@19.0895938,72.8233437,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7c96f0849c345:0x6e0276cc57b4b0ab!8m2!3d19.0895888!4d72.8279571!16s%2Fg%2F11t9k1wcs2?entry=ttu",
-                "https://www.google.com/maps/place/Sardar+Pav+Bhaji/@18.9697752,72.812349,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7ce721ef94a37:0xdc867520d9057b37!8m2!3d18.9697701!4d72.8149239!16s%2Fg%2F1th5y81c?entry=ttu",
-                "https://www.google.com/maps/place/Shamiana/@18.9220605,72.8304638,17z/data=!3m2!4b1!5s0x3be7d1c0c4d5ac1b:0x91caa6393a8c4b4f!4m6!3m5!1s0x3be7d1c0db257b5f:0xf1943ecedc05112!8m2!3d18.9220554!4d72.8330387!16s%2Fg%2F12633_jlq?entry=ttu",
-                "https://www.google.com/maps/place/Shamiana/@18.9220605,72.8304638,17z/data=!3m2!4b1!5s0x3be7d1c0c4d5ac1b:0x91caa6393a8c4b4f!4m6!3m5!1s0x3be7d1c0db257b5f:0xf1943ecedc05112!8m2!3d18.9220554!4d72.8330387!16s%2Fg%2F12633_jlq?entry=ttu",
-                "https://www.google.com/maps/place/The+Bay+View/@18.9312883,72.8205006,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7ce1e8741d455:0xbe039e3af7a9bf98!8m2!3d18.9312832!4d72.8230755!16s%2Fg%2F1tgfnlq8?entry=ttu",
-                "https://www.google.com/maps/place/The+Bombay+Canteen/@19.0032501,72.8250011,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7ce8c350898ed:0x664c7200a24a00a9!8m2!3d19.003245!4d72.827576!16s%2Fg%2F11b75jff6j?entry=ttu",
-                "https://www.google.com/maps/place/One8+Commune,+Juhu/@19.0895938,72.8233437,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7c96f0849c345:0x6e0276cc57b4b0ab!8m2!3d19.0895888!4d72.8279571!16s%2Fg%2F11t9k1wcs2?entry=ttu",
-                "https://www.google.com/maps/search/amchi+mumbai/@19.1846286,72.6476331,10z/data=!3m1!4b1?entry=ttu",
-                "https://www.google.com/maps/place/Colaba+SOCIAL/@18.921667,72.8297235,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7d1c0ea74b9bf:0x41c1d5b1ada97f8c!8m2!3d18.9216619!4d72.8322984!16s%2Fg%2F11bby4kzhy?entry=ttu",
-                "https://www.google.com/maps/place/Leopold+Cafe/@18.9226453,72.8290652,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7d1c0fb6b23a9:0x1ccd311198f0c5a2!8m2!3d18.9226402!4d72.8316401!16s%2Fm%2F04zww53?entry=ttu",
-                "https://www.google.com/maps/place/Banjaara/@19.0064172,72.8191464,17z/data=!3m2!4b1!5s0x3be7ce96a1cafc53:0xa32405de6ba1f533!4m6!3m5!1s0x3be7ce96a1a394ab:0x81f898cb5da318d3!8m2!3d19.0064121!4d72.8217213!16s%2Fg%2F1tgllcg5?entry=ttu"
-
-
-
-
+                "https://www.google.com/maps/place/Bon+Vivant/@20.0066439,72.6173651,9z/data=!4m10!1m2!2m1!1sBon+Vivant!3m6!1s0x1157342f01427d35:0x9ba9b5b4e0ae39cd!8m2!3d20.0066439!4d73.7709296!15sCgpCb24gVml2YW50WgwiCmJvbiB2aXZhbnSSAQpyZXN0YXVyYW504AEA!16s%2Fg%2F11b778p6_k?entry=ttu",
+                "https://www.google.com/maps/place/Curry+Leaves+Pure+Veg+,+Jehan+Circle/@20.0067855,72.6173447,9z/data=!4m10!1m2!2m1!1sCurry+Leaves!3m6!1s0x3bddeb8ee29ad63b:0xcd7c697687a72dbc!8m2!3d20.0127146!4d73.7556801!15sCgxDdXJyeSBMZWF2ZXNaDiIMY3VycnkgbGVhdmVzkgERaW5kaWFuX3Jlc3RhdXJhbnTgAQA!16s%2Fg%2F1hjggg4lz?entry=ttu",
+                "https://www.google.com/maps/place/Palm+Shells/@20.0217035,73.76468,17z/data=!4m6!3m5!1s0x3bddeb94ce8f30a7:0x5782d52dea54885a!8m2!3d20.0216985!4d73.7672549!16s%2Fg%2F11cln159pb?entry=ttu",
+                "https://www.google.com/maps/place/Veg+Aroma/@20.0120574,73.728164,15z/data=!4m10!1m2!2m1!1sVeg+Aroma!3m6!1s0x3bddec764bca5f9b:0xb1212fdff79c12ef!8m2!3d20.0120574!4d73.7461884!15sCglWZWcgQXJvbWFaCyIJdmVnIGFyb21hkgEVdmVnZXRhcmlhbl9yZXN0YXVyYW504AEA!16s%2Fg%2F1pv19trsn?entry=ttu",
+                "https://www.google.com/maps/search/Barbeque+Ville/@19.2653161,73.1802364,9z/data=!3m1!4b1?entry=ttu",
+                "https://www.google.com/maps/place/Hotel+Panchavati+Yatri/@20.0069271,72.6173243,9z/data=!4m13!1m2!2m1!1sHotel+Panchavati!3m9!1s0x3bdd9557f1d75fbb:0x6f01bdeaf0aaf934!5m2!4m1!1i2!8m2!3d20.0056771!4d73.7855302!15sChBIb3RlbCBQYW5jaGF2YXRpWhIiEGhvdGVsIHBhbmNoYXZhdGmSAQVob3RlbJoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VOUE5EWlBaMnBSUlJBQuABAA!16s%2Fg%2F11b70kqz6j?entry=ttu",
+                "https://www.google.com/maps/place/Luscious+Layers/@20.009116,73.7550311,17z/data=!3m1!4b1!4m6!3m5!1s0x3bddeb9ba26e4f13:0x6ac83195cba093fc!8m2!3d20.009111!4d73.757606!16s%2Fg%2F11t7481lsn?entry=ttu",
+                "https://www.google.com/maps/place/Sadhana+Rajeshahi/@20.0215212,73.6491227,13z/data=!4m10!1m2!2m1!1sSadhana+Restaurant!3m6!1s0x3bdd9569f0d3bc69:0xbccb3ec35994d89d!8m2!3d20.0215212!4d73.7212205!15sChJTYWRoYW5hIFJlc3RhdXJhbnRaFCISc2FkaGFuYSByZXN0YXVyYW50kgESbWFyYXRoaV9yZXN0YXVyYW50mgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5WTms5WVUzZFJSUkFC4AEA!16s%2Fg%2F11f7cbhv2c?entry=ttu",
+                "https://www.google.com/maps/place/Mantra+Fine+Dine+Restaurant+%26+Bar/@20.0109215,73.7581421,17z/data=!3m1!4b1!4m6!3m5!1s0x3bddeb42453006cd:0xc7262690204565ad!8m2!3d20.0109165!4d73.760717!16s%2Fg%2F11gh82x25c?entry=ttu",
+                "https://www.google.com/maps/place/The+SSK+Solitaire+Hotel+and+Banquets/@19.9911867,73.7735018,17z/data=!3m1!4b1!4m9!3m8!1s0x3bddeb0dcb37ae5b:0xe22c9db9b749b608!5m2!4m1!1i2!8m2!3d19.9911817!4d73.7760767!16s%2Fg%2F11b5wqf6hv?entry=ttu",
+                "https://www.google.com/maps/place/Curry+Leaves+Pure+Veg+,+Jehan+Circle/@20.0067855,72.6173447,9z/data=!4m10!1m2!2m1!1sCurry+Leaves!3m6!1s0x3bddeb8ee29ad63b:0xcd7c697687a72dbc!8m2!3d20.0127146!4d73.7556801!15sCgxDdXJyeSBMZWF2ZXNaDiIMY3VycnkgbGVhdmVzkgERaW5kaWFuX3Jlc3RhdXJhbnTgAQA!16s%2Fg%2F1hjggg4lz?entry=ttu",
+                "https://www.google.com/maps/place/Mantra+Fine+Dine+Restaurant+%26+Bar/@20.0109215,73.7581421,17z/data=!3m1!4b1!4m6!3m5!1s0x3bddeb42453006cd:0xc7262690204565ad!8m2!3d20.0109165!4d73.760717!16s%2Fg%2F11gh82x25c?entry=ttu",
+                "https://www.google.com/maps/place/Kokni+Darbar+Restaurant/@19.9668913,73.5787272,12z/data=!4m10!1m2!2m1!1sKokni+Darbar+Restaurant!3m6!1s0x3bddeb013af2e74b:0x49e6a71d4fdbeb09!8m2!3d19.998873!4d73.789778!15sChdLb2tuaSBEYXJiYXIgUmVzdGF1cmFudFoZIhdrb2tuaSBkYXJiYXIgcmVzdGF1cmFudJIBEmJpcnlhbmlfcmVzdGF1cmFudOABAA!16s%2Fg%2F1tmxd09v?entry=ttu",
+                "https://www.google.com/maps/place/THE+TEROTALE/@19.9912708,73.7580072,17z/data=!4m6!3m5!1s0x3bddeb761da64c91:0x4609751dd55ee07a!8m2!3d19.9912658!4d73.7605821!16s%2Fg%2F11q4m1rt84?entry=ttu",
+                "https://www.google.com/maps/place/Luscious+Layers/@20.009116,73.7550311,17z/data=!3m1!4b1!4m6!3m5!1s0x3bddeb9ba26e4f13:0x6ac83195cba093fc!8m2!3d20.009111!4d73.757606!16s%2Fg%2F11t7481lsn?entry=ttu",
+                "https://www.google.com/maps/place/Sadhana+Rajeshahi/@20.0215212,73.6491227,13z/data=!4m10!1m2!2m1!1sSadhana+Restaurant!3m6!1s0x3bdd9569f0d3bc69:0xbccb3ec35994d89d!8m2!3d20.0215212!4d73.7212205!15sChJTYWRoYW5hIFJlc3RhdXJhbnRaFCISc2FkaGFuYSByZXN0YXVyYW50kgESbWFyYXRoaV9yZXN0YXVyYW50mgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5WTms5WVUzZFJSUkFC4AEA!16s%2Fg%2F11f7cbhv2c?entry=ttu",
         };
         String[] budgetFriendlyBites = {
                 "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\hotels\\hotels_pune\\Bon Vivant.png",
