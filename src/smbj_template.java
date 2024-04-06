@@ -40,7 +40,7 @@ public class smbj_template {
         PlaceTemplateFunc.getRentButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               rentalcar.rentalrtn("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\QR\\Chhatrapati Sambhaji Nagar-rental.png");
+               rentalcar.rentalrtn("QR/Chhatrapati Sambhaji Nagar-rental.png");
             }
         });
 
@@ -48,8 +48,7 @@ public class smbj_template {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                String url = "https://www.booking.com/city/in/aurangabad.en.html?aid=306395;label=aurangabad-yR9HD2DX6zxUnwkfasFo_gS110121702269:pl:ta:p170:p2:ac:ap:neg:fi:tikwd-710652116:lp1007788:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YZVcNNsENnH02-pWD53qm9c;ws=&gad_source=1&gclid=Cj0KCQjwqpSwBhClARIsADlZ_TkIpX6H9EI9pgEmsgveVaCTm1lKa_flgt60NqxCOGQ1Gp05w8B7fwAaAkKZEALw_wcB"; // Replace this with your actual delivery website URL
-                restaurent_func.Delivery_web(url);
+                all_hotels.sambhajinager_hotels();
             }
         });    }
 }

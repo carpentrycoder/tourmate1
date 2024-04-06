@@ -153,8 +153,12 @@ public class booking extends JFrame implements ActionListener {
 
         places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Your Package is here",Font.BOLD,40,new Color(0xE7E7EE),40, 20, 500, 50);
         places_ratnagiri.loadAndSetCustomFont(packege,fontpath,places.cityname,Font.BOLD,30,new Color(0xE7E7EE),40, 90, 400, 30);
-        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Hotel Check-In Date: "+Hotel_func.strday,Font.BOLD,20,new Color(0xE7E7EE),40, 90+30+20, 400, 30);
-        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Hotel Check-Out Date: "+Hotel_func.endday,Font.BOLD,20,new Color(0xE7E7EE),40, 90+30+30+20, 400,30);
+        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Hotel Check-In Date: "+Hotel_func.strday,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+20, 400, 40);
+        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Hotel Check-Out Date: "+Hotel_func.endday,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30, 400,40);
+        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Trip Starts At: "+trip.startDateStr,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30+40, 400,40);
+        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Trip Ends At: "+trip.endDateStr,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30+40+40, 400,40);
+        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Places: "+trip.newPlace,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30+40+40+60, 400,40);
+
 
 
         setUndecorated(true);

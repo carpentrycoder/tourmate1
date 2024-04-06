@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class rentalcar extends JFrame {
     private static JFrame frame;
@@ -19,6 +21,17 @@ public class rentalcar extends JFrame {
         frame.setUndecorated(true);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+
+        // Create a timer to hide the frame after 60 seconds
+        Timer timer = new Timer(60000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false); // Hide the frame
+                frame.dispose(); // Dispose the frame resources
+            }
+        });
+        timer.setRepeats(false); // Set to not repeat
+        timer.start(); // Start the timer
     }
 
     public static void main(String[] args) {

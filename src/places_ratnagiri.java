@@ -218,7 +218,7 @@ public class places_ratnagiri extends JFrame implements ActionListener {
             Hotel.openURIInBrowser("");
         } else if (e.getSource()==back) {
             rtn.setVisible(false);
-            System.exit(0);
+
         }
     }
 }

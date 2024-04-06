@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class trip extends JFrame implements ActionListener
 {
     static JButton startPlanning, invite, c1,c2,c3,c4,c5,b1,b2,b3,button1,yourButton,saveButton;
-    int days, day;
+    static int days, day;
     static JButton[] customButtons,yourdel;
     static JFrame itineraryFrame;
     static String[] placesList = {
@@ -96,7 +96,7 @@ public class trip extends JFrame implements ActionListener
     static JFrame ratnagiriFrame,mumbaiFrame,puneFrame,SambhajinagerFrame,nashikFrame;
 
     static JLabel label, startDateLabel, endDateLabel;
-    static String endDateStr, startDateStr, citystr, rtnstr, mumstr, pnstr, smbjstr, nshkstr;
+    static String endDateStr, startDateStr, citystr, rtnstr, mumstr, pnstr, smbjstr, nshkstr,newPlace;
     static JTextField startDateField, endDateField;
     static Font fontTxt = new Font("Open sauce", Font.PLAIN, 20);
     Font font = new Font("Arial", Font.BOLD, 29);
@@ -286,38 +286,50 @@ public class trip extends JFrame implements ActionListener
         if (e.getSource() == b1) {
             // Handle action for places button (e.g., show a dialog to add a new place)
             if (citystr == smbjstr ) {
-                JOptionPane.showMessageDialog(SambhajinagerFrame, "Button b1 (Places) clicked!");
+                JOptionPane.showMessageDialog(SambhajinagerFrame, "Places clicked!");
+                subplaces_smbj.smbj_subplaces();
             } else if (citystr == mumstr) {
-                JOptionPane.showMessageDialog(mumbaiFrame, "Button b1 (Places) clicked!" );
+                JOptionPane.showMessageDialog(mumbaiFrame, " Places clicked!" );
+                subplaces_mumbai.mumbai_subplaces();
             } else if (citystr == pnstr) {
-                JOptionPane.showMessageDialog(puneFrame, "Button b1 (Places) clicked!");
+                JOptionPane.showMessageDialog(puneFrame, "Places clicked!");
+                sub_places_pune.punesubplace();
             } else if (citystr == nshkstr) {
-                JOptionPane.showMessageDialog(nashikFrame, " Button b1 (Places) clicked!" );
+                JOptionPane.showMessageDialog(nashikFrame, "Places clicked!" );
+                sub_places_nashik.nashik_subplace();
             }
         }
         // Check if b2 (hotels) button is clicked
         else if (e.getSource() == b2) {
              if (citystr == smbjstr ) {
-                JOptionPane.showMessageDialog(SambhajinagerFrame, "Button b2 (Places) clicked!");
+                JOptionPane.showMessageDialog(SambhajinagerFrame, "Hotels clicked!");
+                all_hotels.sambhajinager_hotels();
             } else if (citystr == mumstr) {
-                JOptionPane.showMessageDialog(mumbaiFrame, "Button b2 (Places) clicked!" );
+                JOptionPane.showMessageDialog(mumbaiFrame, "Hotels clicked! " );
+                all_hotels.mumbai_hotels();
             } else if (citystr == pnstr) {
-                JOptionPane.showMessageDialog(puneFrame, "Button b2 (Places) clicked!");
+                JOptionPane.showMessageDialog(puneFrame, "Hotels clicked!");
+                all_hotels.pune_hotels();
             } else if (citystr == nshkstr) {
-                JOptionPane.showMessageDialog(nashikFrame, " Button b2 (Places) clicked!" );
+                JOptionPane.showMessageDialog(nashikFrame, " Hotels clicked!" );
+                all_hotels.nashik_hotels();
             }
         }
         // Check if b3 (restaurants) button is clicked
         else if (e.getSource() == b3) {
 
              if (citystr == smbjstr ) {
-                JOptionPane.showMessageDialog(SambhajinagerFrame, "Button b3 (Places) clicked!");
+                JOptionPane.showMessageDialog(SambhajinagerFrame, "Restaurents clicked!");
+                smbj_restaurents.smbj_restro();
             } else if (citystr == mumstr) {
-                JOptionPane.showMessageDialog(mumbaiFrame, "Button b3 (Places) clicked!" );
+                JOptionPane.showMessageDialog(mumbaiFrame, "Restaurents clicked!" );
+                mum_retaurents.mum_restro();
             } else if (citystr == pnstr) {
-                JOptionPane.showMessageDialog(puneFrame, "Button b3 (Places) clicked!");
+                JOptionPane.showMessageDialog(puneFrame, "Restaurents clicked!");
+                pune_restaurents.pune_restro();
             } else if (citystr == nshkstr) {
-                JOptionPane.showMessageDialog(nashikFrame, " Button b3 (Places) clicked!" );
+                JOptionPane.showMessageDialog(nashikFrame, " Restaurents clicked!" );
+                Nashik_restaurents.nashik_restro();
             };
         }
         for (int i = 0; i < yourdel.length; i++)
@@ -377,7 +389,7 @@ public class trip extends JFrame implements ActionListener
                     }
 
                     // Retrieve the place from the clicked JButton's text
-                    String newPlace = customButtons[i].getText();
+                     newPlace = customButtons[i].getText();
 
                     System.out.println("Button " + (i + 1) + " clicked for Day " + (day + 1));
                     System.out.println("Selected Place: " + newPlace);
@@ -1495,6 +1507,7 @@ public class trip extends JFrame implements ActionListener
 
     private void addPlaceToDay(int day, String newPlace) {
         // Create a JLabel with the new place
+
         JLabel newLabel = new JLabel("Selected Place: " + newPlace);
         newLabel.setForeground(new Color(0x1333A2));
         newLabel.setBounds(140, 50, 546, 48);

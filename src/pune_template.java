@@ -40,15 +40,14 @@ public class pune_template {
         PlaceTemplateFunc.getRentButton().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                rentalcar.rentalrtn("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\QR\\Pune-rental.png");
+                rentalcar.rentalrtn("QR/Pune-rental.png");
             }
         });
 
         PlaceTemplateFunc.gethotl().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String url = "https://www.booking.com/searchresults.en-gb.html?ss=pune&ssne=Aurangabad&ssne_untouched=Aurangabad&efdco=1&label=aurangabad-yR9HD2DX6zxUnwkfasFo_gS110121702269%3Apl%3Ata%3Ap170%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-710652116%3Alp1007788%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YZVcNNsENnH02-pWD53qm9c&aid=306395&lang=en-gb&sb=1&src_elem=sb&src=city&dest_id=-2108361&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=5fe4162763510019&ac_meta=GhA1ZmU0MTYyNzYzNTEwMDE5IAAoATICZW46AXBAAEoAUAA%3D&checkin=2024-03-29&checkout=2024-03-30&group_adults=2&no_rooms=1&group_children=0&sb_travel_purpose=leisure"; // Replace this with your actual delivery website URL
-                restaurent_func.Delivery_web(url);
+                all_hotels.pune_hotels();
             }
         });
 
