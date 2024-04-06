@@ -42,6 +42,31 @@ public class restaurents_rtn extends JFrame implements ActionListener {
 
     JFrame rtn;
 
+    String[] restaurantLinks = {
+            "https://www.google.com/maps/place/Mithila+Only+Veg/@16.9901922,73.3077054,17z/data=!4m6!3m5!1s0x3bea0d3d696a8ab5:0xdba4c3fa22da9749!8m2!3d16.9901871!4d73.3102803!16s%2Fg%2F1tkp3g0h?entry=ttu",
+            "https://www.google.com/maps/place/Masala+Kitchen+Restaurant(Seafood+Specialist)/@16.9896774,73.2820844,17z/data=!3m1!4b1!4m6!3m5!1s0x3bea0d676fc0c653:0xc27141308aabe7cd!8m2!3d16.9896723!4d73.2846593!16s%2Fg%2F11cn9rl5ft?entry=ttu",
+            "https://www.google.com/maps/place/Hotel+Kokani+Angan/@16.9996504,73.3651174,17z/data=!3m1!4b1!4m6!3m5!1s0x3bea0c9ef6fb3ba3:0x5c8995f310d873ef!8m2!3d16.9996453!4d73.3676923!16s%2Fg%2F11hblcjg0h?entry=ttu",
+            "https://www.google.com/maps/place/Hotel+Amantran/@16.9909157,73.3041912,17z/data=!3m1!4b1!4m6!3m5!1s0x3bea0d161b786aff:0x4aa85c06ca070019!8m2!3d16.9909106!4d73.3067661!16s%2Fg%2F11bwf6gpj_?entry=ttu",
+            "https://www.google.com/maps/place/SAGOTI+FISH+%26+SEAFOOD+RESTAURANT/@16.9908032,73.3123159,17z/data=!3m1!4b1!4m6!3m5!1s0x3bea0d52d57e4221:0xf16ead43f3348c83!8m2!3d16.9907981!4d73.3148908!16s%2Fg%2F11gvxyq_fn?entry=ttu",
+            "https://www.google.com/maps/place/Datta+Cafe/@18.1777893,72.1924992,8z/data=!4m10!1m2!2m1!1sHotel+Datta+Cafe!3m6!1s0x3bea0d6ee8765805:0x36f843e3db9dfbde!8m2!3d16.9969182!4d73.2920023!15sChBIb3RlbCBEYXR0YSBDYWZlWhIiEGhvdGVsIGRhdHRhIGNhZmWSAQRjYWZl4AEA!16s%2Fg%2F11fz9xyxbx?entry=ttu",
+            "https://www.google.com/maps/place/Mahalaxmi+Restaurant/@17.0018109,73.3701831,17z/data=!4m6!3m5!1s0x3bea0b78910ca093:0xc7fdb00527ed6285!8m2!3d17.0018058!4d73.372758!16s%2Fg%2F11cm0n_hw2?entry=ttu",
+            "https://www.google.com/maps/place/Soul+curry+family+restaurant/@16.2628443,73.706766,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc017fa8c9e65c9:0xf6127bf52ab1d143!8m2!3d16.2628392!4d73.7093409!16s%2Fg%2F11tnhqngsd?entry=ttu",
+            "https://www.google.com/maps/place/Hotel+Kokani+Tadka/@16.9988324,73.2729807,9z/data=!4m10!1m2!2m1!1sHotel+Kokani+Tadka+ratnagiri!3m6!1s0x3bc12349205358a1:0x9cd47b1f9ad60059!8m2!3d16.8490016!4d74.5930473!15sChxIb3RlbCBLb2thbmkgVGFka2EgcmF0bmFnaXJpWh4iHGhvdGVsIGtva2FuaSB0YWRrYSByYXRuYWdpcmmSARFmYW1pbHlfcmVzdGF1cmFudJoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VSRGJuQnhjVEJuUlJBQuABAA!16s%2Fg%2F11jcq1hprb?entry=ttu",
+            "https://www.google.com/maps/place/Drive+Inn+Carnival/@16.9903991,73.3131281,17z/data=!4m6!3m5!1s0x3bea0d22661f718b:0xab73f12bc7d3280e!8m2!3d16.990394!4d73.315703!16s%2Fg%2F12qgsy7gx?entry=ttu",
+            // Repeat the links for indices 10 to 15
+            "https://www.google.com/maps/place/Mithila+Only+Veg/@16.9901922,73.3077054,17z/data=!4m6!3m5!1s0x3bea0d3d696a8ab5:0xdba4c3fa22da9749!8m2!3d16.9901871!4d73.3102803!16s%2Fg%2F1tkp3g0h?entry=ttu",
+            "https://www.google.com/maps/place/Masala+Kitchen+Restaurant(Seafood+Specialist)/@16.9896774,73.2820844,17z/data=!3m1!4b1!4m6!3m5!1s0x3bea0d676fc0c653:0xc27141308aabe7cd!8m2!3d16.9896723!4d73.2846593!16s%2Fg%2F11cn9rl5ft?entry=ttu",
+            "https://www.google.com/maps/place/Hotel+Kokani+Angan/@16.9996504,73.3651174,17z/data=!3m1!4b1!4m6!3m5!1s0x3bea0c9ef6fb3ba3:0x5c8995f310d873ef!8m2!3d16.9996453!4d73.3676923!16s%2Fg%2F11hblcjg0h?entry=ttu",
+            "https://www.google.com/maps/place/Hotel+Amantran/@16.9909157,73.3041912,17z/data=!3m1!4b1!4m6!3m5!1s0x3bea0d161b786aff:0x4aa85c06ca070019!8m2!3d16.9909106!4d73.3067661!16s%2Fg%2F11bwf6gpj_?entry=ttu",
+            "https://www.google.com/maps/place/SAGOTI+FISH+%26+SEAFOOD+RESTAURANT/@16.9908032,73.3123159,17z/data=!3m1!4b1!4m6!3m5!1s0x3bea0d52d57e4221:0xf16ead43f3348c83!8m2!3d16.9907981!4d73.3148908!16s%2Fg%2F11gvxyq_fn?entry=ttu",
+            "https://www.google.com/maps/place/Datta+Cafe/@18.1777893,72.1924992,8z/data=!4m10!1m2!2m1!1sHotel+Datta+Cafe!3m6!1s0x3bea0d6ee8765805:0x36f843e3db9dfbde!8m2!3d16.9969182!4d73.2920023!15sChBIb3RlbCBEYXR0YSBDYWZlWhIiEGhvdGVsIGRhdHRhIGNhZmWSAQRjYWZl4AEA!16s%2Fg%2F11fz9xyxbx?entry=ttu",
+            "https://www.google.com/maps/place/Mahalaxmi+Restaurant/@17.0018109,73.3701831,17z/data=!4m6!3m5!1s0x3bea0b78910ca093:0xc7fdb00527ed6285!8m2!3d17.0018058!4d73.372758!16s%2Fg%2F11cm0n_hw2?entry=ttu",
+            "https://www.google.com/maps/place/Soul+curry+family+restaurant/@16.2628443,73.706766,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc017fa8c9e65c9:0xf6127bf52ab1d143!8m2!3d16.2628392!4d73.7093409!16s%2Fg%2F11tnhqngsd?entry=ttu",
+            "https://www.google.com/maps/place/Hotel+Kokani+Tadka/@16.9988324,73.2729807,9z/data=!4m10!1m2!2m1!1sHotel+Kokani+Tadka+ratnagiri!3m6!1s0x3bc12349205358a1:0x9cd47b1f9ad60059!8m2!3d16.8490016!4d74.5930473!15sChxIb3RlbCBLb2thbmkgVGFka2EgcmF0bmFnaXJpWh4iHGhvdGVsIGtva2FuaSB0YWRrYSByYXRuYWdpcmmSARFmYW1pbHlfcmVzdGF1cmFudJoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VSRGJuQnhjVEJuUlJBQuABAA!16s%2Fg%2F11jcq1hprb?entry=ttu",
+            "https://www.google.com/maps/place/Drive+Inn+Carnival/@16.9903991,73.3131281,17z/data=!4m6!3m5!1s0x3bea0d22661f718b:0xab73f12bc7d3280e!8m2!3d16.990394!4d73.315703!16s%2Fg%2F12qgsy7gx?entry=ttu"
+    };
+
+
     String[] hotelImagePaths = {
             "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\hotels\\Mithila Restaurant.png",
             "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\Dash_Icons\\hotels\\Masala Kitchen.png",
@@ -171,12 +196,16 @@ public class restaurents_rtn extends JFrame implements ActionListener {
                     // You can write your code here for each button's action
                     if (buttonIndex == 0) {
                         System.out.println("sutar1");
+                        restaurent_func.Delivery_web(restaurantLinks[0]);
                     } else if (buttonIndex == 1) {
                         System.out.println("sutar2");
+                        restaurent_func.Delivery_web(restaurantLinks[1]);
                     } else if (buttonIndex == 2) {
                         System.out.println("sutar3");
+                        restaurent_func.Delivery_web(restaurantLinks[3]);
                     } else if (buttonIndex == 3) {
                         System.out.println("sutar4");
+                        restaurent_func.Delivery_web(restaurantLinks[4]);
                     }
                 }
             });
@@ -204,12 +233,16 @@ public class restaurents_rtn extends JFrame implements ActionListener {
                     // You can write your code here for each button's action
                     if (buttonIndex == 0) {
                         System.out.println("sutar5");
+                        restaurent_func.Delivery_web(restaurantLinks[5]);
                     } else if (buttonIndex == 1) {
                         System.out.println("sutar6");
+                        restaurent_func.Delivery_web(restaurantLinks[6]);
                     } else if (buttonIndex == 2) {
                         System.out.println("sutar7");
+                        restaurent_func.Delivery_web(restaurantLinks[7]);
                     } else if (buttonIndex == 3) {
                         System.out.println("sutar8");
+                        restaurent_func.Delivery_web(restaurantLinks[8]);
                     }
                 }
             });
@@ -237,12 +270,16 @@ public class restaurents_rtn extends JFrame implements ActionListener {
                     // You can write your code here for each button's action
                     if (buttonIndex == 0) {
                         System.out.println("sutar9");
+                        restaurent_func.Delivery_web(restaurantLinks[9]);
                     } else if (buttonIndex == 1) {
                         System.out.println("sutar10");
+                        restaurent_func.Delivery_web(restaurantLinks[10]);
                     } else if (buttonIndex == 2) {
                         System.out.println("sutar11");
+                        restaurent_func.Delivery_web(restaurantLinks[11]);
                     } else if (buttonIndex == 3) {
                         System.out.println("sutar12");
+                        restaurent_func.Delivery_web(restaurantLinks[12]);
                     }
                 }
             });
@@ -270,12 +307,16 @@ public class restaurents_rtn extends JFrame implements ActionListener {
                     // You can write your code here for each button's action
                     if (buttonIndex == 0) {
                         System.out.println("sutar13");
+                        restaurent_func.Delivery_web(restaurantLinks[13]);
                     } else if (buttonIndex == 1) {
                         System.out.println("sutar14");
+                        restaurent_func.Delivery_web(restaurantLinks[14]);
                     } else if (buttonIndex == 2) {
                         System.out.println("sutar15");
+                        restaurent_func.Delivery_web(restaurantLinks[15]);
                     } else if (buttonIndex == 3) {
                         System.out.println("sutar16");
+                        restaurent_func.Delivery_web(restaurantLinks[16]);
                     }
                 }
             });

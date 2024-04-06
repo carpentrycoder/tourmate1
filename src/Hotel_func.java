@@ -42,7 +42,7 @@ public class Hotel_func extends JFrame {
     static JFrame rtnhotels;
     static String strday, endday;
 
-    public static void func_hotel(String[] urls,String title)
+    public static void func_hotel(String Background_image ,String[] urls,String title)
     {
         rtnhotels = new JFrame();
         rtnhotels.setTitle(title);
@@ -141,7 +141,7 @@ public class Hotel_func extends JFrame {
             contentPanel.add(buttons[i]);
         }
 
-        ImageIcon imageIcon = new ImageIcon("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\rtnhotels.png");
+        ImageIcon imageIcon = new ImageIcon(Background_image);
         Image image = imageIcon.getImage().getScaledInstance(1366, 3000, Image.SCALE_DEFAULT);
         imageIcon = new ImageIcon(image);
         JLabel label = new JLabel(imageIcon);
@@ -171,7 +171,6 @@ public class Hotel_func extends JFrame {
                 // Your action code here for back button
                 System.out.println("Back button clicked");
                 rtnhotels.setVisible(false);
-                System.exit(0);
             }
         });
         label.add(back);
