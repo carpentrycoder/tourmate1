@@ -75,7 +75,10 @@ public class mum_retaurents {
         };
 
         // Call initializeFrame method from restaurent_func class
-        restaurent_func.restaurenttemplate("Mumbai",maplink, restaurantLinks, budgetFriendlyBites, cheapEats, dinner, deliveryAvailable);
+        restaurent_func.restaurenttemplate("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Restaurants in Mumbai.png","Mumbai",maplink, restaurantLinks, budgetFriendlyBites, cheapEats, dinner, deliveryAvailable);
     }
 
+    public static void main(String[] args) {
+        mum_restro();
+    }
 }

@@ -79,7 +79,7 @@ public class smbj_restaurents {
 
 
         // Call initializeFrame method from restaurent_func class
-        restaurent_func.restaurenttemplate("Sambhaji nager",maplink, restaurantLinks, budgetFriendlyBites, cheapEats, dinner, deliveryAvailable);
+        restaurent_func.restaurenttemplate("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Restaurants in Chhatrapati Sambhaji Nagar.png","Sambhaji nager",maplink, restaurantLinks, budgetFriendlyBites, cheapEats, dinner, deliveryAvailable);
     }
 
 }

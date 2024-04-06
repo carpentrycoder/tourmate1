@@ -75,7 +75,7 @@ public class Nashik_restaurents {
 
 
         // Call initializeFrame method from restaurent_func class
-        restaurent_func.restaurenttemplate("Nashik",maplink, restaurantLinks, budgetFriendlyBites, cheapEats, dinner, deliveryAvailable);
+        restaurent_func.restaurenttemplate("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Restaurants in Nashik.png","Nashik",maplink, restaurantLinks, budgetFriendlyBites, cheapEats, dinner, deliveryAvailable);
     }
 
 }

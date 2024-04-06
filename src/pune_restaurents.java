@@ -77,10 +77,7 @@ public class pune_restaurents {
 
 
 
-
-
-        // Call initializeFrame method from restaurent_func class
-        restaurent_func.restaurenttemplate("Pune",maplink, restaurantLinks, budgetFriendlyBites, cheapEats, dinner, deliveryAvailable);
+        restaurent_func.restaurenttemplate("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Restaurants in Pune.png","Pune",maplink, restaurantLinks, budgetFriendlyBites, cheapEats, dinner, deliveryAvailable);
     }
 
 }

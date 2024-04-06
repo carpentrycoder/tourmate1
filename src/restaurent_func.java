@@ -42,7 +42,7 @@ public class restaurent_func extends JFrame {
     public static JScrollPane scrollPane;
 
 
-    public static void restaurenttemplate(String city ,String gmapurl,String[] restaurents_link,String[] Budget_friendly_bites, String[] Cheap_eats,String[] Dinner,String[] Delivery_Available)
+    public static void restaurenttemplate(String front_image,String city ,String gmapurl,String[] restaurents_link,String[] Budget_friendly_bites, String[] Cheap_eats,String[] Dinner,String[] Delivery_Available)
     {
         frame = new JFrame();
         frame.setExtendedState(MAXIMIZED_BOTH);
@@ -62,7 +62,7 @@ public class restaurent_func extends JFrame {
 
         jfxPanel = new JFXPanel();
 
-        ImageIcon imageIcon = new ImageIcon("src/icons/ratangiri_places-restaurents.png");
+        ImageIcon imageIcon = new ImageIcon(front_image);
         Image image = imageIcon.getImage().getScaledInstance(1366, 231, Image.SCALE_DEFAULT);
         imageIcon = new ImageIcon(image);
         JLabel label = new JLabel(imageIcon);
