@@ -213,7 +213,7 @@ public class places extends JFrame implements ActionListener ,KeyListener {
         }
         else if (e.getSource()==back) {
             setVisible(false);
-            new dash();
+
         }
         else if(e.getSource()==rtn){
             setVisible(true);

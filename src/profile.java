@@ -1,11 +1,9 @@
 import com.toedter.calendar.JDateChooser;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 
@@ -13,7 +11,7 @@ public class profile extends JFrame implements ActionListener
 {
    JButton b1,b2,b3;
     private Timer timer;
-    String Sname, Saadhar, SphoneNo, Saddress, Sbldgrp, Sgender, Sdob;
+    static String Sname, Saadhar, SphoneNo, Saddress, Sbldgrp, Sgender, Sdob;
     int x = 80;
     int txtX = 250;
     int txtWidth = 200;
@@ -101,7 +99,7 @@ public class profile extends JFrame implements ActionListener
             l1.setForeground(Color.WHITE);
             image.add(l1);
 
-            name1 = new JLabel();
+            name1 = new JLabel(profile.Sname);
             name1.setBounds(txtX,70,150,40);
             name1.setFont(font);
             name1.setForeground(Color.WHITE);
@@ -143,32 +141,32 @@ public class profile extends JFrame implements ActionListener
             l7.setForeground(Color.WHITE);
             image.add(l7);
 
-            aadhar1 = new JLabel();
+            aadhar1 = new JLabel(profile.Saadhar);
             aadhar1.setBounds(txtX, 130,  txtWidth,txtHeight);
             aadhar1.setFont(font);
             aadhar1.setForeground(Color.WHITE);
             image.add(aadhar1);
 
-            address1 = new JLabel();
+            address1 = new JLabel(profile.Saddress);
             address1.setBounds(txtX, 310,  txtWidth,txtHeight);
             address1.setFont(font);
             address1.setForeground(Color.WHITE);
             image.add(address1);
 
 
-            phoneNo1 = new JLabel();
+            phoneNo1 = new JLabel(profile.SphoneNo);
             phoneNo1.setBounds(txtX, 370,  txtWidth,txtHeight);
             phoneNo1.setFont(font);
             phoneNo1.setForeground(Color.WHITE);
             image.add(phoneNo1);
 
-            bldgrp1 = new JLabel();
+            bldgrp1 = new JLabel(profile.Sbldgrp);
             bldgrp1.setBounds(txtX, 430,  txtWidth,txtHeight);
             bldgrp1.setFont(font);
             bldgrp1.setForeground(Color.WHITE);
             image.add(bldgrp1);
 
-            gender1 = new JLabel();
+            gender1 = new JLabel(profile.Sgender);
             gender1.setBounds(txtX, 490,  txtWidth,txtHeight);
             gender1.setFont(font);
             gender1.setForeground(Color.WHITE);

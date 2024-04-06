@@ -168,7 +168,7 @@ public class booking extends JFrame implements ActionListener {
             new profile();
         } else if (e.getSource() == back) {
             setVisible(false);
-            System.exit(0);
+
         }
     }
 

@@ -36,6 +36,14 @@ public class pune_template {
                 restaurent_func.Delivery_web(url);
             }
         });
+
+        PlaceTemplateFunc.getRentButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                rentalcar.rentalrtn("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\QR\\Pune-rental.png");
+            }
+        });
+
         PlaceTemplateFunc.gethotl().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -44,13 +52,7 @@ public class pune_template {
             }
         });
 
-        PlaceTemplateFunc.getRentButton().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String url = "https://www.mychoize.com/self-drive-car-rentals-pune/cars"; // Replace this with your actual delivery website URL
-                restaurent_func.Delivery_web(url);
-            }
-        });
+
     }
     }
 

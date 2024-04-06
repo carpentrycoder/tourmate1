@@ -37,6 +37,13 @@ public class smbj_template {
             }
         });
 
+        PlaceTemplateFunc.getRentButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               rentalcar.rentalrtn("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\QR\\Chhatrapati Sambhaji Nagar-rental.png");
+            }
+        });
+
         PlaceTemplateFunc.gethotl().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

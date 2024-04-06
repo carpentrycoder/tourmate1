@@ -11,6 +11,12 @@ public class mum_template{
                 restaurent_func.Delivery_web(url);
             }
         });
+        PlaceTemplateFunc.getRentButton().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                rentalcar.rentalrtn("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\QR\\Mumbai-rentals.png");
+            }
+        });
 
         PlaceTemplateFunc.getMapButton().addActionListener(new ActionListener() {
             @Override
@@ -44,12 +50,5 @@ public class mum_template{
             }
         });
 
-        PlaceTemplateFunc.getRentButton().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String url = "https://www.zoomcar.com/in/mumbai/search?lat=19.01019029439606&lng=73.03934097290039&type=round_trip&starts=1711690200000&ends=1711719000000&cargroup_id="; // Replace this with your actual delivery website URL
-                restaurent_func.Delivery_web(url);
-            }
-        });
     }
 }
