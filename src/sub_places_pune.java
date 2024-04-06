@@ -50,8 +50,20 @@ public class sub_places_pune {
         }
 
         String[] placeWebs = {
-
+                "https://www.tripadvisor.in/Attraction_Review-g297654-d2520937-Reviews-Dagadusheth_Halwai_Ganapati_Temple-Pune_Pune_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297654-d325350-Reviews-Katraj_Jain_Temple-Pune_Pune_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297654-d4435162-Reviews-Khadakwasla_Dam-Pune_Pune_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297654-d10259150-Reviews-MCA_Cricket_Stadium-Pune_Pune_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297654-d3923280-Reviews-National_War_Museum-Pune_Pune_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297654-d3626239-Reviews-Neelkantheshwar-Pune_Pune_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297654-d1897512-Reviews-Rajgad_Fort-Pune_Pune_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297654-d2178323-Reviews-Rajiv_Gandhi_Zoological_Park-Pune_Pune_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297654-d3136963-Reviews-Sarasbaug_Ganpati_Temple-Pune_Pune_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297654-d321429-Reviews-Shaniwar_Wada-Pune_Pune_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297654-d2408845-Reviews-Sinhagad_Fort-Pune_Pune_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297654-d4401080-Reviews-Torna_Fort-Pune_Pune_District_Maharashtra.html"
         };
+
 
 
         places_func.initializeFrame(header, placePaths, placeWebs,places);

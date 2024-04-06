@@ -51,8 +51,20 @@ public class subplaces_smbj {
         }
 
         String[] placeWebs = {
-
+                "https://www.tripadvisor.in/Attraction_Review-g297649-d3659888-Reviews-Bhadra_Maruti-Aurangabad_Aurangabad_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297649-d321438-Reviews-Bibi_Ka_Maqbara-Aurangabad_Aurangabad_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297649-d7175755-Reviews-Chatrapati_Shivaji_Museum-Aurangabad_Aurangabad_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g7591475-d1024044-Reviews-Daulatabad_Fort-Daulatabad_Aurangabad_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297649-d317351-Reviews-Ellora_Caves-Aurangabad_Aurangabad_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297649-d4139034-Reviews-H2O_Water_Park-Aurangabad_Aurangabad_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297649-d5787919-Reviews-Jayakwadi_Dam-Aurangabad_Aurangabad_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297649-d3731036-Reviews-Panchakki_Water_Mill-Aurangabad_Aurangabad_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297649-d24164686-Reviews-Salim_Ali_Lake-Aurangabad_Aurangabad_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297649-d3913043-Reviews-Siddharth_Garden-Aurangabad_Aurangabad_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297649-d3346462-Reviews-Sunheri_Mahal-Aurangabad_Aurangabad_District_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g297649-d6602269-Reviews-Tomb_of_Mughal_Emperor_Aurangzeb-Aurangabad_Aurangabad_District_Maharashtra.html"
         };
+
 
 
         places_func.initializeFrame(header, placePaths, placeWebs,places);

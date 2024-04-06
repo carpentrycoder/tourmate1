@@ -52,8 +52,20 @@ public class subplaces_mumbai {
         }
 
         String[] placeWebs = {
-
+                "https://www.tripadvisor.in/Attraction_Review-g304554-d2704519-Reviews-Bandra_Worli_Sea_Link-Mumbai_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g304554-d321412-Reviews-Chhatrapati_Shivaji_Terminus-Mumbai_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g304554-d311661-Reviews-Colaba-Mumbai_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g304554-d311664-Reviews-Elephanta_Caves-Mumbai_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g304554-d311667-Reviews-Gateway_of_India-Mumbai_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g304554-d321424-Reviews-Juhu_Beach-Mumbai_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g304554-d324640-Reviews-Mumba_Devi_Temple-Mumbai_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g304554-d3783379-Reviews-Nariman_Point-Mumbai_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g304554-d324632-Reviews-Sanjay_Gandhi_National_Park-Mumbai_Maharashtra.html#REVIEWS",
+                "https://www.tripadvisor.in/Attraction_Review-g304554-d811527-Reviews-Shivaji_Park-Mumbai_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g304554-d622586-Reviews-Shree_Siddhivinayak-Mumbai_Maharashtra.html",
+                "https://www.tripadvisor.in/Attraction_Review-g304554-d5792109-Reviews-Wankhede_Stadium-Mumbai_Maharashtra.html"
         };
+
 
 
         places_func.initializeFrame(header, placePaths, placeWebs,places);
