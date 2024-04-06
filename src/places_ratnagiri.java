@@ -156,6 +156,14 @@ public class places_ratnagiri extends JFrame implements ActionListener {
         return button;
     }
 
+    public static JButton createButton1(String imagePath) {
+        ImageIcon icon = new ImageIcon(imagePath);
+        JButton button = new JButton(icon);
+        button.setBackground(new Color(0xFB9B70));
+        button.setBorder(BorderFactory.createEmptyBorder());
+        return button;
+    }
+
     public static void setupScrollBar() {
         JScrollBar verticalScrollBar1 = scrollPane.getVerticalScrollBar();
         verticalScrollBar1.setUI(new BasicScrollBarUI() {

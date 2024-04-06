@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,12 +27,23 @@ import java.awt.event.ActionListener;
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-public class places_func extends JFrame implements ActionListener {
-    JScrollPane scrollPane;
-    JButton ganpatipule_temple, ganpatipule_beach,Jai_Vinayak_Temple,Ratnadurg_Fort,Jaigad_Lighthouse,Bhatye_Beach,Aare_ware_Beach,Ganesh_Ghule_Beach,Pawas,Kanakaditya_temple,thirdButton,secondButton, back;
-    JFrame rtn;
+public class places_func extends JFrame {
+    static JScrollPane scrollPane;
+    static JButton ganpatipule_temple, ganpatipule_beach,Jai_Vinayak_Temple,Ratnadurg_Fort,Jaigad_Lighthouse,Bhatye_Beach,Aare_ware_Beach,Ganesh_Ghule_Beach,Pawas,Kanakaditya_temple,thirdButton,secondButton, back;
+    static JFrame rtn;
 
-    public void initializeFrame(String header,String[] place_path,String[] place_web){
+    public static void setupScrollBar() {
+        JScrollBar verticalScrollBar1 = scrollPane.getVerticalScrollBar();
+        verticalScrollBar1.setUI(new BasicScrollBarUI() {
+            @Override
+            protected void configureScrollBarColors() {
+                this.thumbColor = new Color(0xFF834B);
+                this.trackColor = new Color(0xFFFB9B70, true);
+            }
+        });
+    }
+
+    public static void initializeFrame(String header, String[] place_path, String[] place_web,String[] placelbl){
         rtn = new JFrame();
         rtn.setExtendedState(MAXIMIZED_BOTH);
         scrollPane = new JScrollPane(); // Initialize scrollPane
@@ -41,7 +53,7 @@ public class places_func extends JFrame implements ActionListener {
         // Use getContentPane() to get the contentPane of the frame
         Container contentPane = rtn.getContentPane();
         contentPane.setBackground(new Color(0x592A7BA, true));
-        places_ratnagiri.setupScrollBar();
+        setupScrollBar();
         JPanel contentPanel = new JPanel();
         contentPanel.setLayout(null);
         contentPanel.setPreferredSize(new Dimension(1366, 2000));
@@ -64,7 +76,7 @@ public class places_func extends JFrame implements ActionListener {
         int x2 = x1 + 400 + 42;
         int y2 = 250;
 
-        ganpatipule_temple = places_ratnagiri.createButton(place_path[0],this);
+        ganpatipule_temple = places_ratnagiri.createButton1(place_path[0]);
         ganpatipule_temple.setBounds(x1,y1, 400, 300);
         ganpatipule_temple.addActionListener(new ActionListener() {
             @Override
@@ -74,9 +86,9 @@ public class places_func extends JFrame implements ActionListener {
             }
         });
         contentPanel.add(ganpatipule_temple);
-        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ganpatipule Temple", Font.BOLD, 30, new Color(69, 37, 52), 80, 560, 378,44);
+        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", placelbl[0], Font.BOLD, 30, new Color(69, 37, 52), 80, 560, 378,44);
 
-        ganpatipule_beach = places_ratnagiri.createButton(place_path[1],this);
+        ganpatipule_beach = places_ratnagiri.createButton1(place_path[1]);
         ganpatipule_beach.setBounds(x2,y2, 400, 300);
         ganpatipule_beach.addActionListener(new ActionListener() {
             @Override
@@ -86,9 +98,9 @@ public class places_func extends JFrame implements ActionListener {
             }
         });
         contentPanel.add(ganpatipule_beach);
-        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ganpatipule Beach ", Font.BOLD, 30, new Color(69, 37, 52), 120+378+44, 560, 378,44);
+        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", placelbl[1], Font.BOLD, 30, new Color(69, 37, 52), 120+378+44, 560, 378,44);
 
-        Jai_Vinayak_Temple = places_ratnagiri.createButton(place_path[2],this);
+        Jai_Vinayak_Temple = places_ratnagiri.createButton1(place_path[2]);
         Jai_Vinayak_Temple.setBounds(x2 + 400 + 42,y2, 400, 300);
         Jai_Vinayak_Temple.addActionListener(new ActionListener() {
             @Override
@@ -98,9 +110,9 @@ public class places_func extends JFrame implements ActionListener {
             }
         });
         contentPanel.add(Jai_Vinayak_Temple);
-        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Jai Vinayak Temple", Font.BOLD, 30, new Color(69, 37, 52), 260+678+44, 560, 378,44);
+        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", placelbl[2], Font.BOLD, 30, new Color(69, 37, 52), 260+678+44, 560, 378,44);
 
-        Ratnadurg_Fort = places_ratnagiri.createButton(place_path[3],this);
+        Ratnadurg_Fort = places_ratnagiri.createButton1(place_path[3]);
         Ratnadurg_Fort.setBounds(x1,y1 + 300 + 73, 400, 300);
         Ratnadurg_Fort.addActionListener(new ActionListener() {
             @Override
@@ -110,9 +122,9 @@ public class places_func extends JFrame implements ActionListener {
             }
         });
         contentPanel.add(Ratnadurg_Fort);
-        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ratnadurg Fort", Font.BOLD, 30, new Color(69, 37, 52), 120, 90+800+44, 378,44);
+        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", placelbl[3], Font.BOLD, 30, new Color(69, 37, 52), 120, 90+800+44, 378,44);
 
-        Jaigad_Lighthouse = places_ratnagiri.createButton(place_path[4],this);
+        Jaigad_Lighthouse = places_ratnagiri.createButton1(place_path[4]);
         Jaigad_Lighthouse.setBounds(x1 + 400 + 42,y1 + 300 + 73, 400, 300);
         Jaigad_Lighthouse.addActionListener(new ActionListener() {
             @Override
@@ -122,9 +134,9 @@ public class places_func extends JFrame implements ActionListener {
             }
         });
         contentPanel.add(Jaigad_Lighthouse);
-        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Jaigad Lighthouse", Font.BOLD, 30, new Color(69, 37, 52), 120+378+44, 90+800+44, 378,44);
+        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", placelbl[4], Font.BOLD, 30, new Color(69, 37, 52), 120+378+44, 90+800+44, 378,44);
 
-        Bhatye_Beach = places_ratnagiri.createButton(place_path[5],this);
+        Bhatye_Beach = places_ratnagiri.createButton1(place_path[5]);
         Bhatye_Beach.setBounds(x2 + 400 + 42,y1 + 300 + 73, 400, 300);
         Bhatye_Beach.addActionListener(new ActionListener() {
             @Override
@@ -134,9 +146,9 @@ public class places_func extends JFrame implements ActionListener {
             }
         });
         contentPanel.add(Bhatye_Beach);
-        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Bhatye Beach", Font.BOLD, 30, new Color(69, 37, 52), 260+678+80, 90+800+44, 378,44);
+        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", placelbl[5], Font.BOLD, 30, new Color(69, 37, 52), 260+678+80, 90+800+44, 378,44);
 
-        Aare_ware_Beach = places_ratnagiri.createButton(place_path[6],this);
+        Aare_ware_Beach = places_ratnagiri.createButton1(place_path[6]);
         Aare_ware_Beach.setBounds(x1,y1 + 600 + 150, 400, 300);
         Aare_ware_Beach.addActionListener(new ActionListener() {
             @Override
@@ -146,9 +158,9 @@ public class places_func extends JFrame implements ActionListener {
             }
         });
         contentPanel.add(Aare_ware_Beach);
-        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Aare ware Beach", Font.BOLD, 30, new Color(69, 37, 52), 90, 70+1200+44, 378,44);
+        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", placelbl[6], Font.BOLD, 30, new Color(69, 37, 52), 90, 70+1200+44, 378,44);
 
-        Ganesh_Ghule_Beach = places_ratnagiri.createButton(place_path[7],this);
+        Ganesh_Ghule_Beach = places_ratnagiri.createButton1(place_path[7]);
         Ganesh_Ghule_Beach.setBounds(x1 + 400 + 42,y1 + 600 + 150, 400, 300);
         Ganesh_Ghule_Beach.addActionListener(new ActionListener() {
             @Override
@@ -158,9 +170,9 @@ public class places_func extends JFrame implements ActionListener {
             }
         });
         contentPanel.add(Ganesh_Ghule_Beach);
-        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Ganesh Ghule Beach", Font.BOLD, 30, new Color(69, 37, 52), 120+378+38, 70+1200+44, 378,44);
+        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", placelbl[7], Font.BOLD, 30, new Color(69, 37, 52), 120+378+38, 70+1200+44, 378,44);
 
-        Pawas = places_ratnagiri.createButton(place_path[8],this);
+        Pawas = places_ratnagiri.createButton1(place_path[8]);
         Pawas.setBounds(x2 + 400 + 42,y1 + 600 + 150, 400, 300);
         Pawas.addActionListener(new ActionListener() {
             @Override
@@ -170,9 +182,9 @@ public class places_func extends JFrame implements ActionListener {
             }
         });
         contentPanel.add(Pawas);
-        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Pawas", Font.BOLD, 30, new Color(69, 37, 52), 260+678+120, 70+1200+44, 378,44);
+        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", placelbl[8], Font.BOLD, 30, new Color(69, 37, 52), 260+678+120, 70+1200+44, 378,44);
 
-        Kanakaditya_temple = places_ratnagiri.createButton(place_path[9],this);
+        Kanakaditya_temple = places_ratnagiri.createButton1(place_path[9]);
         Kanakaditya_temple.setBounds(x1,y1 + 900 + 150 +73, 400, 300);
         Kanakaditya_temple.addActionListener(new ActionListener() {
             @Override
@@ -182,9 +194,9 @@ public class places_func extends JFrame implements ActionListener {
             }
         });
         contentPanel.add(Kanakaditya_temple);
-        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Kanakaditya Temple", Font.BOLD, 30, new Color(69, 37, 52),80, 70+1600+14, 378,44);
+        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", placelbl[9], Font.BOLD, 30, new Color(69, 37, 52),80, 70+1600+14, 378,44);
 
-        secondButton = places_ratnagiri.createButton(place_path[10], this);
+        secondButton = places_ratnagiri.createButton1(place_path[10]);
         secondButton.setBounds(x1 + 400 + 40, y1 + 900 + 150 + 73, 400, 300);
         secondButton.addActionListener(new ActionListener() {
             @Override
@@ -194,9 +206,9 @@ public class places_func extends JFrame implements ActionListener {
             }
         });
         contentPanel.add(secondButton);
-        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Tilak Ali Museum", Font.BOLD, 30, new Color(69, 37, 52), 80 + 400 + 60, 70 + 1600 + 14, 378, 44);
+        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", placelbl[10], Font.BOLD, 30, new Color(69, 37, 52), 80 + 400 + 60, 70 + 1600 + 14, 378, 44);
 
-        thirdButton = places_ratnagiri.createButton(place_path[11], this);
+        thirdButton = places_ratnagiri.createButton1(place_path[11]);
         thirdButton.setBounds(x1 + (400 + 40) * 2, y1 + 900 + 150 + 73, 400, 300);
         thirdButton.addActionListener(new ActionListener() {
             @Override
@@ -206,7 +218,7 @@ public class places_func extends JFrame implements ActionListener {
             }
         });
         contentPanel.add(thirdButton);
-        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", "Thiba Palace", Font.BOLD, 30, new Color(69, 37, 52), 80 + (400 + 60) * 2, 70 + 1600 + 14, 378, 44);
+        places_ratnagiri.loadAndSetCustomFont(contentPanel, "C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf", placelbl[11], Font.BOLD, 30, new Color(69, 37, 52), 80 + (400 + 60) * 2, 70 + 1600 + 14, 378, 44);
 
         int backButtonX = thirdButton.getX() + thirdButton.getWidth() - 80 ;
         int backButtonY = thirdButton.getY() + thirdButton.getHeight() + 100; // Assuming a vertical space of 20 pixels between the buttons
@@ -219,7 +231,7 @@ public class places_func extends JFrame implements ActionListener {
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                rtn.setVisible(false);
             }
         });
         contentPanel.add(back);
@@ -231,8 +243,4 @@ public class places_func extends JFrame implements ActionListener {
 
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
-    }
 }
