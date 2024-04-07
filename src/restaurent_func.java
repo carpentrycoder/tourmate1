@@ -40,6 +40,7 @@ public class restaurent_func extends JFrame {
     public static JButton view_map,swiggy,Zomato,Uber_eats,Food_Panda,Dunzo;
 
     public static JScrollPane scrollPane;
+    static String userInput_restro;
 
 
     public static void restaurenttemplate(String front_image,String city ,String gmapurl,String[] restaurents_link,String[] Budget_friendly_bites, String[] Cheap_eats,String[] Dinner,String[] Delivery_Available)
@@ -334,7 +335,7 @@ public class restaurent_func extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Set the JFrame to invisible when back button is clicked
-                String userInput = JOptionPane.showInputDialog(frame, "Enter Where are your Decided to Go :");
+                userInput_restro = JOptionPane.showInputDialog(frame, "Enter Where are your Decided to Go :");
                 frame.setVisible(false);
             }
         });

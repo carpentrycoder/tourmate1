@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 
 public class booking extends JFrame implements ActionListener {
     JButton j1, j2, j3, j4, j5, j6, j7, j8, S, back;
+    int day = trip.days;
+    int final_day = day - (day-1);
     String fontpath ="C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Poppins-Light.ttf";
 
     booking() {
@@ -155,11 +157,11 @@ public class booking extends JFrame implements ActionListener {
         places_ratnagiri.loadAndSetCustomFont(packege,fontpath,places.cityname,Font.BOLD,30,new Color(0xE7E7EE),40, 90, 400, 30);
         places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Hotel Check-In Date: "+Hotel_func.strday,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+20, 400, 40);
         places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Hotel Check-Out Date: "+Hotel_func.endday,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30, 400,40);
-        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Trip Starts At: "+trip.startDateStr,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30+40, 400,40);
-        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Trip Ends At: "+trip.endDateStr,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30+40+40, 400,40);
-        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Places: "+trip.newPlace,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30+40+40+60, 400,40);
-
-
+        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Trip Starts At: "+trip.startDateStr,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30+50, 400,40);
+        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Trip Ends At: "+trip.endDateStr,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30+40+50, 400,40);
+        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"No. of Days : "+trip.days,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30+40+40+50, 400,40);
+        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Selected Restaurent : "+restaurent_func.userInput_restro,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30+40+40+60+50, 400,40);
+        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Selected Hotel : "+Hotel_func.userInput_hotel,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30+40+40+60+60+50, 400,40);
 
         setUndecorated(true);
         setVisible(true);

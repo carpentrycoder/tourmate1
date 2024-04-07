@@ -40,7 +40,7 @@ public class Hotel_func extends JFrame {
     static JButton back, done;
     static JButton[] buttons;
     static JFrame rtnhotels;
-    static String strday, endday;
+    static String strday, endday,userInput_hotel;
 
     public static void func_hotel(String Background_image ,String[] urls,String title)
     {
@@ -170,7 +170,9 @@ public class Hotel_func extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 // Your action code here for back button
                 System.out.println("Back button clicked");
+                userInput_hotel = JOptionPane.showInputDialog("Enter your Hotel:");
                 rtnhotels.setVisible(false);
+
             }
         });
         label.add(back);

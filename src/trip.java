@@ -18,6 +18,7 @@ public class trip extends JFrame implements ActionListener
     static int days, day;
     static JButton[] customButtons,yourdel;
     static JFrame itineraryFrame;
+    static String[] places;
     static String[] placesList = {
             "Ganpatipule Temple",
             "Ganpatipule Beach",
@@ -389,10 +390,12 @@ public class trip extends JFrame implements ActionListener
                     }
 
                     // Retrieve the place from the clicked JButton's text
-                     newPlace = customButtons[i].getText();
+                    newPlace = customButtons[i].getText();
 
                     System.out.println("Button " + (i + 1) + " clicked for Day " + (day + 1));
                     System.out.println("Selected Place: " + newPlace);
+
+
 
                     // Add the new place to the day
                     addPlaceToDay(day, newPlace);
@@ -608,12 +611,7 @@ public class trip extends JFrame implements ActionListener
         // Adjust the height of the contentPanel based on the maxHeight
         contentPanel.setPreferredSize(new Dimension(contentPanel.getPreferredSize().width,MaxHeight));
 
-        saveButton = new JButton("Click Me !!! to save your Trip :)");
-        saveButton.setBounds(770, 1340, 570, 30);
-        saveButton.addActionListener(this);
-        saveButton.setBackground(new Color(0xAF032C));
-        saveButton.setBackground(new Color(0xF9F8FC));
-        contentPanel.add(saveButton);
+
 
         startDateLabel = new JLabel(startDateStr);
         startDateLabel.setBounds(60, 18, 200, 40);
