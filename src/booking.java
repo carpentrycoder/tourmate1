@@ -160,7 +160,7 @@ public class booking extends JFrame implements ActionListener {
         places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Trip Starts At: "+trip.startDateStr,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30+50, 400,40);
         places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Trip Ends At: "+trip.endDateStr,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30+40+50, 400,40);
         places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"No. of Days : "+trip.days,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30+40+40+50, 400,40);
-        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Selected Restaurent : "+restaurent_func.userInput_restro,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30+40+40+60+50, 400,40);
+        places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Selected Restaurent : "+restaurent_func.userInput_restro,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30+40+40+60+50, 700,40);
         places_ratnagiri.loadAndSetCustomFont(packege,fontpath,"Selected Hotel : "+Hotel_func.userInput_hotel,Font.BOLD,24,new Color(0xE7E7EE),40, 90+30+30+30+40+40+60+60+50, 400,40);
 
         setUndecorated(true);
