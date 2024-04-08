@@ -195,27 +195,27 @@ public class places_ratnagiri extends JFrame implements ActionListener {
         if (e.getSource() == ganpatipule_temple) {
             Hotel.openURIInBrowser("https://www.tripadvisor.in/Attraction_Review-g1156427-d3410764-Reviews-Ganpatipule_Temple-Ganpatipule_Ratnagiri_District_Maharashtra.html");
         } else if (e.getSource() == ganpatipule_beach) {
-            Hotel.openURIInBrowser("");
+            Hotel.openURIInBrowser("https://www.tripadvisor.in/Attraction_Review-g1156427-d2460293-Reviews-Ganapatipule_Beach-Ganpatipule_Ratnagiri_District_Maharashtra.html");
         } else if (e.getSource() == Jai_Vinayak_Temple) {
-            Hotel.openURIInBrowser("");
+            Hotel.openURIInBrowser("https://www.tripadvisor.in/Attraction_Review-g3478181-d19929639-Reviews-Jal_Binayak_Temple-Kirtipur_Kathmandu_Valley_Bagmati_Zone_Central_Region.html");
         } else if (e.getSource() == Ratnadurg_Fort) {
-            Hotel.openURIInBrowser("");
+            Hotel.openURIInBrowser("https://www.tripadvisor.in/Attraction_Review-g641715-d3398491-Reviews-Ratnadurga_Fort-Ratnagiri_Ratnagiri_District_Maharashtra.html");
         } else if (e.getSource() == Jaigad_Lighthouse) {
-            Hotel.openURIInBrowser("");
+            Hotel.openURIInBrowser("https://www.tripadvisor.in/Attraction_Review-g641715-d3217681-Reviews-Jaigad_Lighthouse-Ratnagiri_Ratnagiri_District_Maharashtra.html");
         } else if (e.getSource() == Bhatye_Beach) {
-            Hotel.openURIInBrowser("");
+            Hotel.openURIInBrowser("https://www.tripadvisor.in/Attraction_Review-g641715-d2721892-Reviews-Bhatye_Beach-Ratnagiri_Ratnagiri_District_Maharashtra.html");
         } else if (e.getSource() == Aare_ware_Beach) {
-            Hotel.openURIInBrowser("");
+            Hotel.openURIInBrowser("https://www.tripadvisor.in/Attraction_Review-g641715-d13834146-Reviews-Aare_Ware_Beach-Ratnagiri_Ratnagiri_District_Maharashtra.html");
         } else if (e.getSource() == Ganesh_Ghule_Beach) {
-            Hotel.openURIInBrowser("");
+            Hotel.openURIInBrowser("https://www.tripadvisor.in/Attraction_Review-g641715-d2648823-Reviews-Ganeshghule_Beach-Ratnagiri_Ratnagiri_District_Maharashtra.html");
         } else if (e.getSource() == Pawas) {
-            Hotel.openURIInBrowser("");
+            Hotel.openURIInBrowser("https://www.tripadvisor.in/Tourism-g15354045-Pawas_Ratnagiri_District_Maharashtra-Vacations.html");
         } else if (e.getSource() == Kanakaditya_temple) {
-            Hotel.openURIInBrowser("");
+            Hotel.openURIInBrowser("https://www.tripadvisor.in/Attraction_Review-g641715-d3454083-Reviews-Sri_Kanakaditya_Temple-Ratnagiri_Ratnagiri_District_Maharashtra.html");
         } else if (e.getSource() == secondButton) {
-            Hotel.openURIInBrowser("");
+            Hotel.openURIInBrowser("https://www.tripadvisor.in/Attraction_Review-g641715-d3705238-Reviews-Tilak_Ali_Museum-Ratnagiri_Ratnagiri_District_Maharashtra.html");
         } else if (e.getSource() == thirdButton) {
-            Hotel.openURIInBrowser("");
+            Hotel.openURIInBrowser("https://www.tripadvisor.in/Attraction_Review-g641715-d3444149-Reviews-Thiba_Palace-Ratnagiri_Ratnagiri_District_Maharashtra.html");
         } else if (e.getSource()==back) {
             rtn.setVisible(false);
 
