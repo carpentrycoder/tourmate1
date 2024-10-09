@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 //add back button on login
 
 public class bg extends JFrame implements ActionListener {
-JButton Login,Signup;
+JButton Login,Signup,exit;
 bg()
 
 {
@@ -33,7 +33,6 @@ bg()
     Login.addActionListener(this);
     image.add(Login);
 
-
     //let's create sign up button
     Signup = new JButton("Signup");
     Signup.setBounds(600,350,250,30);
@@ -43,6 +42,16 @@ bg()
     Signup.setBorder(BorderFactory.createLineBorder(new Color(97,131,192),2,true));
     Signup.addActionListener(this);
     image.add(Signup);
+
+    exit = new JButton("Exit");
+    exit.setBounds(450,450,250,30);
+    exit.setBackground(new Color(255, 255, 255, 255));
+    exit.setFont(new Font("Open Sauce",Font.BOLD,18));
+    exit.setForeground(Color.black);
+    exit.setBorder(BorderFactory.createLineBorder(new Color(97,131,192),2,true));
+    exit.addActionListener(this);
+    image.add(exit);
+
 
     setUndecorated(true);
     setVisible(true);
@@ -59,6 +68,8 @@ public void actionPerformed(ActionEvent dj)
   {
       setVisible(false);
       new signup();
+  } else if (dj.getSource()==exit) {
+      System.exit(0);
   }
 }
 

@@ -130,26 +130,28 @@ public class forpass extends JFrame implements ActionListener {
 
     public void actionPerformed (ActionEvent ae)
     {
-        if(ae.getSource()==S)
-        {
-            try
-            {
-            String query = "Select * From account where Username = '"+tfname.getText()+"'";
-                    conn c = new conn();
-
+        if (ae.getSource() == S) {
+            try {
+                String query = "SELECT * FROM account WHERE Username = '" + tfname.getText() + "'";
+                conn c = new conn();
                 ResultSet rs = c.s.executeQuery(query);
-                while(rs.next())
-                {
-                    tfmail.setText(rs.getString("Email"));
-                    tfsec.setText(rs.getString("Question")) ;
-                }
 
-            }catch (Exception e)
-            {
+                // Check if ResultSet is empty
+                if (!rs.next()) {
+                    // User not found, show message
+                    JOptionPane.showMessageDialog(null, "User not found", "User Not Found", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    // User found, retrieve data
+                    do {
+                        tfmail.setText(rs.getString("Email"));
+                        tfsec.setText(rs.getString("Question"));
+                    } while (rs.next());
+                }
+            } catch (Exception e) {
                 e.printStackTrace();
             }
-
-        } else if (ae.getSource()==retrive)
+        }
+        else if (ae.getSource()==retrive)
         {
             try
             {

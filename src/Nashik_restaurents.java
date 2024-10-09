@@ -78,4 +78,8 @@ public class Nashik_restaurents {
         restaurent_func.restaurenttemplate("C:\\Users\\Admin\\Documents\\GitHub\\tourmate1\\src\\icons\\Restaurants in Nashik.png","Nashik",maplink, restaurantLinks, budgetFriendlyBites, cheapEats, dinner, deliveryAvailable);
     }
 
+    public static void main(String[] args) {
+        nashik_restro();
+    }
+
 }

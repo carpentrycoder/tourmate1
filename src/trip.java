@@ -184,6 +184,7 @@ public class trip extends JFrame implements ActionListener
         smbjstr = "Sambhajinager";
         nshkstr = "Nashik";
 
+        setUndecorated(true);
         setLocationRelativeTo(null);
         setLayout(null);
         setVisible(true);
@@ -234,7 +235,7 @@ public class trip extends JFrame implements ActionListener
 
                             long difference = endDate.getTime() - startDate.getTime();
                             days = (int) (difference / (24 * 60 * 60 * 1000));
-                            JOptionPane.showMessageDialog(getContentPane(), "Number of days : " + days, "Result", JOptionPane.INFORMATION_MESSAGE);
+                            JOptionPane.showMessageDialog(getContentPane(), "Number of days : " + days, "Trip Dates", JOptionPane.INFORMATION_MESSAGE);
                             setVisible(false);
 
                             // Call the appropriate itinerary method based on the selected city
